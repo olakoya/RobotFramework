@@ -1,0 +1,64 @@
+Introduction to Robot Framework
+----------------------------------
+Robot Framework is a Python based, and extensible keyword driven automation framework
+	- Acceptance testing
+	- Acceptance test driven development (ATDD)
+	- Behavior driven development (BDD)
+	- Robotic process automation (RPA)
+
+Why Robot Framework?
+--------------------
+Robot Framework uses tabular syntax for uniform test cases and supports data-driven testing with built-in variables.
+It enables reusable keywords, tagging for test selection, and modular testing for diverse interfaces.
+It is platform-independent, supports testing various applications, and integrates with CI systems via XML output.
+It offers HTML logs, Python-based custom libraries, and versioning-friendly test suites.
+It provides setup/teardown at all levels and supports practical testing in multiple environments.
+
+Architechure of robot frameowrk
+-------------------------------
+
+Robot Framework is having Test Libraries
+
+Install packages
+install plugin
+
+Advantages of Robot Framework
+-------------------------------
+Open-source, operating system independent.
+Extends support for web, device, api and database automation.
+No much programming is required.
+Excellent reporting, support CI, parallel execution, remote execution.
+Robot Framework is case-insensitive
+
+driver.get()
+
+open browser
+OPEN BROWSER
+Open Browser
+Open browser
+
+
+Disadvantages of Robot Framework
+--------------------------------
+Hard to maintain.
+Difficult to customize HTML reports
+Difficult to debug Errors.
+Strict Indentation rules.
+
+Test Suite or Test Case file
+----------------------------
+A Test Suite or Test Case file is a collection of test cases.
+Test case contains test name and test steps.
+A test suite can be saved as
+	.robot (plain text format ⇒ space and pipe separated)
+	.robot.rst (reStructuredText format)
+	.rbt (JSON format)
+
+
+Keywords ==> functions (Builtin and userdefined function)
+
+resouces.robot ==> userdefined function
+
+robot -v Browser:firefox -d Results Day1\FirstTestCase.robot
+
+robot --variable Browser:edge --outputdir Results Day1\FirstTestCase.robot
