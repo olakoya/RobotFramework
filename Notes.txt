@@ -14,13 +14,36 @@ It is platform-independent, supports testing various applications, and integrate
 It offers HTML logs, Python-based custom libraries, and versioning-friendly test suites.
 It provides setup/teardown at all levels and supports practical testing in multiple environments.
 
-Architechure of robot frameowrk
+Architecture of robot framework
 -------------------------------
+Robot Framework has a different Test Libraries
+The libraries can be found here ==> https://robotframework.org/
+Builtin Standard Libraries
 
-Robot Framework is having Test Libraries
+In case this a new project on the system the below requirements libraries need to be installed
+
+Requirements
+-------------
+1. python --version
+2. pip --version
+3. pip install selenium or pip uninstall selenium
+4. Pip install robotframework or Pip uninstall robotframework
+5. Pip install --upgrade robotframework
+6. Pip install robotframework == 2.9.2
+7. Pip list
+8. pip show robotframework
+9. Pip check robotframework
+10. Pip install robotframework-seleniumlibrary
+11. Pip uninstall robotframework-seleniumlibrary
+
+To install all create, a requirements.txt file and enter the libraries/packages without adding pip install, uninstall in front of the libraries
+Afterwards, use cmd ==> pip install -r requirements.txt to automatically install all together than install it individually
+Then ==> pip list to verify the libraries installed
 
 Install packages
 install plugin
+
+This cmd activate virtual environment (venv) in the project ==> source venv/bin/activate
 
 Advantages of Robot Framework
 -------------------------------
