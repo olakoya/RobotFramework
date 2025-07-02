@@ -41,6 +41,7 @@ Afterwards, use cmd ==> pip install -r requirements.txt to automatically install
 Then ==> pip list to verify the libraries installed
 
 Install packages
+- Creating a Directory which is the Test Suit
 install plugin
 
 This cmd activate virtual environment (venv) in the project ==> source venv/bin/activate
