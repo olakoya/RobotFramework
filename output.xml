@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-03T20:42:35.852613" rpa="false" schemaversion="5">
+<suite id="s1" name="FirstTestCase" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day 1/FirstTestCase.robot">
+<test id="s1-t1" name="Login Test" line="19">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T20:42:36.803715" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T20:42:36.803375" elapsed="15.742660"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T20:42:52.547712" elapsed="0.319570"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-03T20:42:55.870074" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-03T20:42:52.867593" elapsed="3.002714"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T20:42:55.870856" elapsed="0.247187"/>
+</kw>
+<doc>This is test case for login to the application</doc>
+<status status="PASS" start="2025-07-03T20:42:36.802165" elapsed="19.316216"/>
+</test>
+<status status="PASS" start="2025-07-03T20:42:35.855421" elapsed="20.263629"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="FirstTestCase" id="s1" pass="1" fail="0" skip="0">FirstTestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -48,11 +48,11 @@ This cmd activate virtual environment (venv) in the project ==> source venv/bin/
 
 Advantages of Robot Framework
 -------------------------------
-Open-source, operating system independent.
-Extends support for web, device, api and database automation.
-No much programming is required.
-Excellent reporting, support CI, parallel execution, remote execution.
-Robot Framework is case-insensitive
+1. Open-source, operating system independent.
+2. Extends support for web, device, api and database automation.
+3. No much programming is required.
+4. Excellent reporting, support CI, parallel execution, remote execution.
+5. Robot Framework is case-insensitive
 
 driver.get()
 
@@ -64,25 +64,45 @@ Open browser
 
 Disadvantages of Robot Framework
 --------------------------------
-Hard to maintain.
-Difficult to customize HTML reports
-Difficult to debug Errors.
-Strict Indentation rules.
+1. Hard to maintain.
+2. Difficult to customize HTML reports
+3. Difficult to debug Errors.
+4. Strict Indentation rules.
 
 Test Suite or Test Case file
 ----------------------------
-A Test Suite or Test Case file is a collection of test cases.
-Test case contains test name and test steps.
-A test suite can be saved as
-	.robot (plain text format ⇒ space and pipe separated)
-	.robot.rst (reStructuredText format)
-	.rbt (JSON format)
+1. A Test Suite or Test Case file is a collection of test cases.
+2. Test case contains test name and test steps.
+3. A test suite can be saved as
+	i. robot (plain text format ⇒ space and pipe separated)
+	ii. robot.rst (reStructuredText format)
+	iii. rbt (JSON format)
 
 
-Keywords ==> functions (Builtin and userdefined function)
+Keywords ==> functions (Builtin and user-defined function)
 
-resouces.robot ==> userdefined function
+resources.robot ==> user-defined function
 
 robot -v Browser:firefox -d Results Day1\FirstTestCase.robot
 
 robot --variable Browser:edge --outputdir Results Day1\FirstTestCase.robot
+
+To run firstly add venv with cmd ==> source venv/bin/activate
+Then cmd to run is ==>  robot FirstTestCase.robot
+
+Test Cases Output
+-------------------
+Day_1
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot "Day 1/FirstTestCase.robot"
+==============================================================================
+FirstTestCase
+==============================================================================
+Login Test :: This is test case for login to the application          | PASS |
+------------------------------------------------------------------------------
+FirstTestCase                                                         | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+
