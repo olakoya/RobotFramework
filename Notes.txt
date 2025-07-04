@@ -90,9 +90,13 @@ robot --variable Browser:edge --outputdir Results Day1\FirstTestCase.robot
 To run firstly add venv with cmd ==> source venv/bin/activate
 Then cmd to run is ==>  robot FirstTestCase.robot
 
-Test Cases Output
--------------------
-Day_1
+Test Cases Output Day_1
+------------------------
+'''
+1. EXERCISE
+#Open Web Browser (Chrome/Firefox/Edge)
+#Open URL https://opensource-demo.orangehrmlive.com/
+OUTPUT
 (venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot "Day 1/FirstTestCase.robot"
 ==============================================================================
 FirstTestCase
@@ -105,4 +109,108 @@ FirstTestCase                                                         | PASS |
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+'''
 
+Inspecting the url page ==> https://opensource-demo.orangehrmlive.com/
+    <input data...> for textbox is called a TAG NAME
+
+2. EXERCISE
+#Enter Username (Admin)
+#Enter Password (admin1234)
+#Click on Login
+OUTPUT
+'''
+==============================================================================
+FirstTestCase
+==============================================================================
+Login Test :: This is test case to login into the application         | PASS |
+------------------------------------------------------------------------------
+FirstTestCase                                                         | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework %
+'''
+
+3. EXERCISE
+#Capture title of the home page (Actual title)
+#Verify title of the page: OrangeHRM (Expected)
+#Close browser
+OUTPUT
+'''
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot Day_1/FirstTestCase.robot
+==============================================================================
+FirstTestCase
+==============================================================================
+Login Test :: This is test case to login into the application         | PASS |
+------------------------------------------------------------------------------
+FirstTestCase                                                         | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework %
+'''
+
+The same url can be used across every other test cases
+KEYWORDS are nothing but FUNCTIONS
+
+EDGE BROWSER cmd ==>  robot -v Browser:edge Day_1/FirstTestCase.robot
+
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot -v Browser:edge Day_1/FirstTestCase.robot
+==============================================================================
+FirstTestCase
+==============================================================================
+Login Test :: This is test case to login into the application         | PASS |
+------------------------------------------------------------------------------
+FirstTestCase                                                         | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework %
+
+FIREFOX cmd ==>  robot -v Browser:firefox Day_1/FirstTestCase.robot
+
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot -v Browser:firefox Day_1/FirstTestCase.robot
+==============================================================================
+FirstTestCase
+==============================================================================
+Login Test :: This is test case to login into the application         | PASS |
+------------------------------------------------------------------------------
+FirstTestCase                                                         | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework %
+
+To generate output reports into the results folder
+    cmd to use is ==> robot -v Browser:edge -d Results Day_1/FirstTestCase.robot
+
+You can specify from cmdline the same way and cmd to use is
+    cmd is ==> robot --variable Browser:edge --outputdir Results Day_1/FirstTestCase.robot
+
+Shortform of these commands --variable and --outputdir are -v and -d
+e.g
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot --variable Browser:edge --outputdir Results Day_1/FirstTestCase.robot
+==============================================================================
+FirstTestCase
+==============================================================================
+Login Test :: This is test case to login into the application         | PASS |
+------------------------------------------------------------------------------
+FirstTestCase                                                         | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+- Close browser cmd is a close method and form of keyword
+- With such one can write simple robust Test Case
+- Moving the Login code lines to Keyword phase and replacing it with the "Login Steps" keyword name is possible hence the above comments
