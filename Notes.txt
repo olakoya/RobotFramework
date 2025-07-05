@@ -211,6 +211,20 @@ Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot --variable Browser:Firefox --outputdir Results Day_1/FirstTestCase.robot
+==============================================================================
+FirstTestCase
+==============================================================================
+Login Test :: This is test case to login into the application         | PASS |
+------------------------------------------------------------------------------
+FirstTestCase                                                         | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
 - Close browser cmd is a close method and form of keyword
 - With such one can write simple robust Test Case
 - Moving the Login code lines to Keyword phase and replacing it with the "Login Steps" keyword name is possible hence the above comments
