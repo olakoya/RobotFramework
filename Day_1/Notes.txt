@@ -1,6 +1,9 @@
 Introduction to Robot Framework
 ----------------------------------
 Robot Framework is a Python based, and extensible keyword driven automation framework
+
+Types of Robot Testing are:
+----------------------------
 	- Acceptance testing
 	- Acceptance test driven development (ATDD)
 	- Behavior driven development (BDD)
@@ -15,7 +18,7 @@ It offers HTML logs, Python-based custom libraries, and versioning-friendly test
 It provides setup/teardown at all levels and supports practical testing in multiple environments.
 
 Architecture of robot framework
--------------------------------
+---------------------------------
 Robot Framework has a different Test Libraries
 The libraries can be found here ==> https://robotframework.org/
 Builtin Standard Libraries

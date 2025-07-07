@@ -1,0 +1,48 @@
+Variables
+---------
+arguments in Test Cases and Keywords section
+All sesstings also allow variables to use in their values
+
+scalar ==> Represents single value ==> ${scalar_var}
+List ==> Represents multiple values ==> @{list_var}
+Dictionary ==> Represnts multiple values in key-value pairs ==> &{dict_var}
+
+case-insensitive,spaces and under_scores are ignored
+
+upper case ==> global variables  ==> ${GLOBAL_VAR}
+lower case ==> local variables  ==> ${local_var}
+
+creating variables
+------------------
+Variable section
+Variable file ==> .robot or .py
+Setting variables in command line
+Return values from keywords
+VAR syntax
+Using Set Test/Suite/Global Variable keywords
+
+
+
+Set Test Variable: Sets a variable only for the current test or keyword. It is not available outside the test.
+Set Suite Variable: Sets a variable for all tests in the suite. It can be used in any test within the suite.
+Set Global Variable: Sets a variable for the entire test run. It is accessible in any test throughout the run.
+
+Some more keywords
+----------------
+Log Variables
+Get Variable Value
+Get Variables
+Replace Variables
+Set Local Variable
+Set Variable
+Set Variable If
+Variable Should Exist
+Variable Should Not Exist
+
+Variable Priorities
+-------------------
+Variables Set During Test Execution > Command Line Variables > Variable Section in Test Case Files > Imported Resource and Variable Files > Built-in Variables
+
+Variable Scopes
+-----------------
+Global Scope > Test Suite Scope > Test Case Scope > Local Scope
