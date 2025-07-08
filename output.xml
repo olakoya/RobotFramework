@@ -1,63 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-04T20:58:04.291105" rpa="false" schemaversion="5">
-<suite id="s1" name="FirstTestCase" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_1/FirstTestCase.robot">
-<test id="s1-t1" name="Login Test" line="24">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-04T20:58:04.679519" level="INFO">Opening browser 'firefox' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-04T20:58:04.679193" elapsed="7.978875"/>
+<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-08T18:59:52.740016" rpa="false" schemaversion="5">
+<suite id="s1" name="Variables" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_2/variables.robot">
+<test id="s1-t1" name="Test Creating Variables" line="9">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${SCALAR_VAR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-08T18:59:52.770791" elapsed="0.000266"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-04T20:58:12.659349" elapsed="0.265155"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-07-04T20:58:12.924968" elapsed="0.004107"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-04T20:58:12.933189" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
-<arg>name=username</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-04T20:58:12.930225" elapsed="0.411171"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-04T20:58:13.342223" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
-<arg>name=password</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-04T20:58:13.341776" elapsed="0.055197"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-07-04T20:58:13.398041" level="INFO">Clicking button 'xpath=//button'.</msg>
-<arg>xpath=//button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-04T20:58:13.397435" elapsed="1.684933"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-07-04T20:58:15.092835" level="INFO">${act_title} = OrangeHRM</msg>
-<var>${act_title}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-07-04T20:58:15.087042" elapsed="0.005885"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${act_title}</arg>
-<arg>${exp_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-07-04T20:58:15.093416" elapsed="0.001208"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-07-04T20:58:15.094986" elapsed="0.988301"/>
-</kw>
-<doc>This is test case to login into the application</doc>
-<status status="PASS" start="2025-07-04T20:58:04.678129" elapsed="11.405799"/>
+<status status="PASS" start="2025-07-08T18:59:52.769909" elapsed="0.001553"/>
 </test>
-<status status="PASS" start="2025-07-04T20:58:04.292736" elapsed="11.793138"/>
+<status status="PASS" start="2025-07-08T18:59:52.741891" elapsed="0.030154"/>
 </suite>
 <statistics>
 <total>
@@ -66,7 +18,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="FirstTestCase" id="s1" pass="1" fail="0" skip="0">FirstTestCase</stat>
+<stat name="Variables" id="s1" pass="1" fail="0" skip="0">Variables</stat>
 </suite>
 </statistics>
 <errors>

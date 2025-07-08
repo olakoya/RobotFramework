@@ -1,18 +1,20 @@
 Variables
 ---------
 arguments in Test Cases and Keywords section
-All sesstings also allow variables to use in their values
+All settings also allow variables to use in their values
 
+Types of Variable
+-------------------
 scalar ==> Represents single value ==> ${scalar_var}
 List ==> Represents multiple values ==> @{list_var}
-Dictionary ==> Represnts multiple values in key-value pairs ==> &{dict_var}
+Dictionary ==> Represents multiple values in key-value pairs ==> &{dict_var}
 
 case-insensitive,spaces and under_scores are ignored
 
 upper case ==> global variables  ==> ${GLOBAL_VAR}
 lower case ==> local variables  ==> ${local_var}
 
-creating variables
+Creating Variables
 ------------------
 Variable section
 Variable file ==> .robot or .py
@@ -21,6 +23,19 @@ Return values from keywords
 VAR syntax
 Using Set Test/Suite/Global Variable keywords
 
+(venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot Day_2/variables.robot
+==============================================================================
+Variables
+==============================================================================
+Test Creating Variables                                               Hello
+Test Creating Variables                                               | PASS |
+------------------------------------------------------------------------------
+Variables                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
 
 
 Set Test Variable: Sets a variable only for the current test or keyword. It is not available outside the test.
@@ -46,3 +61,5 @@ Variables Set During Test Execution > Command Line Variables > Variable Section 
 Variable Scopes
 -----------------
 Global Scope > Test Suite Scope > Test Case Scope > Local Scope
+
+To run firstly add venv with cmd ==> source venv/bin/activate
