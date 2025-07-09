@@ -63,3 +63,5 @@ Variable Scopes
 Global Scope > Test Suite Scope > Test Case Scope > Local Scope
 
 To run firstly add venv with cmd ==> source venv/bin/activate
+
+Cmd to run is ==> robot -d Results Day_2/variables.robot

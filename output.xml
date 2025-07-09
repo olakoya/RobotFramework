@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-08T18:59:52.740016" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-09T20:47:09.808710" rpa="false" schemaversion="5">
 <suite id="s1" name="Variables" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_2/variables.robot">
 <test id="s1-t1" name="Test Creating Variables" line="9">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${SCALAR_VAR}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-08T18:59:52.770791" elapsed="0.000266"/>
+<status status="PASS" start="2025-07-09T20:47:09.844159" elapsed="0.000423"/>
 </kw>
-<status status="PASS" start="2025-07-08T18:59:52.769909" elapsed="0.001553"/>
+<status status="PASS" start="2025-07-09T20:47:09.843267" elapsed="0.001650"/>
 </test>
-<status status="PASS" start="2025-07-08T18:59:52.741891" elapsed="0.030154"/>
+<status status="PASS" start="2025-07-09T20:47:09.810675" elapsed="0.034855"/>
 </suite>
 <statistics>
 <total>

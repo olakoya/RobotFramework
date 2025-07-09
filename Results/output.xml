@@ -1,66 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-04T21:23:05.991279" rpa="false" schemaversion="5">
-<suite id="s1" name="FirstTestCase" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_1/FirstTestCase.robot">
-<test id="s1-t1" name="Login Test" line="24">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-04T21:23:06.376184" level="INFO">Opening browser 'edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-04T21:23:06.375824" elapsed="10.348340"/>
+<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-09T21:39:02.506462" rpa="false" schemaversion="5">
+<suite id="s1" name="Variables" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_2/variables.robot">
+<test id="s1-t1" name="Test Creating Variables" line="9">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-09T21:39:02.541453" level="INFO">Hello</msg>
+<arg>${SCALAR_VAR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-09T21:39:02.541165" elapsed="0.000373"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-04T21:23:16.725854" elapsed="0.319978"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${SCALAR_VAR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-09T21:39:02.541804" elapsed="0.000296"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-07-04T21:23:17.046130" elapsed="0.001794"/>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-07-09T21:39:02.542523" level="INFO">['Item1 Item2 Item3']</msg>
+<arg>${LIST_VAR}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-07-09T21:39:02.542352" elapsed="0.000226"/>
 </kw>
-<kw name=" Login Steps">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-04T21:23:17.050221" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
-<arg>name=username</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-04T21:23:17.049174" elapsed="0.463985"/>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-07-09T21:39:02.542873" level="INFO">{'Key1': 'value1', 'Key2': 'value2', 'Key3': 'value3', 'Key4': 'value4'}</msg>
+<arg>${DICT_VAR}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-07-09T21:39:02.542731" elapsed="0.000190"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-04T21:23:17.513763" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
-<arg>name=password</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-04T21:23:17.513428" elapsed="0.073751"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${LIST_VAR}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-09T21:39:02.543065" elapsed="0.000278"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-07-04T21:23:17.587656" level="INFO">Clicking button 'xpath=//button'.</msg>
-<arg>xpath=//button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-04T21:23:17.587406" elapsed="0.069833"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${LIST_VAR[0]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-09T21:39:02.543504" elapsed="0.000742"/>
 </kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-07-04T21:23:17.661066" level="INFO">${act_title} = OrangeHRM</msg>
-<var>${act_title}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-07-04T21:23:17.657456" elapsed="0.003660"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${act_title}</arg>
-<arg>${exp_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-07-04T21:23:17.661320" elapsed="0.000336"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-07-04T21:23:17.661795" elapsed="0.106872"/>
-</kw>
-<status status="PASS" start="2025-07-04T21:23:17.048583" elapsed="0.720368"/>
-</kw>
-<doc>This is test case to login into the application</doc>
-<status status="PASS" start="2025-07-04T21:23:06.374709" elapsed="11.394561"/>
+<status status="PASS" start="2025-07-09T21:39:02.540078" elapsed="0.004337"/>
 </test>
-<status status="PASS" start="2025-07-04T21:23:05.993116" elapsed="11.777082"/>
+<status status="PASS" start="2025-07-09T21:39:02.510080" elapsed="0.034915"/>
 </suite>
 <statistics>
 <total>
@@ -69,7 +46,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="FirstTestCase" id="s1" pass="1" fail="0" skip="0">FirstTestCase</stat>
+<stat name="Variables" id="s1" pass="1" fail="0" skip="0">Variables</stat>
 </suite>
 </statistics>
 <errors>

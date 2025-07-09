@@ -7,6 +7,11 @@ ${SCALAR_VAR}      Hello
 
 *** Test Cases ***
 Test Creating Variables
+    log     ${SCALAR_VAR}
     Log To Console      ${SCALAR_VAR}
+    Log Many        ${LIST_VAR}
+    Log Many        ${DICT_VAR}
+    Log To Console      ${LIST_VAR}[0]
+    Log To Console      ${LIST_VAR[0]}
 
 *** Keywords ***
