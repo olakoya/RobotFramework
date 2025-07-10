@@ -1,43 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-09T21:39:02.506462" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-10T21:43:45.347419" rpa="false" schemaversion="5">
 <suite id="s1" name="Variables" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_2/variables.robot">
-<test id="s1-t1" name="Test Creating Variables" line="9">
+<test id="s1-t1" name="Test Creating Variables" line="12">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-07-09T21:39:02.541453" level="INFO">Hello</msg>
-<arg>${SCALAR_VAR}</arg>
+<msg time="2025-07-10T21:43:45.378663" level="INFO">FILE Scalar</msg>
+<arg>${SCALAR_FROM_FILE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-07-09T21:39:02.541165" elapsed="0.000373"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${SCALAR_VAR}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-09T21:39:02.541804" elapsed="0.000296"/>
+<status status="PASS" start="2025-07-10T21:43:45.378419" elapsed="0.000330"/>
 </kw>
 <kw name="Log Many" owner="BuiltIn">
-<msg time="2025-07-09T21:39:02.542523" level="INFO">['Item1 Item2 Item3']</msg>
-<arg>${LIST_VAR}</arg>
+<msg time="2025-07-10T21:43:45.379321" level="INFO">ItemA</msg>
+<msg time="2025-07-10T21:43:45.379362" level="INFO">ItemB</msg>
+<msg time="2025-07-10T21:43:45.379388" level="INFO">ItemC</msg>
+<arg>@{LIST_FROM_FILE}</arg>
 <doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2025-07-09T21:39:02.542352" elapsed="0.000226"/>
+<status status="PASS" start="2025-07-10T21:43:45.379129" elapsed="0.000302"/>
 </kw>
 <kw name="Log Many" owner="BuiltIn">
-<msg time="2025-07-09T21:39:02.542873" level="INFO">{'Key1': 'value1', 'Key2': 'value2', 'Key3': 'value3', 'Key4': 'value4'}</msg>
-<arg>${DICT_VAR}</arg>
+<msg time="2025-07-10T21:43:45.379757" level="INFO">keyA=valueA</msg>
+<msg time="2025-07-10T21:43:45.379808" level="INFO">keyB=valueB</msg>
+<arg>&amp;{DICT_FROM_FILE}</arg>
 <doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2025-07-09T21:39:02.542731" elapsed="0.000190"/>
+<status status="PASS" start="2025-07-10T21:43:45.379596" elapsed="0.000274"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${LIST_VAR}[0]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-09T21:39:02.543065" elapsed="0.000278"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${LIST_VAR[0]}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-09T21:39:02.543504" elapsed="0.000742"/>
-</kw>
-<status status="PASS" start="2025-07-09T21:39:02.540078" elapsed="0.004337"/>
+<status status="PASS" start="2025-07-10T21:43:45.377628" elapsed="0.002424"/>
 </test>
-<status status="PASS" start="2025-07-09T21:39:02.510080" elapsed="0.034915"/>
+<status status="PASS" start="2025-07-10T21:43:45.349391" elapsed="0.031218"/>
 </suite>
 <statistics>
 <total>
