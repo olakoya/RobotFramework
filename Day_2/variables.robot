@@ -1,5 +1,5 @@
 *** Settings ***
-Variables       ../Day_1/variables.py
+Variables       ../Day_2/variables.py
 
 
 *** Variables ***
@@ -19,12 +19,21 @@ Test Creating Variables
 #    Log To Console      ${DICT_VAR}[Key2]
 #    Log To Console      ${DICT_VAR["Key3"]}
 #    Log To Console      ${DICT_VAR.Key4}
-     Log    ${SCALAR_FROM_FILE}
-     Log Many       @{LIST_FROM_FILE}
-     Log Many       &{DICT_FROM_FILE}
+#     Log    ${SCALAR_FROM_FILE}
+#     Log Many       @{LIST_FROM_FILE}
+#     Log Many       &{DICT_FROM_FILE}
+# Logging data in the console and pass value in the cmdline
+# How to specify the variables? ==> robot -d Results --v Day_2/variables.robot(sharp notation)
+# SIngular notation ==> robot -d Results -v CMD_VAR:SACHIN Day_2/variables.robot
 
+#    Log to console      ${CMD_VAR}
 
-
-
+# Creating variables
+    ${result}=      Add Numbers     5       10
+    Log To Console      ${result}
 
 *** Keywords ***
+Add Numbers
+    [Arguments]     ${a}    ${b}
+    ${sum}=     Evaluate    ${a}+${b}
+    RETURN    ${sum}

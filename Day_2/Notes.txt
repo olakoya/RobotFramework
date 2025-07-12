@@ -16,12 +16,17 @@ lower case ==> local variables  ==> ${local_var}
 
 Creating Variables
 ------------------
-Variable section
-Variable file ==> .robot or .py
-Setting variables in command line
-Return values from keywords
-VAR syntax
-Using Set Test/Suite/Global Variable keywords
+1. Variable section
+2. Variable file ==> .robot or .py
+3. Setting variables in command line
+[ # Logging data in the console and pass value in the cmdline
+# How to specify the variables? ==> robot -d Results --v Day_2/variables.robot(sharp notation)
+# SIngular notation ==> robot -d Results -v CMD_VAR:SACHIN Day_2/variables.robot
+]
+4. Return values from keywords
+5. VAR syntax
+6. Using Set Test/Suite/Global Variable keywords
+
 
 (venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot Day_2/variables.robot
 ==============================================================================
@@ -65,3 +70,41 @@ Global Scope > Test Suite Scope > Test Case Scope > Local Scope
 To run firstly add venv with cmd ==> source venv/bin/activate
 
 Cmd to run is ==> robot -d Results Day_2/variables.robot
+
+ Key takeaway
+Interpreter in PyCharm = auto
+
+Terminal = manual
+
+
+
+OUTPUT : Creating Variables nos 3. Setting variables in command line
+(venv) olakoya@MacBookPro RobotFramework % robot -d Results -v CMD_VAR:SACHIN Day_2/variables.robot
+==============================================================================
+Variables
+==============================================================================
+Test Creating Variables                                               SACHIN
+Test Creating Variables                                               | PASS |
+------------------------------------------------------------------------------
+Variables                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(venv) olakoya@MacBookPro RobotFramework % robot -d Results -v CMD_VAR:10/OLA Day_2/variables.robot
+==============================================================================
+Variables
+==============================================================================
+Test Creating Variables                                               10/OLA
+Test Creating Variables                                               | PASS |
+------------------------------------------------------------------------------
+Variables                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+OUTPUT: Creating Variables nos: 4. Return values from keywords
