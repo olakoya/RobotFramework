@@ -61,7 +61,8 @@ Variable Should Not Exist
 
 Variable Priorities
 -------------------
-Variables Set During Test Execution > Command Line Variables > Variable Section in Test Case Files > Imported Resource and Variable Files > Built-in Variables
+Variables Set During Test Execution > Command Line Variables > Variable Section in Test Case Files > Imported Resource and Variable
+Files > Built-in Variables
 
 Variable Scopes
 -----------------
@@ -107,4 +108,51 @@ Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 
 
+OUTPUT: VAR Syntax nos: 5. Return values from keywords
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results -v CMD_VAR:10/OLA Day_2/variables.robot
+==============================================================================
+Variables
+==============================================================================
+Test Creating Variables                                               .15
+Test Creating Variables                                               | PASS |
+------------------------------------------------------------------------------
+Variables                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+
 OUTPUT: Creating Variables nos: 4. Return values from keywords
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results -v CMD_VAR:10/OLA Day_2/variables.robot
+==============================================================================
+Variables
+==============================================================================
+Test Creating Variables                                               | PASS |
+------------------------------------------------------------------------------
+Variables                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+
+OUTPUT: Using Set Test/Suite/Global Variable keywords: 6. Return values from keywords
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results -v CMD_VAR:10/OLA Day_2/variables.robot
+==============================================================================
+Variables
+==============================================================================
+Test Creating Variables                                               | PASS |
+------------------------------------------------------------------------------
+Variables                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+

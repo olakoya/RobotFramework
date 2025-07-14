@@ -29,8 +29,26 @@ Test Creating Variables
 #    Log to console      ${CMD_VAR}
 
 # Creating variables
-    ${result}=      Add Numbers     5       10
-    Log To Console      ${result}
+#    ${result}=      Add Numbers     5       10
+#    Log To Console      ${result}
+
+# VAR syntax
+#        VAR     ${name}     Ola Koya
+## Craeting a List
+#        VAR     @{fruits}     Apple     Banana      Grapes      Mange
+## Creating a Dictionary
+#        VAR     &{person}     name = Ola Koya     age = 40
+#
+#        Log Many        ${name}     @{fruits}       &{person}   # name is a scala variable
+
+# Using Set Test/Suite/Global Variable keywords
+        Set Test Variable       ${TEST_VAR}     Test Value
+        Log     ${TEST_VAR}
+        Set Suite Variable       ${SUITE_VAR}     Test Value
+        Log     ${SUITE_VAR}
+        Set Global Variable       ${GLOBAL_VAR}     Test Value
+        Log     ${GLOBAL_VAR}
+
 
 *** Keywords ***
 Add Numbers

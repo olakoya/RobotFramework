@@ -1,33 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.12.0 on darwin)" generated="2025-07-12T21:17:12.792921" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.9.6 on darwin)" generated="2025-07-14T20:17:01.959685" rpa="false" schemaversion="5">
 <suite id="s1" name="Variables" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_2/variables.robot">
 <test id="s1-t1" name="Test Creating Variables" line="12">
-<kw name="Add Numbers">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-07-12T21:17:12.830134" level="INFO">${sum} = 15</msg>
-<var>${sum}</var>
-<arg>${a}+${b}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-07-12T21:17:12.829752" elapsed="0.000431"/>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-07-14T20:17:01.999177" level="INFO">${TEST_VAR} = Test Value</msg>
+<arg>${TEST_VAR}</arg>
+<arg>Test Value</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-07-14T20:17:01.998010" elapsed="0.001265"/>
 </kw>
-<return>
-<value>${sum}</value>
-<status status="PASS" start="2025-07-12T21:17:12.830342" elapsed="0.000062"/>
-</return>
-<msg time="2025-07-12T21:17:12.830690" level="INFO">${result} = 15</msg>
-<var>${result}</var>
-<arg>5</arg>
-<arg>10</arg>
-<status status="PASS" start="2025-07-12T21:17:12.829102" elapsed="0.001622"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-14T20:17:01.999883" level="INFO">Test Value</msg>
+<arg>${TEST_VAR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-14T20:17:01.999601" elapsed="0.000354"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${result}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-12T21:17:12.830907" elapsed="0.000215"/>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-07-14T20:17:02.001574" level="INFO">${SUITE_VAR} = Test Value</msg>
+<arg>${SUITE_VAR}</arg>
+<arg>Test Value</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-07-14T20:17:02.000185" elapsed="0.001536"/>
 </kw>
-<status status="PASS" start="2025-07-12T21:17:12.828082" elapsed="0.003252"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-14T20:17:02.002533" level="INFO">Test Value</msg>
+<arg>${SUITE_VAR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-14T20:17:02.002077" elapsed="0.000569"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-14T20:17:02.005254" level="INFO">${GLOBAL_VAR} = Test Value</msg>
+<arg>${GLOBAL_VAR}</arg>
+<arg>Test Value</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-14T20:17:02.002980" elapsed="0.002421"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-14T20:17:02.006604" level="INFO">Test Value</msg>
+<arg>${GLOBAL_VAR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-14T20:17:02.006176" elapsed="0.000553"/>
+</kw>
+<status status="PASS" start="2025-07-14T20:17:01.996849" elapsed="0.010230"/>
 </test>
-<status status="PASS" start="2025-07-12T21:17:12.795366" elapsed="0.036518"/>
+<status status="PASS" start="2025-07-14T20:17:01.963120" elapsed="0.045061"/>
 </suite>
 <statistics>
 <total>
