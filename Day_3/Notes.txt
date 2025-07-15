@@ -1,0 +1,39 @@
+Operators and Control Flow in Robot Framework
+---------------------------------------------
+Operators
+---------
+Arithmetic
+Comparison
+Logical
+Identity
+Membership
+
+Evaluate keyword is to evaluates given expression in python and returns the result.
+
+
+Control Flow
+------------
+Flow control describes the order in which statements will be executed at runtime.
+
+Conditional Control flow
+Looping control flow
+Error Handling control flow
+
+
+While Loop
+-----------
+Initialisation
+Condition
+Increment/decrement
+
+Transfer Keywords
+-----------------
+BREAK
+------
+We can use BREAK statement inside loops to break loop execution based on some condition.
+
+
+CONTINUE
+---------
+We can use the CONTINUE statement to skip the current iteration and continue the next iteration based on some condition.
+

@@ -90,15 +90,16 @@ robot -v Browser:firefox -d Results Day1\FirstTestCase.robot
 
 robot --variable Browser:edge --outputdir Results Day1\FirstTestCase.robot
 
-To run firstly add venv with cmd ==> source venv/bin/activate
-Then cmd to run is ==>  robot FirstTestCase.robot
+To run firstly add venv (virtual environment) with cmd ==> source venv/bin/activate
+Then cmd to run it is ==>  robot FirstTestCase.robot
 
 Test Cases Output Day_1
 ------------------------
 '''
 1. EXERCISE
-#Open Web Browser (Chrome/Firefox/Edge)
-#Open URL https://opensource-demo.orangehrmlive.com/
+#Step 1. Open Web Browser (Chrome/Firefox/Edge)
+#Step 2. Open URL https://opensource-demo.orangehrmlive.com/
+
 OUTPUT
 (venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot "Day 1/FirstTestCase.robot"
 ==============================================================================
@@ -118,9 +119,10 @@ Inspecting the url page ==> https://opensource-demo.orangehrmlive.com/
     <input data...> for textbox is called a TAG NAME
 
 2. EXERCISE
-#Enter Username (Admin)
-#Enter Password (admin1234)
-#Click on Login
+#Step 1. Enter Username (Admin)
+#Step 2. Enter Password (admin1234)
+#Step 3. Click on Login
+
 OUTPUT
 '''
 ==============================================================================
@@ -138,9 +140,10 @@ Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
 '''
 
 3. EXERCISE
-#Capture title of the home page (Actual title)
-#Verify title of the page: OrangeHRM (Expected)
-#Close browser
+#Step 1. Capture title of the home page (Actual title)
+#Step 2. Verify title of the page: OrangeHRM (Expected)
+#Step 3. Close browser
+
 OUTPUT
 '''
 (venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot Day_1/FirstTestCase.robot
@@ -158,7 +161,8 @@ Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
 (venv) olakoya@Olapejus-MacBook-Pro RobotFramework %
 '''
 
-The same url can be used across every other test cases
+The same url can be used across every other browsers test cases
+
 KEYWORDS are nothing but FUNCTIONS
 
 EDGE BROWSER cmd ==>  robot -v Browser:edge Day_1/FirstTestCase.robot
@@ -229,5 +233,6 @@ Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.htm
 
 
 - Close browser cmd is a close method and form of keyword
-- With such one can write simple robust Test Case
-- Moving the Login code lines to Keyword phase and replacing it with the "Login Steps" keyword name is possible hence the above comments
+- With such, one can write simple robust Test Case
+- Moving the Login code lines to Keyword phase and replacing it with the "Login Steps" keyword name is possible hence the above
+ comments

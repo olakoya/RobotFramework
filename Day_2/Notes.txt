@@ -1,13 +1,13 @@
 Variables
 ---------
-arguments in Test Cases and Keywords section
-All settings also allow variables to use in their values
+Is an argument in Test Cases and Keywords section
+All settings also allow variables to use their values
 
-Types of Variable
+Types of Variables
 -------------------
-scalar ==> Represents single value ==> ${scalar_var}
-List ==> Represents multiple values ==> @{list_var}
-Dictionary ==> Represents multiple values in key-value pairs ==> &{dict_var}
+1. Scalar ==> Represents single value ==> ${scalar_var}
+2. List ==> Represents multiple values ==> @{list_var}
+3. Dictionary ==> Represents multiple values in key-value pairs ==> &{dict_var}
 
 case-insensitive,spaces and under_scores are ignored
 
@@ -21,8 +21,7 @@ Creating Variables
 3. Setting variables in command line
 [ # Logging data in the console and pass value in the cmdline
 # How to specify the variables? ==> robot -d Results --v Day_2/variables.robot(sharp notation)
-# SIngular notation ==> robot -d Results -v CMD_VAR:SACHIN Day_2/variables.robot
-]
+# Singular notation ==> robot -d Results -v CMD_VAR:SACHIN Day_2/variables.robot]
 4. Return values from keywords
 5. VAR syntax
 6. Using Set Test/Suite/Global Variable keywords
@@ -72,7 +71,8 @@ To run firstly add venv with cmd ==> source venv/bin/activate
 
 Cmd to run is ==> robot -d Results Day_2/variables.robot
 
- Key takeaway
+ Key Takeaway
+ ------------
 Interpreter in PyCharm = auto
 
 Terminal = manual
@@ -93,6 +93,7 @@ Variables                                                             | PASS |
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
 (venv) olakoya@MacBookPro RobotFramework % robot -d Results -v CMD_VAR:10/OLA Day_2/variables.robot
 ==============================================================================
 Variables
