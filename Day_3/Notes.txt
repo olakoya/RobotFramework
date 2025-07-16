@@ -2,11 +2,42 @@ Operators and Control Flow in Robot Framework
 ---------------------------------------------
 Operators
 ---------
-Arithmetic
-Comparison
-Logical
-Identity
-Membership
+1. Arithmetic
+2. Comparison
+3. Logical
+4. Identity
+5. Membership
+Above are commonly use operators
+
+EXERCISES AND OUTPUTS
+----------------------
+1. Arithmetric Operators
+*** Variables ***
+${var1}      5
+${var2}      3
+${list}     [1,2,3,4,5]
+${string}       Hello
+
+*** Test Cases ***
+Arithmetric Operators
+    ${sum}      Evaluate    ${var1}+${var2}
+    Log To Console    ${sum}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot Day_3/operators.robot
+==============================================================================
+Operators
+==============================================================================
+Arithmetric Operators                                                 .8
+Arithmetric Operators                                                 | PASS |
+------------------------------------------------------------------------------
+Operators                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+
 
 Evaluate keyword is to evaluates given expression in python and returns the result.
 
@@ -15,9 +46,9 @@ Control Flow
 ------------
 Flow control describes the order in which statements will be executed at runtime.
 
-Conditional Control flow
-Looping control flow
-Error Handling control flow
+1. Conditional Control flow
+2. Looping control flow
+3. Error Handling control flow
 
 
 While Loop
