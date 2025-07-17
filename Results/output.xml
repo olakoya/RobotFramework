@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.9.6 on darwin)" generated="2025-07-16T20:46:02.082226" rpa="false" schemaversion="5">
-<suite id="s1" name="Operators" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_3/operators.robot">
-<test id="s1-t1" name="Arithmetric Operators" line="8">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-07-16T20:46:02.115579" level="INFO">${sum} = 8</msg>
-<var>${sum}</var>
-<arg>${var1}+${var2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-07-16T20:46:02.115167" elapsed="0.000456"/>
+<robot generator="Robot 7.3.2 (Python 3.9.6 on darwin)" generated="2025-07-17T21:36:54.289245" rpa="false" schemaversion="5">
+<suite id="s1" name="Control Flow" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_3/control_flow.robot">
+<test id="s1-t1" name="Simple If/Else" line="2">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-17T21:36:54.334501" level="INFO">${rc} = -1</msg>
+<var>${rc}</var>
+<arg>-1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-17T21:36:54.334088" elapsed="0.000480"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-07-16T20:46:02.116203" level="INFO" html="true">To</msg>
-<arg>To</arg>
-<arg>Console</arg>
-<arg>${sum}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-07-16T20:46:02.115910" elapsed="0.000359"/>
+<if>
+<branch type="IF" condition="${rc}&gt;0">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Positive</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-07-17T21:36:54.335613" elapsed="0.000052"/>
 </kw>
-<status status="PASS" start="2025-07-16T20:46:02.114164" elapsed="0.002303"/>
+<status status="NOT RUN" start="2025-07-17T21:36:54.335178" elapsed="0.000602"/>
+</branch>
+<branch type="ELSE IF" condition="${rc}&lt;0">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Negative</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-17T21:36:54.336186" elapsed="0.000385"/>
+</kw>
+<status status="PASS" start="2025-07-17T21:36:54.335842" elapsed="0.000812"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Zero</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-07-17T21:36:54.336889" elapsed="0.000040"/>
+</kw>
+<status status="NOT RUN" start="2025-07-17T21:36:54.336707" elapsed="0.000285"/>
+</branch>
+<status status="PASS" start="2025-07-17T21:36:54.335114" elapsed="0.001919"/>
+</if>
+<status status="PASS" start="2025-07-17T21:36:54.332542" elapsed="0.004763"/>
 </test>
-<status status="PASS" start="2025-07-16T20:46:02.083791" elapsed="0.033291"/>
+<status status="PASS" start="2025-07-17T21:36:54.291626" elapsed="0.046531"/>
 </suite>
 <statistics>
 <total>
@@ -28,7 +47,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Operators" id="s1" pass="1" fail="0" skip="0">Operators</stat>
+<stat name="Control Flow" id="s1" pass="1" fail="0" skip="0">Control Flow</stat>
 </suite>
 </statistics>
 <errors>

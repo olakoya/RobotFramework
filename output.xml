@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.9.6 on darwin)" generated="2025-07-16T20:55:08.086869" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.9.6 on darwin)" generated="2025-07-17T21:04:42.387539" rpa="false" schemaversion="5">
 <suite id="s1" name="Operators" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_3/operators.robot">
-<test id="s1-t1" name="Arithmetric Operators" line="8">
+<test id="s1-t1" name="1. Arithmetric Operators" line="8">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-07-16T20:55:08.119683" level="INFO">${sum} = 8</msg>
+<msg time="2025-07-17T21:04:42.425310" level="INFO">${sum} = 8</msg>
 <var>${sum}</var>
 <arg>${var1}+${var2}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-07-16T20:55:08.119260" elapsed="0.000468"/>
+<status status="PASS" start="2025-07-17T21:04:42.424332" elapsed="0.001109"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${sum}</arg>
+<arg>${sum} # Log to console it's like print in python</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-16T20:55:08.120316" elapsed="0.000402"/>
+<status status="PASS" start="2025-07-17T21:04:42.426013" elapsed="0.000302"/>
 </kw>
-<status status="PASS" start="2025-07-16T20:55:08.118334" elapsed="0.002628"/>
+<status status="PASS" start="2025-07-17T21:04:42.423173" elapsed="0.003335"/>
 </test>
-<status status="PASS" start="2025-07-16T20:55:08.089204" elapsed="0.032343"/>
+<test id="s1-t2" name="2. Comparison Operators" line="12">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-17T21:04:42.427996" level="INFO">${result} = False</msg>
+<var>${result}</var>
+<arg>${var1}==${var2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-17T21:04:42.427272" elapsed="0.000776"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-17T21:04:42.428268" elapsed="0.000422"/>
+</kw>
+<status status="PASS" start="2025-07-17T21:04:42.426776" elapsed="0.002271"/>
+</test>
+<status status="PASS" start="2025-07-17T21:04:42.390152" elapsed="0.039984"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Operators" id="s1" pass="1" fail="0" skip="0">Operators</stat>
+<stat name="Operators" id="s1" pass="2" fail="0" skip="0">Operators</stat>
 </suite>
 </statistics>
 <errors>

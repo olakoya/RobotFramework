@@ -8,6 +8,10 @@ Operators
 4. Identity
 5. Membership
 Above are commonly use operators
+Commands to run the outputs are
+1. ==> robot Day_3/operators.robot
+2. ==> robot -d Results Day_3/operators.robot
+
 
 EXERCISES AND OUTPUTS
 ----------------------
@@ -21,7 +25,7 @@ ${string}       Hello
 *** Test Cases ***
 Arithmetric Operators
     ${sum}      Evaluate    ${var1}+${var2}
-    Log To Console    ${sum}
+    Log To Console    ${sum} # Log to console it's like print in python
 
 OUTPUT
 (.venv) olakoya@MacBookPro RobotFramework % robot Day_3/operators.robot
@@ -38,7 +42,62 @@ Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
 
+2. Comparison Operators
+    ${result}      Evaluate    ${var1}==${var2}
+    Log To Console    ${result}
 
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_3/operators.robot
+==============================================================================
+Operators
+==============================================================================
+1. Arithmetric Operators                                              .8
+1. Arithmetric Operators                                              | PASS |
+------------------------------------------------------------------------------
+2. Comparison Operators                                               .False
+2. Comparison Operators                                               | PASS |
+------------------------------------------------------------------------------
+Operators                                                             | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+3. Logical Operators
+    ${result}      Evaluate    True and False
+    Log To Console    ${result}
+
+OUTPUT
+------------------------------------------------------------------------------
+3. Logical Operators                                                  .False
+3. Logical Operators                                                  | PASS |
+------------------------------------------------------------------------------
+Operators                                                             | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+4. Membership Operators
+    ${result}      Evaluate    3 in ${list}
+    Log To Console    ${result}
+
+OUTPUT
+------------------------------------------------------------------------------
+4. Membership Operators                                               .True
+4. Membership Operators                                               | PASS |
+------------------------------------------------------------------------------
+Operators                                                             | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+TO WORK WITH EVALUATE KEYWORD ONE NEEDS THE OPERATORS
 Evaluate keyword is to evaluates given expression in python and returns the result.
 
 
@@ -47,6 +106,61 @@ Control Flow
 Flow control describes the order in which statements will be executed at runtime.
 
 1. Conditional Control flow
+EXERCISE
+
+*** Test Cases ***
+Simple If/Else
+    ${rc}       Set Variable        1
+
+    IF          ${rc}>0
+            Log To Console         Positive
+    ELSE IF     ${rc}<0
+            Log To Console         Negative
+    ELSE
+            Log To Console         Zero
+    END
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_3/control_flow.robot
+==============================================================================
+Control Flow
+==============================================================================
+Simple If/Else                                                        .Positive
+Simple If/Else                                                        | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+Simple If/Else
+    ${rc}       Set Variable        -1
+
+    IF          ${rc}>0
+            Log To Console         Positive
+    ELSE IF     ${rc}<0
+            Log To Console         Negative
+    ELSE
+            Log To Console         Zero
+    END
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_3/control_flow.robot
+==============================================================================
+Control Flow
+==============================================================================
+Simple If/Else                                                        .Negative
+Simple If/Else                                                        | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
 2. Looping control flow
 3. Error Handling control flow
 
