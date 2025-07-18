@@ -161,15 +161,314 @@ Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 
+
+*** Test Cases ***
+Simple If/Else
+    ${rc}       Set Variable        0 ==> VARIABLES
+
+# FUNCTIONS
+    IF          ${rc}>0
+            Log To Console         Positive
+    ELSE IF     ${rc}<0
+            Log To Console         Negative
+    ELSE
+            Log To Console         Zero
+    END
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_3/control_flow.robot
+==============================================================================
+Control Flow
+==============================================================================
+Simple If/Else                                                        .Zero
+Simple If/Else                                                        | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+Inline If Else
+    ${rc}       Set Variable        0
+     IF          ${rc}>0        Log To Console         Positive
+     ...        ELSE IF     ${rc}<0        Log To Console         Negative
+     ...        ELSE       Log To Console         Zero
+
+EITHER THE CODE IS WRITTEN AS ABOVE OR BELOW, IT'S OUTPUT REMAINS THE SAME AS BELOW OUTPUT RESULT
+
+Inline If Else
+    ${rc}       Set Variable        0
+     IF          ${rc}>0        Log To Console         Positive     ELSE IF     ${rc}<0        Log To Console         Negative      ELSE       Log To Console         Zero
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_3/control_flow.robot
+==============================================================================
+Control Flow
+==============================================================================
+Simple If/Else                                                        .Zero
+Simple If/Else                                                        | PASS |
+------------------------------------------------------------------------------
+Inline If Else                                                        .Zero
+Inline If Else                                                        | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+Nested IF ELSE
+    ${rc}       Set Variable        15
+
+    IF          ${rc}>0
+            Log To Console         Positive
+    ELSE IF     ${rc}<0
+            Log To Console         Negative
+    ELSE
+            Log To Console         Zero
+    END
+
+OUTPUT
+low.robot
+==============================================================================
+Control Flow
+==============================================================================
+Simple If/Else                                                        .Zero
+Simple If/Else                                                        | PASS |
+------------------------------------------------------------------------------
+Inline If Else                                                        .Negative
+Inline If Else                                                        | PASS |
+------------------------------------------------------------------------------
+Nested IF ELSE                                                        .Positive
+Nested IF ELSE                                                        | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+CONDITIONS IN ANOTHER CONDITIONS
+Nested IF ELSE
+    ${rc}       Set Variable        15
+
+    IF          ${rc}>0
+            IF      ${rc}%2==0
+                Log To Console         Positive and Even
+            ELSE
+                Log To Console         Positive and Odd
+            END
+
+    ELSE IF     ${rc}<0
+            Log To Console         Negative
+    ELSE
+            Log To Console         Zero
+    END
+
+OUTPUT
+ow.robot
+==============================================================================
+Control Flow
+==============================================================================
+Simple If/Else                                                        .Zero
+Simple If/Else                                                        | PASS |
+------------------------------------------------------------------------------
+Inline If Else                                                        .Negative
+Inline If Else                                                        | PASS |
+------------------------------------------------------------------------------
+Nested IF ELSE                                                        .Positive and Odd
+Nested IF ELSE                                                        | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+CHANGING THIS LINE OF CODE TO EVEN NOS GIVES US THIS OUTPUT ==> POSITIVE AND EVEN
+${rc}       Set Variable        18
+
+OUTPUT
+
+bot
+==============================================================================
+Control Flow
+==============================================================================
+Simple If/Else                                                        .Zero
+Simple If/Else                                                        | PASS |
+------------------------------------------------------------------------------
+Inline If Else                                                        .Negative
+Inline If Else                                                        | PASS |
+------------------------------------------------------------------------------
+Nested IF ELSE                                                        .Positive and Even
+Nested IF ELSE                                                        | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
 2. Looping control flow
+
+
+
+
 3. Error Handling control flow
 
 
 While Loop
 -----------
-Initialisation
-Condition
-Increment/decrement
+Before using while loop one needs to specify:
+1. Initialisation
+2. Condition
+3. Increment/decrement
+
+EXAMPLE
+While Loop Even Number
+     ${i}       Set Variable        2       #Initialisation
+     WHILE      ${i}<=100                   #Condition
+        Log To Console      ${i}
+        ${i}     Set Variable        ${i}+2  #Incrementation
+     END
+
+OUTPUT
+------------------------------------------------------------------------------
+Nested IF ELSE                                                        .Positive and Even
+Nested IF ELSE                                                        | PASS |
+------------------------------------------------------------------------------
+While Loop Even Number                                                .2
+2+2
+2+2+2
+2+2+2+2
+2+2+2+2+2
+2+2+2+2+2+2
+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2+2
+While Loop Even Number                                                | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+USING CHANGING AND USING THE EVALUATION KEYWORD FOR THIS LINE OF CODE GIVES US THIS OUTPUT
+ ${i}     Evaluate        ${i}+2  #Incrementation
+
+OUTPUT
+While Loop Even Number                                                .2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+52
+54
+56
+58
+60
+62
+64
+66
+68
+70
+72
+74
+76
+78
+80
+82
+84
+86
+88
+90
+92
+94
+96
+98
+100
+While Loop Even Number                                                | PASS |
+------------------------------------------------------------------------------
+Control Flow                                                          | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
 
 Transfer Keywords
 -----------------
