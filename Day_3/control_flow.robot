@@ -43,3 +43,28 @@ While Loop Odd Numbers
         Log To Console      ${i}
         ${i}     Evaluate        ${i}+2     #Incrementation
      END
+
+For Loop Even Numbers
+     FOR        ${element}       IN RANGE        2     100     2       #Initialisation
+        Log To Console      ${element}                  #Condition
+     END
+
+For Loop Odd Numbers
+     FOR        ${element}       IN RANGE        1     100     2       #Initialisation
+        Log To Console      ${element}                  #Condition
+     END
+
+For Loop Example with BREAK and CONTINUE
+     FOR        ${element}       IN RANGE        0     6       #Initialisation
+        IF      ${element}==3
+                BREAK
+     END
+        Log To Console      ${element}                  #Condition
+     END
+
+    FOR        ${element}       IN RANGE        0     6       #Initialisation
+        IF      ${element}==3
+                CONTINUE
+     END
+        Log To Console      ${element}                  #Condition
+     END
