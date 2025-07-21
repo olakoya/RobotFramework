@@ -30,8 +30,15 @@ Nested IF ELSE
             Log To Console         Zero
     END
 
-While Loop Even Number
+While Loop Even Numbers
      ${i}       Set Variable        2       #Initialisation
+     WHILE      ${i}<=100                   #Condition
+        Log To Console      ${i}
+        ${i}     Evaluate        ${i}+2     #Incrementation
+     END
+
+While Loop Odd Numbers
+     ${i}       Set Variable        1       #Initialisation
      WHILE      ${i}<=100                   #Condition
         Log To Console      ${i}
         ${i}     Evaluate        ${i}+2     #Incrementation
