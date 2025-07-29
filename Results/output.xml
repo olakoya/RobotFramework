@@ -1,84 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-07-26T22:16:20.128529" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-07-29T20:51:44.082929" rpa="false" schemaversion="5">
 <suite id="s1" name="Error Handling" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_3/error_handling.robot">
 <test id="s1-t1" name="Try Except Else Finally Example" line="5">
 <try>
 <branch type="TRY">
 <kw name="Get Value From User" owner="Dialogs">
-<msg time="2025-07-26T22:16:25.043317" level="INFO">${x} = 1000</msg>
+<msg time="2025-07-29T20:51:50.009882" level="INFO">${x} = 10</msg>
 <var>${x}</var>
 <arg>Enter First Number:</arg>
 <doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2025-07-26T22:16:20.190342" elapsed="4.853037"/>
+<status status="PASS" start="2025-07-29T20:51:44.890279" elapsed="5.119682"/>
 </kw>
 <kw name="Get Value From User" owner="Dialogs">
-<msg time="2025-07-26T22:16:28.036028" level="INFO">${y} = 2</msg>
+<msg time="2025-07-29T20:51:51.972656" level="INFO">${y} = 0</msg>
 <var>${y}</var>
 <arg>Enter Second Number:</arg>
 <doc>Pauses execution and asks user to input a value.</doc>
-<status status="PASS" start="2025-07-26T22:16:25.043987" elapsed="2.992122"/>
+<status status="PASS" start="2025-07-29T20:51:50.010258" elapsed="1.962497"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-07-26T22:16:28.036802" level="INFO">${result} = 500.0</msg>
+<msg time="2025-07-29T20:51:51.973717" level="FAIL">Evaluating expression '10/0' failed: ZeroDivisionError: division by zero</msg>
 <var>${result}</var>
 <arg>${x}/${y}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-07-26T22:16:28.036334" elapsed="0.000530"/>
+<status status="FAIL" start="2025-07-29T20:51:51.973050" elapsed="0.001096">Evaluating expression '10/0' failed: ZeroDivisionError: division by zero</status>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${result}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-26T22:16:28.037025" elapsed="0.000257"/>
+<status status="NOT RUN" start="2025-07-29T20:51:51.974404" elapsed="0.000051"/>
 </kw>
-<status status="PASS" start="2025-07-26T22:16:20.189848" elapsed="7.847489"/>
+<status status="FAIL" start="2025-07-29T20:51:44.889554" elapsed="7.085026">Evaluating expression '10/0' failed: ZeroDivisionError: division by zero</status>
 </branch>
 <branch type="EXCEPT">
 <pattern>ZeroDivisionError</pattern>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>An error occurred: Division by zero or invalid input.</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-07-26T22:16:28.037556" elapsed="0.000030"/>
+<status status="NOT RUN" start="2025-07-29T20:51:51.974932" elapsed="0.000045"/>
 </kw>
-<status status="NOT RUN" start="2025-07-26T22:16:28.037426" elapsed="0.000207"/>
+<status status="NOT RUN" start="2025-07-29T20:51:51.974748" elapsed="0.000300"/>
 </branch>
 <branch type="EXCEPT">
 <pattern>FileNotFoundError</pattern>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Throwing FileNotFoundError Error</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-07-26T22:16:28.037797" elapsed="0.000028"/>
+<status status="NOT RUN" start="2025-07-29T20:51:51.975333" elapsed="0.000042"/>
 </kw>
-<status status="NOT RUN" start="2025-07-26T22:16:28.037689" elapsed="0.000179"/>
+<status status="NOT RUN" start="2025-07-29T20:51:51.975161" elapsed="0.000280"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Exception Handled</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-07-26T22:16:28.038023" elapsed="0.000028"/>
+<status status="PASS" start="2025-07-29T20:51:51.975661" elapsed="0.000311"/>
 </kw>
-<status status="NOT RUN" start="2025-07-26T22:16:28.037913" elapsed="0.000180"/>
+<status status="PASS" start="2025-07-29T20:51:51.975512" elapsed="0.000531"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>No Exceptions Occured</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-26T22:16:28.038244" elapsed="0.000200"/>
+<status status="NOT RUN" start="2025-07-29T20:51:51.976260" elapsed="0.000036"/>
 </kw>
-<status status="PASS" start="2025-07-26T22:16:28.038150" elapsed="0.000344"/>
+<status status="NOT RUN" start="2025-07-29T20:51:51.976126" elapsed="0.000236"/>
 </branch>
 <branch type="FINALLY">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Always Executed: Done with TRY/EXCEPT</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-26T22:16:28.038657" elapsed="0.000175"/>
+<status status="PASS" start="2025-07-29T20:51:51.976564" elapsed="0.000228"/>
 </kw>
-<status status="PASS" start="2025-07-26T22:16:28.038550" elapsed="0.000332"/>
+<status status="PASS" start="2025-07-29T20:51:51.976432" elapsed="0.000427"/>
 </branch>
-<status status="PASS" start="2025-07-26T22:16:20.189790" elapsed="7.849137"/>
+<status status="PASS" start="2025-07-29T20:51:44.889469" elapsed="7.087438"/>
 </try>
-<status status="PASS" start="2025-07-26T22:16:20.189494" elapsed="7.849684"/>
+<status status="PASS" start="2025-07-29T20:51:44.889077" elapsed="7.088148"/>
 </test>
-<status status="PASS" start="2025-07-26T22:16:20.129879" elapsed="7.909859"/>
+<status status="PASS" start="2025-07-29T20:51:44.084272" elapsed="7.893910"/>
 </suite>
 <statistics>
 <total>

@@ -822,3 +822,24 @@ Error Handling                                                        | PASS |
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+EXCEPTION HANDLED when enter 10 and 0
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_3/error_handling.robot
+==============================================================================
+Error Handling
+==============================================================================
+Try Except Else Finally Example                                       Exception Handled
+Always Executed: Done with TRY/EXCEPT
+Try Except Else Finally Example                                       | PASS |
+------------------------------------------------------------------------------
+Error Handling                                                        | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
