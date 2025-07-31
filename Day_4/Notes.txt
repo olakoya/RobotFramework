@@ -1,0 +1,3 @@
+Handling Strings in Robot Framework - 1
+--------------------------------------
+String Library ==> manipulating strings,verifying contents of the string
