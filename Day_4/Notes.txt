@@ -1,3 +1,21 @@
 Handling Strings in Robot Framework - 1
 --------------------------------------
 String Library ==> manipulating strings,verifying contents of the string
+
+EXERCISE 1 OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_1.robot
+==============================================================================
+String 1
+==============================================================================
+Demonstration of Built in String Operations                           .Learning Python is very easy !!! Python is easy
+Demonstration of Built in String Operations                           | PASS |
+------------------------------------------------------------------------------
+String 1                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
