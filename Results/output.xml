@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-07-31T23:24:18.134223" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-06T21:58:10.170035" rpa="false" schemaversion="5">
 <suite id="s1" name="String 1" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_4/string_1.robot">
 <test id="s1-t1" name="Demonstration of Built in String Operations" line="10">
 <kw name="Catenate" owner="BuiltIn">
-<msg time="2025-07-31T23:24:18.189369" level="INFO">${catenated_string} = Learning Python is very easy !!! Python is easy</msg>
+<msg time="2025-08-06T21:58:10.216960" level="INFO">${catenated_string} = Learning Python is very easy !!! Python is easy</msg>
 <var>${catenated_string}</var>
 <arg>${string1}</arg>
 <arg>${string2}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2025-07-31T23:24:18.189032" elapsed="0.000387"/>
+<status status="PASS" start="2025-08-06T21:58:10.216647" elapsed="0.000364"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${catenated_string}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-31T23:24:18.189719" elapsed="0.000221"/>
+<status status="PASS" start="2025-08-06T21:58:10.217306" elapsed="0.000232"/>
 </kw>
-<status status="PASS" start="2025-07-31T23:24:18.188084" elapsed="0.002038"/>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-08-06T21:58:10.217845" level="INFO">Length is 32.</msg>
+<msg time="2025-08-06T21:58:10.217955" level="INFO">${string_length} = 32</msg>
+<var>${string_length}</var>
+<arg>${string1}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-08-06T21:58:10.217695" elapsed="0.000290"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${string_length}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-06T21:58:10.218135" elapsed="0.000196"/>
+</kw>
+<kw name="Length Should Be" owner="BuiltIn">
+<msg time="2025-08-06T21:58:10.218645" level="INFO">Length is 32.</msg>
+<arg>${string1}</arg>
+<arg>32</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="PASS" start="2025-08-06T21:58:10.218463" elapsed="0.000244"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${string2}</arg>
+<arg>${regexp_pattern}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2025-08-06T21:58:10.218858" elapsed="0.000260"/>
+</kw>
+<kw name="Should Not Match Regexp" owner="BuiltIn">
+<arg>${string1}</arg>
+<arg>${regexp_pattern}</arg>
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2025-08-06T21:58:10.219258" elapsed="0.000202"/>
+</kw>
+<status status="PASS" start="2025-08-06T21:58:10.215825" elapsed="0.003785"/>
 </test>
-<status status="PASS" start="2025-07-31T23:24:18.136152" elapsed="0.054578"/>
+<status status="PASS" start="2025-08-06T21:58:10.172567" elapsed="0.047579"/>
 </suite>
 <statistics>
 <total>

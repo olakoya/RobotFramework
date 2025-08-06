@@ -19,3 +19,82 @@ Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 (.venv) olakoya@MacBookPro RobotFramework %
 
+EXERCISE:
+${string_length}        Get Length      ${string1}
+    Log To Console      ${string_length}
+
+OUTPUT: 32 IS THE TOTAL NUMBER OF THE WORD "Learning Python is very easy !!! Python is easy" INCLUDING SPACES
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_1.robot
+==============================================================================
+String 1
+==============================================================================
+Demonstration of Built in String Operations                           .Learning Python is very easy !!! Python is easy
+..32
+Demonstration of Built in String Operations                           | PASS |
+------------------------------------------------------------------------------
+String 1                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+EXERCISE:
+Length Should Be        ${string1}      31
+
+OUTPUT: IS FAILED DUE TO "Length of 'Learning Python is very easy !!!' should be 31 but is 32." AS STATED IN OUTPUT BELOW
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_1.robot
+==============================================================================
+String 1
+==============================================================================
+Demonstration of Built in String Operations                           .Learning Python is very easy !!! Python is easy
+..32
+Demonstration of Built in String Operations                           | FAIL |
+Length of 'Learning Python is very easy !!!' should be 31 but is 32.
+------------------------------------------------------------------------------
+String 1                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+EXERCISE:
+Length Should Be        ${string1}      32
+
+OUTPUT: PASSED AFTER THE STRING IS SWITCHED TO 32
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_1.robot
+==============================================================================
+String 1
+==============================================================================
+Demonstration of Built in String Operations                           .Learning Python is very easy !!! Python is easy
+..32
+Demonstration of Built in String Operations                           | PASS |
+------------------------------------------------------------------------------
+String 1                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+EXERCISE:
+    Should Match Regexp     ${string2}      ${regexp_pattern}
+    Should Not Match Regexp     ${string1}      ${regexp_pattern}
+
+OUTPUT:
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_1.robot
+==============================================================================
+String 1
+==============================================================================
+Demonstration of Built in String Operations                           .Learning Python is very easy !!! Python is easy
+..32
+Demonstration of Built in String Operations                           | PASS |
+------------------------------------------------------------------------------
+String 1                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
