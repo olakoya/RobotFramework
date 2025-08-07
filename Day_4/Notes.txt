@@ -2,6 +2,7 @@ Handling Strings in Robot Framework - 1
 --------------------------------------
 String Library ==> manipulating strings,verifying contents of the string
 
+FILE STRING_1
 EXERCISE 1 OUTPUT
 
 (.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_1.robot
@@ -92,6 +93,70 @@ Demonstration of Built in String Operations                           .Learning 
 Demonstration of Built in String Operations                           | PASS |
 ------------------------------------------------------------------------------
 String 1                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+
+FILE: STRING_2
+*** Settings ***
+Library     String
+
+*** Variables ***
+${string1}      Learning Python is very easy !!!
+
+*** Test Cases ***
+Demonstrate String Conversion
+    ${lower}    Convert To Lower Case       ${string1}
+    Log To Console      ${lower}
+
+    ${upper}    Convert To Upper Case       ${string1}
+    Log To Console      ${upper}
+
+    ${title}    Convert To Title Case       ${string1}
+    Log To Console      ${title}
+
+OUTPUT:
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_2.robot
+==============================================================================
+String 2
+==============================================================================
+Demonstrate String Conversion                                         .learning python is very easy !!!
+..LEARNING PYTHON IS VERY EASY !!!
+..Learning Python Is Very Easy !!!
+Demonstrate String Conversion                                         | PASS |
+------------------------------------------------------------------------------
+String 2                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+EXERCISE 2
+${encoded}  Encode String To Bytes      ${string1}      ASCII
+    Log To Console      ${encoded}
+
+    ${decoded}  Decode Bytes To String      ${encoded}      ASCII
+    Log To Console      ${decoded}
+
+OUTPUT:
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_4/string_2.robot
+==============================================================================
+String 2
+==============================================================================
+Demonstrate String Conversion                                         .learning python is very easy !!!
+..LEARNING PYTHON IS VERY EASY !!!
+..Learning Python Is Very Easy !!!
+..b'Learning Python is very easy !!!'
+Demonstrate String Conversion                                         .Learning Python is very easy !!!
+Demonstrate String Conversion                                         | PASS |
+------------------------------------------------------------------------------
+String 2                                                              | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml

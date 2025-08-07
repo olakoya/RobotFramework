@@ -1,55 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-06T21:58:10.170035" rpa="false" schemaversion="5">
-<suite id="s1" name="String 1" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_4/string_1.robot">
-<test id="s1-t1" name="Demonstration of Built in String Operations" line="10">
-<kw name="Catenate" owner="BuiltIn">
-<msg time="2025-08-06T21:58:10.216960" level="INFO">${catenated_string} = Learning Python is very easy !!! Python is easy</msg>
-<var>${catenated_string}</var>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-07T22:19:15.813018" rpa="false" schemaversion="5">
+<suite id="s1" name="String 2" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_4/string_2.robot">
+<test id="s1-t1" name="Demonstrate String Conversion" line="8">
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2025-08-07T22:19:15.866876" level="INFO">${lower} = learning python is very easy !!!</msg>
+<var>${lower}</var>
 <arg>${string1}</arg>
-<arg>${string2}</arg>
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2025-08-06T21:58:10.216647" elapsed="0.000364"/>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.866595" elapsed="0.000329"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${catenated_string}</arg>
+<arg>${lower}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-06T21:58:10.217306" elapsed="0.000232"/>
+<status status="PASS" start="2025-08-07T22:19:15.867227" elapsed="0.000258"/>
 </kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-08-06T21:58:10.217845" level="INFO">Length is 32.</msg>
-<msg time="2025-08-06T21:58:10.217955" level="INFO">${string_length} = 32</msg>
-<var>${string_length}</var>
+<kw name="Convert To Upper Case" owner="String">
+<msg time="2025-08-07T22:19:15.867880" level="INFO">${upper} = LEARNING PYTHON IS VERY EASY !!!</msg>
+<var>${upper}</var>
 <arg>${string1}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-08-06T21:58:10.217695" elapsed="0.000290"/>
+<doc>Converts string to upper case.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.867645" elapsed="0.000271"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${string_length}</arg>
+<arg>${upper}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-06T21:58:10.218135" elapsed="0.000196"/>
+<status status="PASS" start="2025-08-07T22:19:15.868070" elapsed="0.000194"/>
 </kw>
-<kw name="Length Should Be" owner="BuiltIn">
-<msg time="2025-08-06T21:58:10.218645" level="INFO">Length is 32.</msg>
+<kw name="Convert To Title Case" owner="String">
+<msg time="2025-08-07T22:19:15.868754" level="INFO">${title} = Learning Python Is Very Easy !!!</msg>
+<var>${title}</var>
 <arg>${string1}</arg>
-<arg>32</arg>
-<doc>Verifies that the length of the given item is correct.</doc>
-<status status="PASS" start="2025-08-06T21:58:10.218463" elapsed="0.000244"/>
+<doc>Converts string to title case.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.868415" elapsed="0.000374"/>
 </kw>
-<kw name="Should Match Regexp" owner="BuiltIn">
-<arg>${string2}</arg>
-<arg>${regexp_pattern}</arg>
-<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-08-06T21:58:10.218858" elapsed="0.000260"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.868928" elapsed="0.000173"/>
 </kw>
-<kw name="Should Not Match Regexp" owner="BuiltIn">
+<kw name="Encode String To Bytes" owner="String">
+<msg time="2025-08-07T22:19:15.869460" level="INFO">${encoded} = Learning Python is very easy !!!</msg>
+<var>${encoded}</var>
 <arg>${string1}</arg>
-<arg>${regexp_pattern}</arg>
-<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-08-06T21:58:10.219258" elapsed="0.000202"/>
+<arg>ASCII</arg>
+<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.869242" elapsed="0.000249"/>
 </kw>
-<status status="PASS" start="2025-08-06T21:58:10.215825" elapsed="0.003785"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${encoded}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.869630" elapsed="0.000171"/>
+</kw>
+<kw name="Decode Bytes To String" owner="String">
+<msg time="2025-08-07T22:19:15.870161" level="INFO">${decoded} = Learning Python is very easy !!!</msg>
+<var>${decoded}</var>
+<arg>${encoded}</arg>
+<arg>ASCII</arg>
+<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.869933" elapsed="0.000258"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${decoded}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-07T22:19:15.870404" elapsed="0.000216"/>
+</kw>
+<status status="PASS" start="2025-08-07T22:19:15.865718" elapsed="0.005050"/>
 </test>
-<status status="PASS" start="2025-08-06T21:58:10.172567" elapsed="0.047579"/>
+<status status="PASS" start="2025-08-07T22:19:15.814707" elapsed="0.056718"/>
 </suite>
 <statistics>
 <total>
@@ -58,7 +75,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="String 1" id="s1" pass="1" fail="0" skip="0">String 1</stat>
+<stat name="String 2" id="s1" pass="1" fail="0" skip="0">String 2</stat>
 </suite>
 </statistics>
 <errors>
