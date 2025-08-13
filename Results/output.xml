@@ -1,72 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-07T22:19:15.813018" rpa="false" schemaversion="5">
-<suite id="s1" name="String 2" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_4/string_2.robot">
-<test id="s1-t1" name="Demonstrate String Conversion" line="8">
-<kw name="Convert To Lower Case" owner="String">
-<msg time="2025-08-07T22:19:15.866876" level="INFO">${lower} = learning python is very easy !!!</msg>
-<var>${lower}</var>
-<arg>${string1}</arg>
-<doc>Converts string to lower case.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.866595" elapsed="0.000329"/>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-13T20:51:10.844556" rpa="false" schemaversion="5">
+<suite id="s1" name="String 3" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_5/string_3.robot">
+<test id="s1-t1" name="Demonstrate String Extraction and Substring Operations" line="12">
+<kw name="Fetch From Left" owner="String">
+<msg time="2025-08-13T20:51:10.903145" level="INFO">${left} = Learning</msg>
+<var>${left}</var>
+<arg>${string}</arg>
+<arg>marker=,</arg>
+<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
+<status status="PASS" start="2025-08-13T20:51:10.902706" elapsed="0.000513"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${lower}</arg>
+<arg>${left}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.867227" elapsed="0.000258"/>
+<status status="PASS" start="2025-08-13T20:51:10.903544" elapsed="0.000326"/>
 </kw>
-<kw name="Convert To Upper Case" owner="String">
-<msg time="2025-08-07T22:19:15.867880" level="INFO">${upper} = LEARNING PYTHON IS VERY EASY !!!</msg>
-<var>${upper}</var>
-<arg>${string1}</arg>
-<doc>Converts string to upper case.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.867645" elapsed="0.000271"/>
+<kw name="Fetch From Right" owner="String">
+<msg time="2025-08-13T20:51:10.904434" level="INFO">${right} =  Very Easy!!!</msg>
+<var>${right}</var>
+<arg>${string}</arg>
+<arg>marker=,</arg>
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<status status="PASS" start="2025-08-13T20:51:10.904101" elapsed="0.000387"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${upper}</arg>
+<arg>${right}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.868070" elapsed="0.000194"/>
+<status status="PASS" start="2025-08-13T20:51:10.904717" elapsed="0.000272"/>
 </kw>
-<kw name="Convert To Title Case" owner="String">
-<msg time="2025-08-07T22:19:15.868754" level="INFO">${title} = Learning Python Is Very Easy !!!</msg>
-<var>${title}</var>
-<arg>${string1}</arg>
-<doc>Converts string to title case.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.868415" elapsed="0.000374"/>
+<kw name="Get Line" owner="String">
+<msg time="2025-08-13T20:51:10.905488" level="INFO">${line} = Line 2: Python Is Awesome</msg>
+<var>${line}</var>
+<arg>${multi_line_string}</arg>
+<arg>1</arg>
+<doc>Returns the specified line from the given ``string``.</doc>
+<status status="PASS" start="2025-08-13T20:51:10.905203" elapsed="0.000335"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${title}</arg>
+<arg>${line}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.868928" elapsed="0.000173"/>
+<status status="PASS" start="2025-08-13T20:51:10.905763" elapsed="0.000270"/>
 </kw>
-<kw name="Encode String To Bytes" owner="String">
-<msg time="2025-08-07T22:19:15.869460" level="INFO">${encoded} = Learning Python is very easy !!!</msg>
-<var>${encoded}</var>
-<arg>${string1}</arg>
-<arg>ASCII</arg>
-<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.869242" elapsed="0.000249"/>
+<kw name="Get Line" owner="String">
+<msg time="2025-08-13T20:51:10.906489" level="INFO">${line} = Line 3: Python Is Great!!!</msg>
+<var>${line}</var>
+<arg>${multi_line_string}</arg>
+<arg>2</arg>
+<doc>Returns the specified line from the given ``string``.</doc>
+<status status="PASS" start="2025-08-13T20:51:10.906232" elapsed="0.000294"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${encoded}</arg>
+<arg>${line}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.869630" elapsed="0.000171"/>
+<status status="PASS" start="2025-08-13T20:51:10.906695" elapsed="0.000201"/>
 </kw>
-<kw name="Decode Bytes To String" owner="String">
-<msg time="2025-08-07T22:19:15.870161" level="INFO">${decoded} = Learning Python is very easy !!!</msg>
-<var>${decoded}</var>
-<arg>${encoded}</arg>
-<arg>ASCII</arg>
-<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.869933" elapsed="0.000258"/>
+<kw name="Get Line Count" owner="String">
+<msg time="2025-08-13T20:51:10.907227" level="INFO">3 lines.</msg>
+<msg time="2025-08-13T20:51:10.907334" level="INFO">${line_couint} = 3</msg>
+<var>${line_couint}</var>
+<arg>${multi_line_string}</arg>
+<doc>Returns and logs the number of lines in the given string.</doc>
+<status status="PASS" start="2025-08-13T20:51:10.907046" elapsed="0.000320"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${decoded}</arg>
+<arg>${line_couint}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-07T22:19:15.870404" elapsed="0.000216"/>
+<status status="PASS" start="2025-08-13T20:51:10.907567" elapsed="0.000212"/>
 </kw>
-<status status="PASS" start="2025-08-07T22:19:15.865718" elapsed="0.005050"/>
+<kw name="Get Lines Containing String" owner="String">
+<msg time="2025-08-13T20:51:10.908168" level="INFO">3 out of 3 lines matched.</msg>
+<msg time="2025-08-13T20:51:10.908282" level="INFO">${lines_contain} = Line 1: Learning Python Is Very Easy!!!
+Line 2: Python Is Awesome
+Line 3: Python Is Great!!!</msg>
+<var>${lines_contain}</var>
+<arg>${multi_line_string}</arg>
+<arg>Python</arg>
+<doc>Returns lines of the given ``string`` that contain the ``pattern``.</doc>
+<status status="PASS" start="2025-08-13T20:51:10.907941" elapsed="0.000376"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${lines_contain}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-13T20:51:10.908495" elapsed="0.000241"/>
+</kw>
+<status status="PASS" start="2025-08-13T20:51:10.901332" elapsed="0.007583"/>
 </test>
-<status status="PASS" start="2025-08-07T22:19:15.814707" elapsed="0.056718"/>
+<status status="PASS" start="2025-08-13T20:51:10.845970" elapsed="0.063526"/>
 </suite>
 <statistics>
 <total>
@@ -75,7 +94,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="String 2" id="s1" pass="1" fail="0" skip="0">String 2</stat>
+<stat name="String 3" id="s1" pass="1" fail="0" skip="0">String 3</stat>
 </suite>
 </statistics>
 <errors>

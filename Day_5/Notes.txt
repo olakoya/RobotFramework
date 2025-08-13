@@ -1,0 +1,85 @@
+1. Demonstrate String Extraction and Substring Operations
+
+OUTPUT
+(.venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot -d Results Day_5/string_3.robot
+==============================================================================
+String 3
+==============================================================================
+Demonstrate String Extraction and Substring Operations                .Learning
+.. Very Easy!!!
+Demonstrate String Extraction and Substring Operations                | PASS |
+------------------------------------------------------------------------------
+String 3                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+2. ${multi_line_string}     1
+OUTPUT
+(.venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot -d Results Day_5/string_3.robot
+==============================================================================
+String 3
+==============================================================================
+Demonstrate String Extraction and Substring Operations                .Learning
+.. Very Easy!!!
+..Line 2: Python Is Awesome
+Demonstrate String Extraction and Substring Operations                | PASS |
+------------------------------------------------------------------------------
+String 3                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+3.  ${multi_line_string}     2
+OUTPUT
+
+(.venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot -d Results Day_5/string_3.robot
+==============================================================================
+String 3
+==============================================================================
+Demonstrate String Extraction and Substring Operations                .Learning
+.. Very Easy!!!
+..Line 2: Python Is Awesome
+..Line 3: Python Is Great!!!
+Demonstrate String Extraction and Substring Operations                | PASS |
+------------------------------------------------------------------------------
+String 3                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+4.  ${line_couint}     Get Line Count        ${multi_line_string}
+    Log To Console      ${line_couint}
+
+    ${lines_contain}     Get Lines Containing String        ${multi_line_string}    Python
+    Log To Console      ${lines_contain}
+
+OUTPUT
+(.venv) olakoya@Olapejus-MacBook-Pro RobotFramework % robot -d Results Day_5/string_3.robot
+==============================================================================
+String 3
+==============================================================================
+Demonstrate String Extraction and Substring Operations                .Learning
+.. Very Easy!!!
+..Line 2: Python Is Awesome
+..Line 3: Python Is Great!!!
+Demonstrate String Extraction and Substring Operations                .3
+..Line 1: Learning Python Is Very Easy!!!
+Line 2: Python Is Awesome
+Line 3: Python Is Great!!!
+Demonstrate String Extraction and Substring Operations                | PASS |
+------------------------------------------------------------------------------
+String 3                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
