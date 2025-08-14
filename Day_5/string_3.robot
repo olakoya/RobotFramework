@@ -25,5 +25,17 @@ Demonstrate String Extraction and Substring Operations
     ${line_couint}     Get Line Count        ${multi_line_string}
     Log To Console      ${line_couint}
 
-    ${lines_contain}     Get Lines Containing String        ${multi_line_string}    Python
-    Log To Console      ${lines_contain}
+#    ${lines_contain}     Get Lines Containing String        ${multi_line_string}    Python
+#    Log To Console      ${lines_contain}
+#
+#    ${lines_contain}     Get Lines Containing String        ${multi_line_string}    great
+#    Log To Console      ${lines_contain}
+
+    ${regexp_matches}       Get Regexp Matches      ${string}       ${regexp_pattern}
+    Log To Console      ${regexp_matches}
+
+    ${substring}       Get Substring      ${string}       9     15
+    Log To Console      ${substring}
+
+
+
