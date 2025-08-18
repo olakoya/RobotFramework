@@ -155,3 +155,396 @@ String 3                                                              | PASS |
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+----
+String 5
+*** Settings ***
+Library     String
+
+*** Test Cases ***
+Example for Format and Random String Generation
+    ${formatted_string}     Format String       Hello {name}! Your Age Is {age}     name=John       age=67
+    Log To Console      ${formatted_string}
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_4.robot
+==============================================================================
+String 4
+==============================================================================
+Example for Format and Random String Generation                       .Hello John! Your Age Is 67
+Example for Format and Random String Generation                       | PASS |
+------------------------------------------------------------------------------
+String 4                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+ ${random_string}     Generate Random String
+    Log To COnsole      ${random_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_4.robot
+==============================================================================
+String 4
+==============================================================================
+Example for Format and Random String Generation                       .Hello John! Your Age Is 67
+..HAIgyhZi
+Example for Format and Random String Generation                       | PASS |
+------------------------------------------------------------------------------
+String 4                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+${random_string}     Generate Random String     chars='[LOWER]'
+    Log To Console      ${random_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_4.robot
+==============================================================================
+String 4
+==============================================================================
+Example for Format and Random String Generation                       .Hello John! Your Age Is 67
+..oCQE7lcl
+..twlhvj'm
+Example for Format and Random String Generation                       | PASS |
+------------------------------------------------------------------------------
+String 4                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+ ${random_string}     Generate Random String     chars='[UPPER]'
+    Log To Console      ${random_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_4.robot
+==============================================================================
+String 4
+==============================================================================
+Example for Format and Random String Generation                       .Hello John! Your Age Is 67
+..m7PKEaU4
+..htbhslpv
+..SGDMTSJG
+Example for Format and Random String Generation                       | PASS |
+------------------------------------------------------------------------------
+String 4                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+${random_string}     Generate Random String     chars='[NUMBERS]'
+    Log To Console      ${random_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_4.robot
+==============================================================================
+String 4
+==============================================================================
+Example for Format and Random String Generation                       .Hello John! Your Age Is 67
+..w7BYVL1Z
+..k'ywkmdy
+..YXGSRNCP
+Example for Format and Random String Generation                       .'26997'4
+Example for Format and Random String Generation                       | PASS |
+------------------------------------------------------------------------------
+String 4                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+----
+String 5
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_5.robot
+==============================================================================
+String 5
+==============================================================================
+Example for String Replacement and Removal Keywords                   .Hello !
+Example for String Replacement and Removal Keywords                   | PASS |
+------------------------------------------------------------------------------
+String 5                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+${Updated_String}       Remove String Using Regexp      abc123xyz       [a-z]+
+     Log To Console      ${updated_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_5.robot
+==============================================================================
+String 5
+==============================================================================
+Example for String Replacement and Removal Keywords                   .Hello !
+..123
+Example for String Replacement and Removal Keywords                   | PASS |
+------------------------------------------------------------------------------
+String 5                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+${Updated_String}       Replace String     Hello World!        World       Universe
+     Log To Console      ${updated_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_5.robot
+==============================================================================
+String 5
+==============================================================================
+Example for String Replacement and Removal Keywords                   .Hello !
+..123
+..Hello Universe!
+Example for String Replacement and Removal Keywords                   | PASS |
+------------------------------------------------------------------------------
+String 5                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+${Updated_String}       Replace String Using Regexp     abc123xyz       [a-z]+      456
+    Log To Console      ${updated_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_5.robot
+==============================================================================
+String 5
+==============================================================================
+Example for String Replacement and Removal Keywords                   .Hello !
+..123
+..Hello Universe!
+..456123456
+Example for String Replacement and Removal Keywords                   | PASS |
+------------------------------------------------------------------------------
+String 5                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+----
+String 6
+*** Settings ***
+Library     String
+
+*** Test Cases ***
+Example for String Validation Keywords
+    ${byte_string}      Evaluate        b"test"
+    Should Be Byte String       ${byte_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_6.robot
+==============================================================================
+String 6
+==============================================================================
+Example for String Validation Keywords                                | PASS |
+------------------------------------------------------------------------------
+String 6                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+
+----
+
+*** Test Cases ***
+Example for String Validation Keywords
+    ${byte_string}      Evaluate        b"test"
+    Should Be Byte String       ${byte_string}
+    Should Be Lower Case        python
+    Should Be String        This is a String
+    Should Be Title Case        Python
+#    Should Be Unicode String
+    Should Be Upper Case        PYTHON
+    Should Not Be String        ${42}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_6.robot
+==============================================================================
+String 6
+==============================================================================
+Example for String Validation Keywords                                | PASS |
+------------------------------------------------------------------------------
+String 6                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+----
+
+   ${unicode_string}      Evaluate        u"test"
+    Should Be Unicode String        ${unicode_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_6.robot
+==============================================================================
+String 6
+==============================================================================
+Example for String Validation Keywords                                | PASS |
+------------------------------------------------------------------------------
+String 6                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
+
+----
+String 7
+*** Settings ***
+Library     String
+
+*** Test Cases ***
+Examples for String Splitting and Stripping Keywords
+        ${ split_string}        Split String        Hello,World!!!     ,
+        Log To Console      ${ split_string}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_7.robot
+==============================================================================
+String 7
+==============================================================================
+Examples for String Splitting and Stripping Keywords                  .['Hello', ' World!!!']
+Examples for String Splitting and Stripping Keywords                  | PASS |
+------------------------------------------------------------------------------
+String 7                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+${ split_right}        Split String From Right     Hello,World,Again!!!     ,
+        Log To Console      ${ split_right}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_7.robot
+==============================================================================
+String 7
+==============================================================================
+Examples for String Splitting and Stripping Keywords                  .['Hello', 'World!!!']
+..['Hello', 'World', 'Again!!!']
+Examples for String Splitting and Stripping Keywords                  | PASS |
+------------------------------------------------------------------------------
+String 7                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+${split_chars}      Split String To Characters      HELLO
+        Log To Console      ${ split_chars}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_7.robot
+==============================================================================
+String 7
+==============================================================================
+Examples for String Splitting and Stripping Keywords                  .['Hello', 'World!!!']
+..['Hello', 'World', 'Again!!!']
+..['H', 'E', 'L', 'L', 'O']
+Examples for String Splitting and Stripping Keywords                  | PASS |
+------------------------------------------------------------------------------
+String 7                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+${split_lines}      Split To Lines      Hello\nWorld
+        Log To Console      ${ split_lines}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_7.robot
+==============================================================================
+String 7
+==============================================================================
+Examples for String Splitting and Stripping Keywords                  .['Hello', 'World!!!']
+..['Hello', 'World', 'Again!!!']
+..['H', 'E', 'L', 'L', 'O']
+..['Hello', 'World']
+Examples for String Splitting and Stripping Keywords                  | PASS |
+------------------------------------------------------------------------------
+String 7                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+----
+
+${stripped_string}     Strip String        Hello World
+        Log To Console      ${stripped_string}
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_5/string_7.robot
+==============================================================================
+String 7
+==============================================================================
+Examples for String Splitting and Stripping Keywords                  .['Hello', 'World!!!']
+..['Hello', 'World', 'Again!!!']
+..['H', 'E', 'L', 'L', 'O']
+..['Hello', 'World']
+Examples for String Splitting and Stripping Keywords                  .Hello World
+Examples for String Splitting and Stripping Keywords                  | PASS |
+------------------------------------------------------------------------------
+String 7                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+

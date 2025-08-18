@@ -1,102 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-14T16:54:43.828905" rpa="false" schemaversion="5">
-<suite id="s1" name="String 3" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_5/string_3.robot">
-<test id="s1-t1" name="Demonstrate String Extraction and Substring Operations" line="12">
-<kw name="Fetch From Left" owner="String">
-<msg time="2025-08-14T16:54:43.883712" level="INFO">${left} = Learning</msg>
-<var>${left}</var>
-<arg>${string}</arg>
-<arg>marker=,</arg>
-<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.883445" elapsed="0.000317"/>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-18T21:02:53.145349" rpa="false" schemaversion="5">
+<suite id="s1" name="String 7" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_5/string_7.robot">
+<test id="s1-t1" name="Examples for String Splitting and Stripping Keywords" line="5">
+<kw name="Split String" owner="String">
+<msg time="2025-08-18T21:02:53.177480" level="INFO">${ split_string} = ['Hello', 'World!!!']</msg>
+<var>${ split_string}</var>
+<arg>Hello,World!!!</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-08-18T21:02:53.177254" elapsed="0.000268"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${left}</arg>
+<arg>${split_string}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.884065" elapsed="0.000217"/>
+<status status="PASS" start="2025-08-18T21:02:53.177728" elapsed="0.000263"/>
 </kw>
-<kw name="Fetch From Right" owner="String">
-<msg time="2025-08-14T16:54:43.884629" level="INFO">${right} =  Very Easy!!!</msg>
-<var>${right}</var>
-<arg>${string}</arg>
-<arg>marker=,</arg>
-<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.884435" elapsed="0.000227"/>
+<kw name="Split String From Right" owner="String">
+<msg time="2025-08-18T21:02:53.178366" level="INFO">${ split_right} = ['Hello', 'World', 'Again!!!']</msg>
+<var>${ split_right}</var>
+<arg>Hello,World,Again!!!</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` starting from right.</doc>
+<status status="PASS" start="2025-08-18T21:02:53.178171" elapsed="0.000240"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${right}</arg>
+<arg>${split_right}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.884803" elapsed="0.000165"/>
+<status status="PASS" start="2025-08-18T21:02:53.178579" elapsed="0.000233"/>
 </kw>
-<kw name="Get Line" owner="String">
-<msg time="2025-08-14T16:54:43.885273" level="INFO">${line} = Line 2: Python Is Awesome</msg>
-<var>${line}</var>
-<arg>${multi_line_string}</arg>
-<arg>1</arg>
-<doc>Returns the specified line from the given ``string``.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.885098" elapsed="0.000204"/>
+<kw name="Split String To Characters" owner="String">
+<msg time="2025-08-18T21:02:53.179181" level="INFO">${split_chars} = ['H', 'E', 'L', 'L', 'O']</msg>
+<var>${split_chars}</var>
+<arg>HELLO</arg>
+<doc>Splits the given ``string`` to characters.</doc>
+<status status="PASS" start="2025-08-18T21:02:53.179003" elapsed="0.000210"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${line}</arg>
+<arg>${split_chars}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.885441" elapsed="0.000180"/>
+<status status="PASS" start="2025-08-18T21:02:53.179381" elapsed="0.000200"/>
 </kw>
-<kw name="Get Line" owner="String">
-<msg time="2025-08-14T16:54:43.885911" level="INFO">${line} = Line 3: Python Is Great!!!</msg>
-<var>${line}</var>
-<arg>${multi_line_string}</arg>
-<arg>2</arg>
-<doc>Returns the specified line from the given ``string``.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.885742" elapsed="0.000197"/>
+<kw name="Split To Lines" owner="String">
+<msg time="2025-08-18T21:02:53.179849" level="INFO">2 lines returned.</msg>
+<msg time="2025-08-18T21:02:53.179960" level="INFO">${split_lines} = ['Hello', 'World']</msg>
+<var>${split_lines}</var>
+<arg>Hello\nWorld</arg>
+<doc>Splits the given string to lines.</doc>
+<status status="PASS" start="2025-08-18T21:02:53.179733" elapsed="0.000256"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${line}</arg>
+<arg>${split_lines}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.886072" elapsed="0.000147"/>
+<status status="PASS" start="2025-08-18T21:02:53.180135" elapsed="0.000192"/>
 </kw>
-<kw name="Get Line Count" owner="String">
-<msg time="2025-08-14T16:54:43.886455" level="INFO">3 lines.</msg>
-<msg time="2025-08-14T16:54:43.886537" level="INFO">${line_couint} = 3</msg>
-<var>${line_couint}</var>
-<arg>${multi_line_string}</arg>
-<doc>Returns and logs the number of lines in the given string.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.886332" elapsed="0.000230"/>
+<kw name="Strip String" owner="String">
+<msg time="2025-08-18T21:02:53.180619" level="INFO">${stripped_string} = Hello World</msg>
+<var>${stripped_string}</var>
+<arg>Hello World</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-08-18T21:02:53.180467" elapsed="0.000179"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${line_couint}</arg>
+<arg>${stripped_string}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.886717" elapsed="0.000150"/>
+<status status="PASS" start="2025-08-18T21:02:53.180814" elapsed="0.000189"/>
 </kw>
-<kw name="Get Regexp Matches" owner="String">
-<msg time="2025-08-14T16:54:43.887320" level="INFO">${regexp_matches} = ['earning', 'ython', 's', 'ery', 'asy']</msg>
-<var>${regexp_matches}</var>
-<arg>${string}</arg>
-<arg>${regexp_pattern}</arg>
-<doc>Returns a list of all non-overlapping matches in the given string.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.886986" elapsed="0.000365"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${regexp_matches}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.887488" elapsed="0.000167"/>
-</kw>
-<kw name="Get Substring" owner="String">
-<msg time="2025-08-14T16:54:43.888009" level="INFO">${substring} =  Pytho</msg>
-<var>${substring}</var>
-<arg>${string}</arg>
-<arg>9</arg>
-<arg>15</arg>
-<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.887783" elapsed="0.000256"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${substring}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-14T16:54:43.888184" elapsed="0.000155"/>
-</kw>
-<status status="PASS" start="2025-08-14T16:54:43.882649" elapsed="0.005819"/>
+<status status="PASS" start="2025-08-18T21:02:53.176467" elapsed="0.004701"/>
 </test>
-<status status="PASS" start="2025-08-14T16:54:43.830610" elapsed="0.058251"/>
+<status status="PASS" start="2025-08-18T21:02:53.147097" elapsed="0.034534"/>
 </suite>
 <statistics>
 <total>
@@ -105,7 +76,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="String 3" id="s1" pass="1" fail="0" skip="0">String 3</stat>
+<stat name="String 7" id="s1" pass="1" fail="0" skip="0">String 7</stat>
 </suite>
 </statistics>
 <errors>
