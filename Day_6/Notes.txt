@@ -1,0 +1,32 @@
+Handling Lista and Dictionaries in Robot Framework
+--------------------------------------------------
+Collections is Robot Framework's standard library that provides a set of keywords for handling Python lists and dictionaries.
+
+Exercise 1
+*** Variables ***
+@{list1}    3       4       3
+
+*** Test Cases ***
+Example for Lis operators
+        ${my_list}        Create List     1       2       3
+        Log To Console      ${my_list}
+
+        Append To List      ${my_list}      4
+        Log To console      ${my_list}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             .['1', '2', '3']
+..['1', '2', '3', '4']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+(.venv) olakoya@MacBookPro RobotFramework %

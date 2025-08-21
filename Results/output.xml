@@ -1,73 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-18T21:02:53.145349" rpa="false" schemaversion="5">
-<suite id="s1" name="String 7" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_5/string_7.robot">
-<test id="s1-t1" name="Examples for String Splitting and Stripping Keywords" line="5">
-<kw name="Split String" owner="String">
-<msg time="2025-08-18T21:02:53.177480" level="INFO">${ split_string} = ['Hello', 'World!!!']</msg>
-<var>${ split_string}</var>
-<arg>Hello,World!!!</arg>
-<arg>,</arg>
-<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.177254" elapsed="0.000268"/>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-21T21:34:35.271791" rpa="false" schemaversion="5">
+<suite id="s1" name="List" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_6/list.robot">
+<test id="s1-t1" name="Example for Lis operators" line="8">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-08-21T21:34:35.318566" level="INFO">${my_list} = ['1', '2', '3']</msg>
+<var>${my_list}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-08-21T21:34:35.318307" elapsed="0.000303"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${split_string}</arg>
+<arg>${my_list}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.177728" elapsed="0.000263"/>
+<status status="PASS" start="2025-08-21T21:34:35.318884" elapsed="0.000222"/>
 </kw>
-<kw name="Split String From Right" owner="String">
-<msg time="2025-08-18T21:02:53.178366" level="INFO">${ split_right} = ['Hello', 'World', 'Again!!!']</msg>
-<var>${ split_right}</var>
-<arg>Hello,World,Again!!!</arg>
-<arg>,</arg>
-<doc>Splits the ``string`` using ``separator`` starting from right.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.178171" elapsed="0.000240"/>
+<kw name="Append To List" owner="Collections">
+<arg>${my_list}</arg>
+<arg>4</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-08-21T21:34:35.319248" elapsed="0.000181"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${split_right}</arg>
+<arg>${my_list}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.178579" elapsed="0.000233"/>
+<status status="PASS" start="2025-08-21T21:34:35.319594" elapsed="0.000209"/>
 </kw>
-<kw name="Split String To Characters" owner="String">
-<msg time="2025-08-18T21:02:53.179181" level="INFO">${split_chars} = ['H', 'E', 'L', 'L', 'O']</msg>
-<var>${split_chars}</var>
-<arg>HELLO</arg>
-<doc>Splits the given ``string`` to characters.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.179003" elapsed="0.000210"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${split_chars}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.179381" elapsed="0.000200"/>
-</kw>
-<kw name="Split To Lines" owner="String">
-<msg time="2025-08-18T21:02:53.179849" level="INFO">2 lines returned.</msg>
-<msg time="2025-08-18T21:02:53.179960" level="INFO">${split_lines} = ['Hello', 'World']</msg>
-<var>${split_lines}</var>
-<arg>Hello\nWorld</arg>
-<doc>Splits the given string to lines.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.179733" elapsed="0.000256"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${split_lines}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.180135" elapsed="0.000192"/>
-</kw>
-<kw name="Strip String" owner="String">
-<msg time="2025-08-18T21:02:53.180619" level="INFO">${stripped_string} = Hello World</msg>
-<var>${stripped_string}</var>
-<arg>Hello World</arg>
-<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.180467" elapsed="0.000179"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${stripped_string}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-08-18T21:02:53.180814" elapsed="0.000189"/>
-</kw>
-<status status="PASS" start="2025-08-18T21:02:53.176467" elapsed="0.004701"/>
+<status status="PASS" start="2025-08-21T21:34:35.317445" elapsed="0.002495"/>
 </test>
-<status status="PASS" start="2025-08-18T21:02:53.147097" elapsed="0.034534"/>
+<status status="PASS" start="2025-08-21T21:34:35.273313" elapsed="0.047138"/>
 </suite>
 <statistics>
 <total>
@@ -76,7 +38,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="String 7" id="s1" pass="1" fail="0" skip="0">String 7</stat>
+<stat name="List" id="s1" pass="1" fail="0" skip="0">List</stat>
 </suite>
 </statistics>
 <errors>
