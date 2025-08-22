@@ -30,3 +30,42 @@ Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 (.venv) olakoya@MacBookPro RobotFramework %
+
+
+Exercise 2
+${combined_list}        Combine Lists       ${my_list}      ${list1}
+        Log To Console      ${combined_list}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['1', '2', '3', '3', '4', '3']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+Ex 3
+${Converted_list}       Convert To List     123
+        Log To Console      ${Converted_list}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['1', '2', '3']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
