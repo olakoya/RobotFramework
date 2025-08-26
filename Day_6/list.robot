@@ -6,7 +6,7 @@ Library     Collections
 
 *** Test Cases ***
 Example for Lis operators
-        ${my_list}        Create List     1       2       3
+        ${my_list}        Create List     1       2       3     4       5
 #        Log To Console      ${my_list}
 #
 #        Append To List      ${my_list}      4
@@ -15,15 +15,27 @@ Example for Lis operators
 #        ${combined_list}        Combine Lists       ${my_list}      ${list1}
 #        Log To Console      ${combined_list}
 
-        ${Converted_list}       Convert To List     123
-        Log To Console      ${Converted_list}
+#        ${Converted_list}       Convert To List     John
+#        Log To Console      ${Converted_list}
+#
+#        ${Copied_list}      Copy List       ${list1}
+#        Log To Console      ${Copied_list}
+#
+#        ${count}        Count Values In List        ${list1}        3
+#        Log To Console      ${count}
+#
+#        ${item}      Get From List       ${list1}       1
+#         Log To Console      ${item}
+#
+#        ${index}     Get Index From List     ${list1}        3
+#        Log To Console      ${index}
+#
+#        ${slice}     Get Slice From List     ${my_list}      1       4
+#        Log To Console      ${slice}
+#        Log To Console      ${my_list}
+#        Insert Into List      ${my_list}      2       10
+#        Log To Console      ${my_list}
 
-#        Copy List
-#        Count Values In List
-#        Get From List
-#        Get Index From List
-#        Get Slice From List
-#        Insert Into List
 #        List Should Contain Sub List
 #        List Should Contain Value
 #        List Should Not Contain Duplicates

@@ -69,3 +69,158 @@ List                                                                  | PASS |
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+E3b
+${Converted_list}       Convert To List     John
+        Log To Console      ${Converted_list}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['J', 'o', 'h', 'n']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+Ex 4 COPY LIST
+${Copied_list}      Copy List       ${list1}
+        Log To Console      ${Copied_list}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['3', '4', '3']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+Ex 5
+${count}        Count Values In List        ${list1}
+        Log To Console      ${count}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['3', '4', '3']
+Example for Lis operators                                             | FAIL |
+Keyword 'Collections.Count Values In List' expected 2 to 4 arguments, got 1.
+------------------------------------------------------------------------------
+List                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+
+
+EX 5B
+${count}        Count Values In List        ${list1}        3
+        Log To Console      ${count}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['3', '4', '3']
+..2
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+Ex 6
+${item}      Get From List       ${list1}       1
+         Log To Console      ${item}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['3', '4', '3']
+..2
+..4
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+Ex 7
+${index}     Get Index From List     ${list1}        3
+        Log To Console      ${index}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['3', '4', '3']
+..2
+..4
+..0
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+Ex 8
+${slice}     Get Slice From List     ${my_list}      1       4
+        Log To Console      $slice}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['3', '4', '3']
+..2
+..4
+..0
+Example for Lis operators                                             ..$slice}
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+Ex 9
+${slice}     Get Slice From List     ${my_list}      1       4
+        Log To Console      ${slice}
+        Log To Console      ${my_list}
+        Insert Into List      ${my_list}      2       10
+        Log To Console      ${my_list}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ..['3', '4', '3']
+..2
+..4
+..0
+Example for Lis operators                                             ..['2', '3', '4']
+.['1', '2', '3', '4', '5']
+..['1', '2', '10', '3', '4', '5']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
