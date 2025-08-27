@@ -31,6 +31,7 @@ Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 (.venv) olakoya@MacBookPro RobotFramework %
 
+----
 
 Exercise 2
 ${combined_list}        Combine Lists       ${my_list}      ${list1}
@@ -51,6 +52,8 @@ Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 
+----
+
 Ex 3
 ${Converted_list}       Convert To List     123
         Log To Console      ${Converted_list}
@@ -70,6 +73,7 @@ Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
 
+----
 
 E3b
 ${Converted_list}       Convert To List     John
@@ -86,6 +90,8 @@ Example for Lis operators                                             | PASS |
 List                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+----
 
 Ex 4 COPY LIST
 ${Copied_list}      Copy List       ${list1}
@@ -104,6 +110,8 @@ List                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 
+----
+
 Ex 5
 ${count}        Count Values In List        ${list1}
         Log To Console      ${count}
@@ -121,6 +129,7 @@ List                                                                  | FAIL |
 1 test, 0 passed, 1 failed
 ==============================================================================
 
+----
 
 EX 5B
 ${count}        Count Values In List        ${list1}        3
@@ -139,6 +148,7 @@ List                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 
+----
 
 Ex 6
 ${item}      Get From List       ${list1}       1
@@ -158,6 +168,7 @@ List                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 
+----
 
 Ex 7
 ${index}     Get Index From List     ${list1}        3
@@ -178,6 +189,7 @@ List                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 
+----
 
 Ex 8
 ${slice}     Get Slice From List     ${my_list}      1       4
@@ -199,6 +211,7 @@ List                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 
+----
 
 Ex 9
 ${slice}     Get Slice From List     ${my_list}      1       4
@@ -219,6 +232,159 @@ Example for Lis operators                                             ..['3', '4
 Example for Lis operators                                             ..['2', '3', '4']
 .['1', '2', '3', '4', '5']
 ..['1', '2', '10', '3', '4', '5']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+Ex 9
+${sublist}      Create List     4       3
+        List Should Contain Sub List        ${my_list}      ${sublist}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+Ex 9b It Failed because the list doesnt contain those numbers
+${sublist}      Create List     14       13
+        List Should Contain Sub List        ${my_list}      ${sublist}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | FAIL |
+Following values are missing: '14' and '13'
+------------------------------------------------------------------------------
+List                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+
+----
+
+Ex 10
+List Should Contain Value       ${my_list}      3
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+Ex 10
+List Should Contain Value       ${my_list}      13
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | FAIL |
+[ 1 | 2 | 3 | 4 | 5 ] does not contain value '13'.
+------------------------------------------------------------------------------
+List                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+
+----
+
+Ex 11 - No duplication
+ List Should Not Contain Duplicates          ${my_list}
+
+ OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+Ex 12
+List Should Not Contain Value       ${my_list}      13
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 12B
+List Should Not Contain Value       ${my_list}      3
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | FAIL |
+[ 1 | 2 | 3 | 4 | 5 ] contains value '3'.
+------------------------------------------------------------------------------
+List                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+
+----
+
+EX 13
+${my_list}        Create List     1       2       3     4       5
+        Lists Should Be Equal       ${my_list}      ${my_list1}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | FAIL |
+Variable '${my_list1}' not found. Did you mean:
+    ${my_list}
+    ${list1}
+------------------------------------------------------------------------------
+List                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+
+----
+
+EX 13B
+${my_list1}        Create List     1       2       3     4       5
+        Lists Should Be Equal       ${my_list}      ${my_list1}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
 Example for Lis operators                                             | PASS |
 ------------------------------------------------------------------------------
 List                                                                  | PASS |

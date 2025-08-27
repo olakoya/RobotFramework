@@ -36,11 +36,20 @@ Example for Lis operators
 #        Insert Into List      ${my_list}      2       10
 #        Log To Console      ${my_list}
 
-#        List Should Contain Sub List
-#        List Should Contain Value
-#        List Should Not Contain Duplicates
-#        List Should Not Contain Value
-#        Lists Should Be Equal
+#        ${sublist}      Create List     14       13
+#        List Should Contain Sub List        ${my_list}      ${sublist}
+
+
+#        List Should Contain Value       ${my_list}      13
+
+#        List Should Not Contain Duplicates          ${my_list}
+
+#        List Should Not Contain Value       ${my_list}      3
+
+        ${my_list1}        Create List     1       2       3     4       5
+        Lists Should Be Equal       ${my_list}      ${my_list1}
+
+
 #        Log List
 #        Remove From List
 #        Remove Values From List
