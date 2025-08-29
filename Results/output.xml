@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-27T23:17:39.083127" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-29T22:23:30.214436" rpa="false" schemaversion="5">
 <suite id="s1" name="List" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_6/list.robot">
-<test id="s1-t1" name="Example for Lis operators" line="8">
+<test id="s1-t1" name="Example for List operators" line="8">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-08-27T23:17:39.132312" level="INFO">${my_list} = ['1', '2', '3', '4', '5']</msg>
+<msg time="2025-08-29T22:23:30.287881" level="INFO">${my_list} = ['1', '2', '3', '4', '5']</msg>
 <var>${my_list}</var>
 <arg>1</arg>
 <arg>2</arg>
@@ -11,28 +11,41 @@
 <arg>4</arg>
 <arg>5</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-08-27T23:17:39.132048" elapsed="0.000322"/>
+<status status="PASS" start="2025-08-29T22:23:30.287626" elapsed="0.000302"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-08-27T23:17:39.132861" level="INFO">${my_list1} = ['1', '2', '3', '4', '5']</msg>
+<msg time="2025-08-29T22:23:30.288387" level="INFO">${my_list1} = ['1', '5', '2', '3', '4', '5', '4', '3', '3', '2', '1']</msg>
 <var>${my_list1}</var>
 <arg>1</arg>
+<arg>5</arg>
 <arg>2</arg>
 <arg>3</arg>
 <arg>4</arg>
 <arg>5</arg>
+<arg>4</arg>
+<arg>3</arg>
+<arg>3</arg>
+<arg>2</arg>
+<arg>1</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-08-27T23:17:39.132657" elapsed="0.000238"/>
+<status status="PASS" start="2025-08-29T22:23:30.288192" elapsed="0.000229"/>
 </kw>
-<kw name="Lists Should Be Equal" owner="Collections">
-<arg>${my_list}</arg>
+<kw name="Remove Duplicates" owner="Collections">
+<msg time="2025-08-29T22:23:30.288735" level="INFO">6 duplicates removed.</msg>
+<msg time="2025-08-29T22:23:30.288821" level="INFO">${removed_duplicates_list} = ['1', '5', '2', '3', '4']</msg>
+<var>${removed_duplicates_list}</var>
 <arg>${my_list1}</arg>
-<doc>Fails if given lists are unequal.</doc>
-<status status="PASS" start="2025-08-27T23:17:39.133063" elapsed="0.000233"/>
+<doc>Returns a list without duplicates based on the given ``list``.</doc>
+<status status="PASS" start="2025-08-29T22:23:30.288589" elapsed="0.000257"/>
 </kw>
-<status status="PASS" start="2025-08-27T23:17:39.131283" elapsed="0.002156"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${removed_duplicates_list}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-29T22:23:30.288981" elapsed="0.000213"/>
+</kw>
+<status status="PASS" start="2025-08-29T22:23:30.286800" elapsed="0.002587"/>
 </test>
-<status status="PASS" start="2025-08-27T23:17:39.084614" elapsed="0.049284"/>
+<status status="PASS" start="2025-08-29T22:23:30.217385" elapsed="0.072783"/>
 </suite>
 <statistics>
 <total>

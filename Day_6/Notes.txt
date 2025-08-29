@@ -390,3 +390,138 @@ Example for Lis operators                                             | PASS |
 List                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+----
+
+EX 14
+${my_list1}        Create List     1       2       3     4       5
+        Lists Should Be Equal       ${my_list}      ${my_list1}
+        Log List        ${my_list1}
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+Ex 15
+${removed_data}     Remove From List        ${my_list1}     3
+        Log To Console      ${removed_data}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ...4
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX16
+
+${my_list1}        Create List     1       2       3     4       5
+
+${removed_data}     Remove From List        ${my_list1}     3
+        Log To Console      ${removed_data}
+        Log To Console      ${my_list1}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ...4
+.['1', '2', '3', '5']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 17
+Remove Values From List     ${my_list1}     5
+        Log To Console      ${my_list1}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for Lis operators                                             ...['1', '2', '3', '4']
+Example for Lis operators                                             | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 18
+Reverse List        ${my_list1}
+        Log To Console      ${my_list1}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for List operators                                            ...['5', '4', '3', '2', '1']
+Example for List operators                                            | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 19
+
+${my_list1}        Create List     1       5        2       3     4       5     4       3       3       2       1
+
+Sort List      ${my_list1}
+        Log To Console      ${my_list1}
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for List operators                                            ...['1', '1', '2', '2', '3', '3', '3', '4', '4', '5', '5']
+Example for List operators                                            | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 20
+${removed_duplicates_list}      Remove Duplicates       ${my_list1}
+        Log To Console      ${removed_duplicates_list}
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_6/list.robot
+==============================================================================
+List
+==============================================================================
+Example for List operators                                            ...['1', '5', '2', '3', '4']
+Example for List operators                                            | PASS |
+------------------------------------------------------------------------------
+List                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================

@@ -5,7 +5,7 @@ Library     Collections
 @{list1}    3       4       3
 
 *** Test Cases ***
-Example for Lis operators
+Example for List operators
         ${my_list}        Create List     1       2       3     4       5
 #        Log To Console      ${my_list}
 #
@@ -46,14 +46,25 @@ Example for Lis operators
 
 #        List Should Not Contain Value       ${my_list}      3
 
-        ${my_list1}        Create List     1       2       3     4       5
-        Lists Should Be Equal       ${my_list}      ${my_list1}
+        ${my_list1}        Create List     1       5        2       3     4       5     4       3       3       2       1
+#        Lists Should Be Equal       ${my_list}      ${my_list1}
+#        Log List        ${my_list1}
 
+#        ${removed_data}     Remove From List        ${my_list1}     3
+#        Log To Console      ${removed_data}
+#        Log To Console      ${my_list1}
 
-#        Log List
-#        Remove From List
-#        Remove Values From List
-#        Reverse List
-#        Set List Value
-#        Sort List
-#        Remove Duplicates
+#        Remove Values From List     ${my_list1}     5
+#        Log To Console      ${my_list1}
+
+#        Reverse List        ${my_list1}
+#        Log To Console      ${my_list1}
+
+#        Set List Value     ${my_list1}
+#        Log To Console      ${my_list1}
+
+#        Sort List      ${my_list1}
+#        Log To Console      ${my_list1}
+
+        ${removed_duplicates_list}      Remove Duplicates       ${my_list1}
+        Log To Console      ${removed_duplicates_list}
