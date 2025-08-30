@@ -1,0 +1,74 @@
+Handling Lists and Dictionaries in Robot Framework  - 2
+-------------------------------------------------------
+Collection Library ==> List and Dictionaries
+
+
+${{"key1","value1"}}	${{"key2","value2"}}
+
+EX 1
+    ${items}        Create List     ${{"key1","value1"}}        ${{"key2","value2"}}
+    ${my_dict}      Convert To Dictionary       ${items}
+    Log To Console      ${my_dict}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   | PASS |
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 2
+    ${copied_dictionary}        Copy Dictionary     ${my_dict}
+    Log To Console      ${copied_dictionary}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   | PASS |
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 3
+Dictionaries Should Be Equal        ${dict1}            ${my_dict}
+
+    Dictionary Should Contain Item      ${dict1}     key1       value1
+
+    Dictionary Should Contain Key       ${dict1}        key1
+
+    ${sub_dict}     Create Dictionary       key1=value1
+
+    Dictionary Should Contain Sub Dictionary        ${dict1}        ${sub_dict}
+
+    Dictionary Should Contain Value     ${dict1}        value1
+
+    Dictionary Should Not Contain Key        ${dict1}        key3
+
+    Dictionary Should Not Contain Value      ${dict1}        value3
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   | PASS |
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
