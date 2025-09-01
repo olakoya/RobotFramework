@@ -31,9 +31,13 @@ Example for Handling Dictionaries in RobotFramework
 
     Dictionary Should Not Contain Value      ${dict1}        value3
 
-#    Get Dictionary Items
-#    Get Dictionary Keys
-#    Get Dictionary Values
+    Log To Console      Run Keyword And Return      Get Dictionary Items
+
+    Log To Console      Run Keyword And Return      Get Dictionary Keys
+
+    Log To Console      Run Keyword And Return      Get Dictionary Values
+
+
 #    Get From Dictionary
 #    Keep In Dictionary
 #    Log Dictionary

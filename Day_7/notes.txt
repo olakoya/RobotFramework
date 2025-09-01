@@ -72,3 +72,47 @@ Example for Handling Dictionaries in RobotFramework                   | PASS |
 Dictionary                                                            | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+----
+
+Ex 4
+ Log To Console      Run Keyword And Return      Get Dictionary Items
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   .....Run Keyword And Return
+Example for Handling Dictionaries in RobotFramework                   | PASS |
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+Ex 5
+ Log To Console      Run Keyword And Return      Get Dictionary Keys
+
+    Log To Console      Run Keyword And Return      Get Dictionary Values
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   .....Run Keyword And Return
+.Run Keyword And Return
+.Run Keyword And Return
+Example for Handling Dictionaries in RobotFramework                   | PASS |
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
