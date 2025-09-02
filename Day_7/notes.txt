@@ -116,3 +116,83 @@ Example for Handling Dictionaries in RobotFramework                   | PASS |
 Dictionary                                                            | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+----
+
+Ex 6
+Log To Console      Run Keyword And Return      Get Dictionary Keys     ${dict1}
+    ${keys}     Get Dictionary Keys     ${dict1}
+    Log To Console      ${Keys}
+
+#    Log To Console      Run Keyword And Return      Get Dictionary Values
+
+    ${values}       Get Dictionary Values       ${dict1}
+    Log To Console      ${values}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   .....Run Keyword And Return
+.Run Keyword And Return..['key1', 'key2']
+Example for Handling Dictionaries in RobotFramework                   ..['value1', 'value2']
+Example for Handling Dictionaries in RobotFramework                   | PASS |
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 7
+
+ Log To Console      Run Keyword And Return      Get Dictionary Items        ${dict1}
+
+    Log To Console      Run Keyword And Return      Get Dictionary Keys     ${dict1}
+
+    Log To Console      Run Keyword And Return      Get Dictionary Values       ${dict1}
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   | PASS | Keyword And Return.Run Keyword And Return.Run Keyword And Return.
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+Ex 8
+${keys}     Get Dictionary Keys     ${dict1}
+    Log To Console      ${Keys}
+
+    ${values}       Get Dictionary Values       ${dict1}
+    Log To Console      ${values}
+
+    ${value}       Get Dictionary Values       ${dict1}     key1
+    Log To Console      ${value}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_7/dictionary.robot
+==============================================================================
+Dictionary
+==============================================================================
+Example for Handling Dictionaries in RobotFramework                   ..{'key1': 'value1', 'key2': 'value2'}
+..{'key1': 'value1', 'key2': 'value2'}
+Example for Handling Dictionaries in RobotFramework                   .....Run Keyword And Return..['key1', 'key2']
+Example for Handling Dictionaries in RobotFramework                   .['value1', 'value2']
+..['value1', 'value2']
+Example for Handling Dictionaries in RobotFramework                   | PASS |
+------------------------------------------------------------------------------
+Dictionary                                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+

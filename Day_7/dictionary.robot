@@ -31,16 +31,28 @@ Example for Handling Dictionaries in RobotFramework
 
     Dictionary Should Not Contain Value      ${dict1}        value3
 
-    Log To Console      Run Keyword And Return      Get Dictionary Items
+    Log To Console      Run Keyword And Return      Get Dictionary Items        ${dict1}
 
-    Log To Console      Run Keyword And Return      Get Dictionary Keys
+#    Log To Console      Run Keyword And Return      Get Dictionary Keys     ${dict1}
+#
+#    Log To Console      Run Keyword And Return      Get Dictionary Values       ${dict1}
 
-    Log To Console      Run Keyword And Return      Get Dictionary Values
+    ${keys}     Get Dictionary Keys     ${dict1}
+    Log To Console      ${Keys}
+
+    ${values}       Get Dictionary Values       ${dict1}
+    Log To Console      ${values}
+
+    ${value}       Get Dictionary Values       ${dict1}     key1
+    Log To Console      ${value}
 
 
-#    Get From Dictionary
 #    Keep In Dictionary
+
 #    Log Dictionary
+
 #    Pop From Dictionary
+
 #    Remove From Dictionary
+
 #    Set To Dictionary

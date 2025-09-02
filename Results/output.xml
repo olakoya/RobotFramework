@@ -1,110 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-01T23:40:43.069617" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-02T23:27:32.373310" rpa="false" schemaversion="5">
 <suite id="s1" name="Dictionary" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_7/dictionary.robot">
 <test id="s1-t1" name="Example for Handling Dictionaries in RobotFramework" line="10">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-09-01T23:40:43.116553" level="INFO">${items} = [('key1', 'value1'), ('key2', 'value2')]</msg>
+<msg time="2025-09-02T23:27:32.426631" level="INFO">${items} = [('key1', 'value1'), ('key2', 'value2')]</msg>
 <var>${items}</var>
 <arg>${{"key1","value1"}}</arg>
 <arg>${{"key2","value2"}}</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.115407" elapsed="0.001203"/>
+<status status="PASS" start="2025-09-02T23:27:32.425682" elapsed="0.001001"/>
 </kw>
 <kw name="Convert To Dictionary" owner="Collections">
-<msg time="2025-09-01T23:40:43.117292" level="INFO">${my_dict} = {'key1': 'value1', 'key2': 'value2'}</msg>
+<msg time="2025-09-02T23:27:32.427205" level="INFO">${my_dict} = {'key1': 'value1', 'key2': 'value2'}</msg>
 <var>${my_dict}</var>
 <arg>${items}</arg>
 <doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.116939" elapsed="0.000425"/>
+<status status="PASS" start="2025-09-02T23:27:32.426989" elapsed="0.000255"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${my_dict}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.117642" elapsed="0.000369"/>
+<status status="PASS" start="2025-09-02T23:27:32.427414" elapsed="0.000198"/>
 </kw>
 <kw name="Copy Dictionary" owner="Collections">
-<msg time="2025-09-01T23:40:43.118610" level="INFO">${copied_dictionary} = {'key1': 'value1', 'key2': 'value2'}</msg>
+<msg time="2025-09-02T23:27:32.427966" level="INFO">${copied_dictionary} = {'key1': 'value1', 'key2': 'value2'}</msg>
 <var>${copied_dictionary}</var>
 <arg>${my_dict}</arg>
 <doc>Returns a copy of the given dictionary.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.118240" elapsed="0.000438"/>
+<status status="PASS" start="2025-09-02T23:27:32.427756" elapsed="0.000243"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${copied_dictionary}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.118943" elapsed="0.000343"/>
+<status status="PASS" start="2025-09-02T23:27:32.428151" elapsed="0.000190"/>
 </kw>
 <kw name="Dictionaries Should Be Equal" owner="Collections">
 <arg>${dict1}</arg>
 <arg>${my_dict}</arg>
 <doc>Fails if the given dictionaries are not equal.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.119478" elapsed="0.000247"/>
+<status status="PASS" start="2025-09-02T23:27:32.428479" elapsed="0.000260"/>
 </kw>
 <kw name="Dictionary Should Contain Item" owner="Collections">
 <arg>${dict1}</arg>
 <arg>key1</arg>
 <arg>value1</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.119936" elapsed="0.000204"/>
+<status status="PASS" start="2025-09-02T23:27:32.428969" elapsed="0.000240"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${dict1}</arg>
 <arg>key1</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.120310" elapsed="0.000196"/>
+<status status="PASS" start="2025-09-02T23:27:32.429380" elapsed="0.000193"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-09-01T23:40:43.121024" level="INFO">${sub_dict} = {'key1': 'value1'}</msg>
+<msg time="2025-09-02T23:27:32.430035" level="INFO">${sub_dict} = {'key1': 'value1'}</msg>
 <var>${sub_dict}</var>
 <arg>key1=value1</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.120700" elapsed="0.000413"/>
+<status status="PASS" start="2025-09-02T23:27:32.429758" elapsed="0.000313"/>
 </kw>
 <kw name="Dictionary Should Contain Sub Dictionary" owner="Collections">
 <arg>${dict1}</arg>
 <arg>${sub_dict}</arg>
 <doc>Fails unless all items in ``dict2`` are found from ``dict1``.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.121481" elapsed="0.000420"/>
+<status status="PASS" start="2025-09-02T23:27:32.430308" elapsed="0.000415"/>
 </kw>
 <kw name="Dictionary Should Contain Value" owner="Collections">
 <arg>${dict1}</arg>
 <arg>value1</arg>
 <doc>Fails if ``value`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.122156" elapsed="0.000290"/>
+<status status="PASS" start="2025-09-02T23:27:32.430873" elapsed="0.000189"/>
 </kw>
 <kw name="Dictionary Should Not Contain Key" owner="Collections">
 <arg>${dict1}</arg>
 <arg>key3</arg>
 <doc>Fails if ``key`` is found from ``dictionary``.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.122610" elapsed="0.000322"/>
+<status status="PASS" start="2025-09-02T23:27:32.431201" elapsed="0.000163"/>
 </kw>
 <kw name="Dictionary Should Not Contain Value" owner="Collections">
 <arg>${dict1}</arg>
 <arg>value3</arg>
 <doc>Fails if ``value`` is found from ``dictionary``.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.123160" elapsed="0.000270"/>
+<status status="PASS" start="2025-09-02T23:27:32.431498" elapsed="0.000159"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Run Keyword And Return</arg>
 <arg>Get Dictionary Items</arg>
+<arg>${dict1}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.123619" elapsed="0.000185"/>
+<status status="PASS" start="2025-09-02T23:27:32.431781" elapsed="0.000262"/>
+</kw>
+<kw name="Get Dictionary Keys" owner="Collections">
+<msg time="2025-09-02T23:27:32.432378" level="INFO">${keys} = ['key1', 'key2']</msg>
+<var>${keys}</var>
+<arg>${dict1}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2025-09-02T23:27:32.432170" elapsed="0.000245"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Run Keyword And Return</arg>
-<arg>Get Dictionary Keys</arg>
+<arg>${Keys}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.123952" elapsed="0.000231"/>
+<status status="PASS" start="2025-09-02T23:27:32.432681" elapsed="0.000280"/>
+</kw>
+<kw name="Get Dictionary Values" owner="Collections">
+<msg time="2025-09-02T23:27:32.433455" level="INFO">${values} = ['value1', 'value2']</msg>
+<var>${values}</var>
+<arg>${dict1}</arg>
+<doc>Returns values of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2025-09-02T23:27:32.433202" elapsed="0.000290"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Run Keyword And Return</arg>
-<arg>Get Dictionary Values</arg>
+<arg>${values}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-01T23:40:43.124395" elapsed="0.000200"/>
+<status status="PASS" start="2025-09-02T23:27:32.433698" elapsed="0.000195"/>
 </kw>
-<status status="PASS" start="2025-09-01T23:40:43.114292" elapsed="0.010517"/>
+<kw name="Get Dictionary Values" owner="Collections">
+<msg time="2025-09-02T23:27:32.434319" level="INFO">${value} = ['value1', 'value2']</msg>
+<var>${value}</var>
+<arg>${dict1}</arg>
+<arg>key1</arg>
+<doc>Returns values of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2025-09-02T23:27:32.434044" elapsed="0.000315"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-02T23:27:32.434548" elapsed="0.000272"/>
+</kw>
+<status status="PASS" start="2025-09-02T23:27:32.424734" elapsed="0.010403"/>
 </test>
-<status status="PASS" start="2025-09-01T23:40:43.070959" elapsed="0.054518"/>
+<status status="PASS" start="2025-09-02T23:27:32.375269" elapsed="0.060653"/>
 </suite>
 <statistics>
 <total>
