@@ -1,0 +1,98 @@
+EX 1
+*** Settings ***
+Library  SeleniumLibrary
+
+*** Variables ***
+${URL}      https://www.google.com
+${EXPECTED_TITLE}       Google
+${EXPECTED_TEXT}       Google
+${EXPECTED_LINK}       Advertising
+${NEW_URL}      https://www.python.org
+
+
+*** Test Cases ***
+verify Website Functionality
+    [Documentation]     This test case verifies mutiple aspects of a website
+    Open Browser        ${URL}      chrome      options=add_experimental_option("detach", True)
+    Maximize Browser Window
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_8/commands.robot
+==============================================================================
+Commands
+==============================================================================
+verify Website Functionality :: This test case verifies mutiple as... | PASS |
+------------------------------------------------------------------------------
+Commands                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+Ex 2
+ ${title}        Get Title
+    Log To Console      ${title}
+    Title Should Be     ${EXPECTED_TITLE}
+    Log Title
+
+    Close Browser
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_8/commands.robot
+==============================================================================
+Commands
+==============================================================================
+verify Website Functionality :: This test case verifies mutiple as... ...Google
+verify Website Functionality :: This test case verifies mutiple as... | PASS |
+------------------------------------------------------------------------------
+Commands                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+
+EX 3
+Page Should Contain     ${EXPECTED_TEXT}
+    Page Should Contain Link        ${EXPECTED_LINK}
+
+    ${current_location}     Get Location
+    Log To Console      ${current_location}
+
+    Location Should Be      ${current_location}
+
+    Close Browser
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_8/commands.robot
+==============================================================================
+Commands
+==============================================================================
+verify Website Functionality :: This test case verifies mutiple as... ...Google
+verify Website Functionality :: This test case verifies mutiple as... .https://www.google.com/
+verify Website Functionality :: This test case verifies mutiple as... | PASS |
+------------------------------------------------------------------------------
+Commands                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+----
+EX 4
+Go To       ${NEW_URL}
+    Reload Page
+
+    Page Should Contain     Python
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_8/commands.robot
+==============================================================================
+Commands
+==============================================================================
+verify Website Functionality :: This test case verifies mutiple as... ...Google
+verify Website Functionality :: This test case verifies mutiple as... .https://www.google.com/
+verify Website Functionality :: This test case verifies mutiple as... | PASS |
+------------------------------------------------------------------------------
+Commands                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================

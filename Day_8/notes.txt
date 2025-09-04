@@ -1,0 +1,52 @@
+Keywords or Commands or Methods in Selenium Library
+---------------------------------------------------
+Application commands
+====================
+Open Browser
+Get Title
+Get Window Titles
+Log Title
+Title Should Be
+Get Location
+Get Locations
+Location Should Be
+Location Should Contain
+
+Conditional Commands
+=====================
+Page Should Contain
+Page Should Contain Button
+Page Should Contain Checkbox
+Page Should Contain Element
+Page Should Contain Image
+Page Should Contain Link
+Page Should Contain List
+Page Should Contain Radio Button
+Page Should Contain Textfield
+Page Should Not Contain
+Page Should Not Contain Button
+Page Should Not Contain Checkbox
+Page Should Not Contain Element
+Page Should Not Contain Image
+Page Should Not Contain Link
+Page Should Not Contain List
+Page Should Not Contain Radio Button
+Page Should Not Contain Textfield
+
+
+
+Navigational commands
+======================
+Go To
+Go Back
+Reload Page
+
+Browser commands
+=================
+Close Browser
+Close All Browsers
+
+
+
+Waiting commands
+================
