@@ -96,3 +96,52 @@ verify Website Functionality :: This test case verifies mutiple as... | PASS |
 Commands                                                              | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+
+--------------------
+SELENIUM TIMEOUT KEYWORDS
+
+EX 1
+*** Settings ***
+Library     SeleniumLibrary
+
+*** Variables ***
+${BROWSER}      chrome
+${TIMEOUT}      105
+${IMPLICIT_WAIT}        55
+${PAGE_LOAD}        20s
+${URL}      https://www.google.com
+
+*** Test Cases ***
+Example of Selenium Timeout Keywords
+        Open Browser        ${URL}      ${BROWSER}      options=add_experimental_option("detach", True)
+        Maximize Browser Window
+
+        Set Selenium Timeout        ${TIMEOUT}
+        ${timeout}      Get Selenium Timeout
+        Log To Console      ${timeout}
+
+        Set Browser Implicit Wait       ${IMPLICIT_WAIT}
+        Set Selenium Implicit Wait      ${IMPLICIT_WAIT}
+        ${implicit}=       Get Selenium Implicit Wait
+        Log To Console      Current Implicit Wait:      ${implicit}
+
+        Set Selenium Page Load Timeout      ${PAGE_LOAD}
+        ${pageload}=        Get Selenium Page Load Timeout
+        Log To Console      Current Page Load Timeout:      ${pageload}
+
+        Close Browser
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_8/selenium_timeout_keywords.robot
+==============================================================================
+Selenium Timeout Keywords
+==============================================================================
+Example of Selenium Timeout Keywords                                  ....1 minute 45 seconds
+....Current Implicit Wait:
+Example of Selenium Timeout Keywords                                  ...Current Page Load Timeout:
+Example of Selenium Timeout Keywords                                  | PASS |
+------------------------------------------------------------------------------
+Selenium Timeout Keywords                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
