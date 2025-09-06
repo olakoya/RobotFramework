@@ -1,82 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-05T19:47:25.597018" rpa="false" schemaversion="5">
-<suite id="s1" name="Selenium Timeout Keywords" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_8/selenium_timeout_keywords.robot">
-<test id="s1-t1" name="Example of Selenium Timeout Keywords" line="12">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-06T22:54:59.504503" rpa="false" schemaversion="5">
+<suite id="s1" name="Explicit Wait" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_8/explicit_wait.robot">
+<test id="s1-t1" name="Example of Selenium Timeout Keywords" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-05T19:47:25.919815" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg time="2025-09-06T22:54:59.796945" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-05T19:47:25.919424" elapsed="1.800430"/>
+<status status="PASS" start="2025-09-06T22:54:59.796401" elapsed="3.314515"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-05T19:47:27.721381" elapsed="1.387825"/>
+<status status="PASS" start="2025-09-06T22:55:03.111948" elapsed="0.370370"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>${TIMEOUT}</arg>
+<arg>${WAIT_TIME}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.109559" elapsed="0.001406"/>
+<status status="PASS" start="2025-09-06T22:55:03.483561" elapsed="0.002177"/>
 </kw>
-<kw name="Get Selenium Timeout" owner="SeleniumLibrary">
-<msg time="2025-09-05T19:47:29.111589" level="INFO">${timeout} = 1 minute 45 seconds</msg>
-<var>${timeout}</var>
-<doc>Gets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.111210" elapsed="0.000468"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${timeout}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.111951" elapsed="0.000262"/>
-</kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>${IMPLICIT_WAIT}</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.112407" elapsed="0.001753"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>${IMPLICIT_WAIT}</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.114381" elapsed="0.001112"/>
-</kw>
-<kw name="Get Selenium Implicit Wait" owner="SeleniumLibrary">
-<msg time="2025-09-05T19:47:29.116032" level="INFO">${implicit} = 55 seconds</msg>
-<var>${implicit}</var>
-<doc>Gets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.115737" elapsed="0.000343"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='GUI Elements']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-06T22:55:03.486042" elapsed="0.033239"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Current Implicit Wait:</arg>
-<arg>${implicit}</arg>
+<arg>Element 'GUI Elements is now visible'</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.116270" elapsed="0.000248"/>
+<status status="PASS" start="2025-09-06T22:55:03.519848" elapsed="0.000392"/>
 </kw>
-<kw name="Set Selenium Page Load Timeout" owner="SeleniumLibrary">
-<arg>${PAGE_LOAD}</arg>
-<doc>Sets the page load timeout value used by Selenium.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.116730" elapsed="0.001471"/>
-</kw>
-<kw name="Get Selenium Page Load Timeout" owner="SeleniumLibrary">
-<msg time="2025-09-05T19:47:29.118841" level="INFO">${pageload} = 20 seconds</msg>
-<var>${pageload}</var>
-<doc>Gets the time to wait for a page load to complete
-before raising a timeout exception.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.118480" elapsed="0.000433"/>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='GUI Elements']</arg>
+<arg>GUI Elements</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-09-06T22:55:03.520534" elapsed="0.023807"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Current Page Load Timeout:</arg>
-<arg>${pageload}</arg>
+<arg>"Element contains provided Text"</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.119153" elapsed="0.000339"/>
+<status status="PASS" start="2025-09-06T22:55:03.544715" elapsed="0.000293"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>GUI Elements</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-06T22:55:03.545257" elapsed="0.016400"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Page contains expected Text</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-06T22:55:03.562066" elapsed="0.000360"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-09-06T22:55:03.571140" level="INFO">Current page contains element 'xpath=//a[text()='GUI Elements']'.</msg>
+<arg>xpath=//a[text()='GUI Elements']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-09-06T22:55:03.563402" elapsed="0.007853"/>
+</kw>
+<msg time="2025-09-06T22:55:03.571436" level="INFO">${VISIBLE} = True</msg>
+<var>${VISIBLE}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=//a[text()='GUI Elements']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-09-06T22:55:03.562927" elapsed="0.008545"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Element 'GUI Elements' is visible: ${VISIBLE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-06T22:55:03.571662" elapsed="0.000240"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-05T19:47:29.119765" elapsed="0.134503"/>
+<status status="PASS" start="2025-09-06T22:55:03.572131" elapsed="0.139253"/>
 </kw>
-<status status="PASS" start="2025-09-05T19:47:25.918086" elapsed="3.336487"/>
+<status status="PASS" start="2025-09-06T22:54:59.794741" elapsed="3.917000"/>
 </test>
-<status status="PASS" start="2025-09-05T19:47:25.599694" elapsed="3.655931"/>
+<status status="PASS" start="2025-09-06T22:54:59.505989" elapsed="4.206730"/>
 </suite>
 <statistics>
 <total>
@@ -85,7 +84,7 @@ before raising a timeout exception.</doc>
 <tag>
 </tag>
 <suite>
-<stat name="Selenium Timeout Keywords" id="s1" pass="1" fail="0" skip="0">Selenium Timeout Keywords</stat>
+<stat name="Explicit Wait" id="s1" pass="1" fail="0" skip="0">Explicit Wait</stat>
 </suite>
 </statistics>
 <errors>
