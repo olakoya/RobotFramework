@@ -1,0 +1,80 @@
+Handling Webelements in Robot Framework - 1
+-------------------------------------------
+Input Box
+	A textbox or input box is a field for entering text or data in a user interface
+	Input Password
+	Input Text
+	Page should contain TextField
+
+Radio buttons
+	A radio button is a GUI element allowing selection of one option from a set of exclusive 	choices.
+	Radio Should Be Selected
+	Radio Button Should not be selected
+	Radio button should be set to
+	Page should contain Radio Button
+
+Checkboxes
+	A checkbox is an input field on a webpage form that allows users to select one or more options 	from a predefined list.
+	Checkbox should be selected
+	Checkbox should Not be selected
+	Page should contain Checkbox
+
+
+
+Frames
+-------
+A frame is an HTML document embedded inside another HTML document on a webpage.
+Used to display external content like ads, videos, or interactive elements.
+Selenium requires switching to a frame to interact with its elements.
+An inner frame is a frame nested within another frame, containing its own elements.
+
+	Current Frame Should (not) contain
+	Frame Should Contain
+	Select Frame
+	Unslect Frame
+
+
+Dropdowns
+----------
+Dropdown is a web element with multiple selectable options.
+Options are represented as `<option>` elements inside a `<select>` tag.
+
+	Get List Items
+	Get Selected Label
+	Get Selected List Labels
+	Get Selected List Value
+	(un)	Select From List By Index
+	(un) Select From List By Label
+	(un) Select From List By Value
+
+Cookies
+	Cookie is small piece of data stored by websites to recognize and remember users.
+	It is used to save user preferences and load stored information on revisit.
+	Cookie is represented as key-value pairs in form of a dictionary.
+	Add Cookie
+	Delete All Cookies
+	Delete Cookie
+	Get Cookie
+	Get Cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
