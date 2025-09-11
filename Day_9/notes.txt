@@ -20,7 +20,6 @@ Checkboxes
 	Page should contain Checkbox
 
 
-
 Frames
 -------
 A frame is an HTML document embedded inside another HTML document on a webpage.
@@ -31,7 +30,7 @@ An inner frame is a frame nested within another frame, containing its own elemen
 	Current Frame Should (not) contain
 	Frame Should Contain
 	Select Frame
-	Unslect Frame
+	Unselect Frame
 
 
 Dropdowns

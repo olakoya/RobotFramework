@@ -1,122 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-10T23:03:06.417017" rpa="false" schemaversion="5">
-<suite id="s1" name="Webelements 1" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_9/webelements_1.robot">
-<test id="s1-t1" name="Handle Webelements" line="13">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-11T23:15:16.257910" rpa="false" schemaversion="5">
+<suite id="s1" name="Frames" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_9/frames.robot">
+<test id="s1-t1" name="Handle Frames" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:06.706210" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-09-11T23:15:16.655030" level="INFO">Opening browser 'chrome' to base url 'https://ui.vision/demo/webtest/frames/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-10T23:03:06.705826" elapsed="3.910528"/>
+<status status="PASS" start="2025-09-11T23:15:16.654566" elapsed="3.531395"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-10T23:03:10.617314" elapsed="0.598570"/>
+<status status="PASS" start="2025-09-11T23:15:20.189112" elapsed="0.476945"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.216292" elapsed="0.002247"/>
+<status status="PASS" start="2025-09-11T23:15:20.666513" elapsed="0.003479"/>
 </kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.234535" level="INFO">${checkboxes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.38")&gt;, &lt;selenium.webdriv...</msg>
-<var>${checkboxes}</var>
-<arg>${CHECKBOX_XPATH}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.218787" elapsed="0.015879"/>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-09-11T23:15:20.671366" level="INFO">Selecting frame '//frame[@src="frame_1.html"]'.</msg>
+<arg>//frame[@src="frame_1.html"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-09-11T23:15:20.670186" elapsed="0.038127"/>
 </kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-09-10T23:03:11.236098" level="INFO">Length is 7.</msg>
-<msg time="2025-09-10T23:03:11.236233" level="INFO">${total_checkboex_count} = 7</msg>
-<var>${total_checkboex_count}</var>
-<arg>${checkboxes}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.235274" elapsed="0.000994"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-11T23:15:20.708852" level="INFO">Typing text 'Testing1' into text field '//input[@name='mytext1']'.</msg>
+<arg>//input[@name='mytext1']</arg>
+<arg>Testing1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-11T23:15:20.708581" elapsed="0.208669"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${total_checkboex_count}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.236581" elapsed="0.000323"/>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2025-09-11T23:15:20.917584" elapsed="0.002426"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.238080" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.38")&gt;'.</msg>
-<arg>${checkbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.237832" elapsed="0.073863"/>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-09-11T23:15:20.920413" level="INFO">Selecting frame '//frame[@src="frame_2.html"]'.</msg>
+<arg>//frame[@src="frame_2.html"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-09-11T23:15:20.920200" elapsed="0.024687"/>
 </kw>
-<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.38")&gt;</var>
-<status status="PASS" start="2025-09-10T23:03:11.237676" elapsed="0.074106"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.312308" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.39")&gt;'.</msg>
-<arg>${checkbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.312090" elapsed="0.045962"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-11T23:15:20.945522" level="INFO">Typing text 'Testing2' into text field '//input[@name='mytext2']'.</msg>
+<arg>//input[@name='mytext2']</arg>
+<arg>Testing2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-11T23:15:20.945170" elapsed="0.062117"/>
 </kw>
-<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.39")&gt;</var>
-<status status="PASS" start="2025-09-10T23:03:11.311969" elapsed="0.046168"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.358720" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.40")&gt;'.</msg>
-<arg>${checkbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.358422" elapsed="0.040887"/>
-</kw>
-<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.40")&gt;</var>
-<status status="PASS" start="2025-09-10T23:03:11.358305" elapsed="0.041083"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.399946" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.41")&gt;'.</msg>
-<arg>${checkbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.399725" elapsed="0.038255"/>
-</kw>
-<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.41")&gt;</var>
-<status status="PASS" start="2025-09-10T23:03:11.399559" elapsed="0.038504"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.438529" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.42")&gt;'.</msg>
-<arg>${checkbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.438324" elapsed="0.040769"/>
-</kw>
-<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.42")&gt;</var>
-<status status="PASS" start="2025-09-10T23:03:11.438212" elapsed="0.041020"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.479761" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.43")&gt;'.</msg>
-<arg>${checkbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.479549" elapsed="0.049376"/>
-</kw>
-<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.43")&gt;</var>
-<status status="PASS" start="2025-09-10T23:03:11.479430" elapsed="0.049647"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-10T23:03:11.529875" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.44")&gt;'.</msg>
-<arg>${checkbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-10T23:03:11.529534" elapsed="0.047767"/>
-</kw>
-<var name="${checkbox}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d631f833bfc8f394a94a99e39c096118", element="f.534588338328A8B48D10181AD3C73498.d.09303911D4833B70ED1A23BCA90D92A7.e.44")&gt;</var>
-<status status="PASS" start="2025-09-10T23:03:11.529279" elapsed="0.048147"/>
-</iter>
-<var>${checkbox}</var>
-<value>@{checkboxes}</value>
-<status status="PASS" start="2025-09-10T23:03:11.237191" elapsed="0.340404"/>
-</for>
-<status status="PASS" start="2025-09-10T23:03:06.704643" elapsed="4.873680"/>
+<status status="PASS" start="2025-09-11T23:15:16.653589" elapsed="4.354420"/>
 </test>
-<status status="PASS" start="2025-09-10T23:03:06.418386" elapsed="5.161160"/>
+<status status="PASS" start="2025-09-11T23:15:16.259707" elapsed="4.749845"/>
 </suite>
 <statistics>
 <total>
@@ -125,7 +60,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Webelements 1" id="s1" pass="1" fail="0" skip="0">Webelements 1</stat>
+<stat name="Frames" id="s1" pass="1" fail="0" skip="0">Frames</stat>
 </suite>
 </statistics>
 <errors>
