@@ -42,7 +42,7 @@ Options are represented as `<option>` elements inside a `<select>` tag.
 	Get Selected Label
 	Get Selected List Labels
 	Get Selected List Value
-	(un)	Select From List By Index
+	(un) Select From List By Index
 	(un) Select From List By Label
 	(un) Select From List By Value
 

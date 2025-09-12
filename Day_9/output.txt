@@ -155,3 +155,79 @@ Handle Frames                                                         | PASS |
 Frames                                                                | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+
+----------
+DROPDOWN AND COOKIES
+
+EX 1
+*** Settings ***
+Library         SeleniumLibrary
+
+
+*** Variables ***
+${URL}      https://testautomationpractice.blogspot.com/
+${COOKIE_NAME}      MyCookie
+${COOKIE_VALUE}     123456
+
+*** Test Cases ***
+Handle Dropdown and Cookies
+    open Browser        ${URL}      chrome      options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    Set Selenium Implicit Wait      10s
+
+    Select From List By Label       //select[@id='country']     France
+
+#    Select From List By Value
+#    Select From List By Index
+
+    ${options}      Get List Items      //select[@id='country']
+    Log To Console      ${options}
+    ${count}        Get Length      {options}
+    Log To Console      ${count}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_9/dropdown_cookie.robot
+==============================================================================
+Dropdown Cookie
+==============================================================================
+Handle Dropdown and Cookies                                           .....['United States', 'Canada', 'United Kingdom',
+'Germany', 'France', 'Australia', 'Japan', 'China', 'Brazil', 'India']
+..9
+Handle Dropdown and Cookies                                           | PASS |
+------------------------------------------------------------------------------
+Dropdown Cookie                                                       | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+------
+
+Ex 2
+Select From List By Value      //select[@id='country']     australia
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_9/dropdown_cookie.robot
+==============================================================================
+Dropdown Cookie
+==============================================================================
+Handle Dropdown and Cookies                                           | PASS |
+------------------------------------------------------------------------------
+Dropdown Cookie                                                       | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+-------
+
+EX 2
+Select From List By Index       //select[@id='country']     3
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_9/dropdown_cookie.robot
+==============================================================================
+Dropdown Cookie
+==============================================================================
+Handle Dropdown and Cookies                                           | PASS |
+------------------------------------------------------------------------------
+Dropdown Cookie                                                       | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================

@@ -1,57 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-11T23:15:16.257910" rpa="false" schemaversion="5">
-<suite id="s1" name="Frames" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_9/frames.robot">
-<test id="s1-t1" name="Handle Frames" line="9">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-12T23:29:44.761642" rpa="false" schemaversion="5">
+<suite id="s1" name="Dropdown Cookie" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_9/dropdown_cookie.robot">
+<test id="s1-t1" name="Handle Dropdown and Cookies" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-11T23:15:16.655030" level="INFO">Opening browser 'chrome' to base url 'https://ui.vision/demo/webtest/frames/'.</msg>
+<msg time="2025-09-12T23:29:45.121312" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-11T23:15:16.654566" elapsed="3.531395"/>
+<status status="PASS" start="2025-09-12T23:29:45.120858" elapsed="6.583326"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-11T23:15:20.189112" elapsed="0.476945"/>
+<status status="PASS" start="2025-09-12T23:29:51.707103" elapsed="1.128285"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-11T23:15:20.666513" elapsed="0.003479"/>
+<status status="PASS" start="2025-09-12T23:29:52.836712" elapsed="0.010909"/>
 </kw>
-<kw name="Select Frame" owner="SeleniumLibrary">
-<msg time="2025-09-11T23:15:20.671366" level="INFO">Selecting frame '//frame[@src="frame_1.html"]'.</msg>
-<arg>//frame[@src="frame_1.html"]</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="PASS" start="2025-09-11T23:15:20.670186" elapsed="0.038127"/>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2025-09-12T23:29:52.856920" level="INFO">Selecting options from selection list '//select[@id='country']' by index 3.</msg>
+<arg>//select[@id='country']</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-09-12T23:29:52.848460" elapsed="0.235747"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-11T23:15:20.708852" level="INFO">Typing text 'Testing1' into text field '//input[@name='mytext1']'.</msg>
-<arg>//input[@name='mytext1']</arg>
-<arg>Testing1</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-11T23:15:20.708581" elapsed="0.208669"/>
-</kw>
-<kw name="Unselect Frame" owner="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" start="2025-09-11T23:15:20.917584" elapsed="0.002426"/>
-</kw>
-<kw name="Select Frame" owner="SeleniumLibrary">
-<msg time="2025-09-11T23:15:20.920413" level="INFO">Selecting frame '//frame[@src="frame_2.html"]'.</msg>
-<arg>//frame[@src="frame_2.html"]</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="PASS" start="2025-09-11T23:15:20.920200" elapsed="0.024687"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-11T23:15:20.945522" level="INFO">Typing text 'Testing2' into text field '//input[@name='mytext2']'.</msg>
-<arg>//input[@name='mytext2']</arg>
-<arg>Testing2</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-11T23:15:20.945170" elapsed="0.062117"/>
-</kw>
-<status status="PASS" start="2025-09-11T23:15:16.653589" elapsed="4.354420"/>
+<status status="PASS" start="2025-09-12T23:29:45.119465" elapsed="7.965919"/>
 </test>
-<status status="PASS" start="2025-09-11T23:15:16.259707" elapsed="4.749845"/>
+<status status="PASS" start="2025-09-12T23:29:44.764227" elapsed="8.329784"/>
 </suite>
 <statistics>
 <total>
@@ -60,7 +37,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Frames" id="s1" pass="1" fail="0" skip="0">Frames</stat>
+<stat name="Dropdown Cookie" id="s1" pass="1" fail="0" skip="0">Dropdown Cookie</stat>
 </suite>
 </statistics>
 <errors>
