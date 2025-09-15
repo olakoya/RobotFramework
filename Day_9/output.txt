@@ -231,3 +231,63 @@ Handle Dropdown and Cookies                                           | PASS |
 Dropdown Cookie                                                       | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+-------
+
+EX 3
+    # Get existing cookies
+    ${all_cookies}=     Get Cookies     bool=True
+    ${total_cookies}        Get Length      ${all_cookies}
+    Log To Console      Total Number of Cookies Created: ${total_cookies}
+
+    # Add a new cookie
+    Log Many        ${all_cookies}
+    Add Cookie      name=${COOKIE_NAME}     value=${COOKIE_VALUE}
+    ${all_cookies}=     Get Cookies     bool=True
+    ${total_cookies}        Get Length      ${all_cookies}
+    Log To Console      Total Number of Cookies Created: ${total_cookies}
+
+    # Retrieve one cookie by name
+    ${retrieved_cookie}=        Get Cookies     bool=True
+    Log To Console      Retrieved Cookie Details: ${retrieved_cookie}
+
+    # Delete all cookies
+    Delete All Cookies
+    ${all_cookies}=     Get Cookies     bool=True
+    ${total_cookies}        Get Length      ${all_cookies}
+    Log To Console      Total Number of Cookies Created: ${total_cookies}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_9/dropdown_cookie.robot
+==============================================================================
+Dropdown Cookie
+==============================================================================
+Handle Dropdown and Cookies                                           .....Total Number of Cookies Created: 0
+Handle Dropdown and Cookies                                           ..Total Number of Cookies Created: 1
+..Retrieved Cookie Details: {'MyCookie': '123456'}
+....Total Number of Cookies Created: 0
+Handle Dropdown and Cookies                                           | PASS |
+------------------------------------------------------------------------------
+Dropdown Cookie                                                       | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+------
+EX 4
+INSERTING AMAZON URL ==> ${URL} : https://www.amazon.com/
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_9/dropdown_cookie.robot
+==============================================================================
+Dropdown Cookie
+==============================================================================
+Handle Dropdown and Cookies                                           .....Total Number of Cookies Created: 1
+Handle Dropdown and Cookies                                           ..Total Number of Cookies Created: 2
+..Retrieved Cookie Details: {'MyCookie': '123456', 'csm-sid': '915-7392838-9527610'}
+....Total Number of Cookies Created: 0
+Handle Dropdown and Cookies                                           | PASS |
+------------------------------------------------------------------------------
+Dropdown Cookie                                                       | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
