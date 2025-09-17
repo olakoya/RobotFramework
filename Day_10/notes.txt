@@ -1,0 +1,46 @@
+Handling Webelements in Robot Framework - 2
+-------------------------------------------
+Links
+-----
+Link is a web element when we click on it it will open another page.
+
+Click Link
+Page Should Contain Link
+Page Should Not contain Link
+Get All Links
+
+
+Web Table
+-----------
+WebTable or HTML Table  is used to organize data in tabular format on a web page.
+Operations on Web Table
+	count no of rows, columns
+	read data from specific row and column
+	read data from all rows and columns,etc
+
+Get Table Cell
+Table Cell should Contain
+Table Column should Contain
+Table Row should Contain
+Table Footer Should Contain
+Table Header Should Contain
+Table Should Contain
+
+
+
+Alerts or Popups
+----------------
+Alerts are pop-up windows that are used for warnings, confirmations, or prompting the user for input.
+An alert or popup is not a regular web element. it's a special type of web object. one can't inspect anything within this alert window.
+Types of Alerts
+Simple Alert: Displays a message and has an "OK" button.
+Confirmation Alert: Displays a message with "OK" and "Cancel" buttons.
+Prompt Alert: Displays a message input text box, along with "OK" and "Cancel" buttons.
+
+Alert Should Be Present
+Alert Should Not Be Present
+Handle Alert
+Input Text to Alert
+
+
+Mouse Opeartions

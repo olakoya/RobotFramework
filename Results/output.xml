@@ -1,119 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-15T21:57:06.794948" rpa="false" schemaversion="5">
-<suite id="s1" name="Dropdown Cookie" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_9/dropdown_cookie.robot">
-<test id="s1-t1" name="Handle Dropdown and Cookies" line="12">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-17T21:15:19.357092" rpa="false" schemaversion="5">
+<suite id="s1" name="Table" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_10/table.robot">
+<test id="s1-t1" name="Handling Tables" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-15T21:57:07.095266" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-09-17T21:15:19.808012" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-15T21:57:07.094871" elapsed="4.722444"/>
+<status status="PASS" start="2025-09-17T21:15:19.807409" elapsed="4.429061"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-15T21:57:11.819450" elapsed="0.343646"/>
+<status status="PASS" start="2025-09-17T21:15:24.238626" elapsed="0.388698"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.163812" elapsed="0.003794"/>
+<status status="PASS" start="2025-09-17T21:15:24.627754" elapsed="0.003801"/>
 </kw>
-<kw name="Get Cookies" owner="SeleniumLibrary">
-<msg time="2025-09-15T21:57:12.177671" level="INFO">${all_cookies} = {}</msg>
-<var>${all_cookies}</var>
-<arg>bool=True</arg>
-<doc>Returns all cookies of the current page.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.167873" elapsed="0.009878"/>
+<kw name="Table Should Contain" owner="SeleniumLibrary">
+<arg>//table[@name="BookTable"]</arg>
+<arg>Mukesh</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="PASS" start="2025-09-17T21:15:24.631892" elapsed="0.140573"/>
 </kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-09-15T21:57:12.178350" level="INFO">Length is 0.</msg>
-<msg time="2025-09-15T21:57:12.178512" level="INFO">${total_cookies} = 0</msg>
-<var>${total_cookies}</var>
-<arg>${all_cookies}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.178019" elapsed="0.000547"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-09-17T21:15:24.786669" level="INFO">${rows} = 7</msg>
+<var>${rows}</var>
+<arg>//table[@name="BookTable"]//tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-09-17T21:15:24.773426" elapsed="0.013315"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Total Number of Cookies Created: ${total_cookies}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.178811" elapsed="0.000428"/>
-</kw>
-<kw name="Log Many" owner="BuiltIn">
-<msg time="2025-09-15T21:57:12.180146" level="INFO">{}</msg>
-<arg>${all_cookies}</arg>
-<doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.179681" elapsed="0.000569"/>
-</kw>
-<kw name="Add Cookie" owner="SeleniumLibrary">
-<arg>name=${COOKIE_NAME}</arg>
-<arg>value=${COOKIE_VALUE}</arg>
-<doc>Adds a cookie to your current session.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.180568" elapsed="0.005844"/>
-</kw>
-<kw name="Get Cookies" owner="SeleniumLibrary">
-<msg time="2025-09-15T21:57:12.191162" level="INFO">${all_cookies} = {'MyCookie': '123456'}</msg>
-<var>${all_cookies}</var>
-<arg>bool=True</arg>
-<doc>Returns all cookies of the current page.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.186715" elapsed="0.004493"/>
-</kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-09-15T21:57:12.191966" level="INFO">Length is 1.</msg>
-<msg time="2025-09-15T21:57:12.192121" level="INFO">${total_cookies} = 1</msg>
-<var>${total_cookies}</var>
-<arg>${all_cookies}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.191731" elapsed="0.000438"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-09-17T21:15:24.798804" level="INFO">${cols} = 4</msg>
+<var>${cols}</var>
+<arg>//table[@name="BookTable"]//tr[2]/td</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-09-17T21:15:24.786976" elapsed="0.011943"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Total Number of Cookies Created: ${total_cookies}</arg>
+<arg>${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.192435" elapsed="0.000325"/>
-</kw>
-<kw name="Get Cookies" owner="SeleniumLibrary">
-<msg time="2025-09-15T21:57:12.197217" level="INFO">${retrieved_cookie} = {'MyCookie': '123456'}</msg>
-<var>${retrieved_cookie}</var>
-<arg>bool=True</arg>
-<doc>Returns all cookies of the current page.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.192997" elapsed="0.004264"/>
+<status status="PASS" start="2025-09-17T21:15:24.799303" elapsed="0.000410"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Retrieved Cookie Details: ${retrieved_cookie}</arg>
+<arg>${cols}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.197447" elapsed="0.000196"/>
+<status status="PASS" start="2025-09-17T21:15:24.800008" elapsed="0.000303"/>
 </kw>
-<kw name="Delete All Cookies" owner="SeleniumLibrary">
-<doc>Deletes all cookies.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.197802" elapsed="0.006511"/>
-</kw>
-<kw name="Get Cookies" owner="SeleniumLibrary">
-<msg time="2025-09-15T21:57:12.208702" level="INFO">${all_cookies} = {}</msg>
-<var>${all_cookies}</var>
-<arg>bool=True</arg>
-<doc>Returns all cookies of the current page.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.204611" elapsed="0.004158"/>
-</kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-09-15T21:57:12.209249" level="INFO">Length is 0.</msg>
-<msg time="2025-09-15T21:57:12.209361" level="INFO">${total_cookies} = 0</msg>
-<var>${total_cookies}</var>
-<arg>${all_cookies}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.209007" elapsed="0.000418"/>
+<kw name="Get Table Cell" owner="SeleniumLibrary">
+<msg time="2025-09-17T21:15:34.874394" level="INFO">${cell_data} = Master In Selenium</msg>
+<var>${cell_data}</var>
+<arg>//table[@name="BookTable"]</arg>
+<arg>5</arg>
+<arg>1</arg>
+<doc>Returns contents of a table cell.</doc>
+<status status="PASS" start="2025-09-17T21:15:24.800597" elapsed="10.073844"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Total Number of Cookies Created: ${total_cookies}</arg>
+<arg>${cell_data}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.209620" elapsed="0.000259"/>
+<status status="PASS" start="2025-09-17T21:15:34.874713" elapsed="0.000235"/>
+</kw>
+<kw name="Get Table Cell" owner="SeleniumLibrary">
+<msg time="2025-09-17T21:15:44.917609" level="INFO">${cell_data} = 500</msg>
+<var>${cell_data}</var>
+<arg>//table[@name="BookTable"]</arg>
+<arg>3</arg>
+<arg>4</arg>
+<doc>Returns contents of a table cell.</doc>
+<status status="PASS" start="2025-09-17T21:15:34.875124" elapsed="10.042534"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${cell_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-17T21:15:44.917873" elapsed="0.000204"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-15T21:57:12.210192" elapsed="0.247273"/>
+<status status="PASS" start="2025-09-17T21:15:44.918258" elapsed="0.232819"/>
 </kw>
-<status status="PASS" start="2025-09-15T21:57:07.093574" elapsed="5.364367"/>
+<status status="PASS" start="2025-09-17T21:15:19.805349" elapsed="25.346470"/>
 </test>
-<status status="PASS" start="2025-09-15T21:57:06.798238" elapsed="5.661711"/>
+<status status="PASS" start="2025-09-17T21:15:19.358851" elapsed="25.794766"/>
 </suite>
 <statistics>
 <total>
@@ -122,7 +92,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Dropdown Cookie" id="s1" pass="1" fail="0" skip="0">Dropdown Cookie</stat>
+<stat name="Table" id="s1" pass="1" fail="0" skip="0">Table</stat>
 </suite>
 </statistics>
 <errors>

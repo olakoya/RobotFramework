@@ -1,0 +1,173 @@
+EX 1
+*** Settings ***
+Library     SeleniumLibrary
+
+*** Variables ***
+${URL}      http://www.deadlinkcity.com/
+
+
+*** Test Cases ***
+Handling Links
+    open Browser        ${URL}      chrome      options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    Set Selenium Implicit Wait      10s
+
+    ${all_links}        Get webelements     xpath://a
+    ${links_count}      Get Length       ${all_links}
+    Log To Console      ${links_count}
+
+    Close Browser
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/link.robot
+==============================================================================
+Link
+==============================================================================
+Handling Links                                                        .....48
+Handling Links                                                        | PASS |
+------------------------------------------------------------------------------
+Link                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+-----
+EX 2
+FOR     ${link}     IN      @{all_links}
+        ${link_text}        Get Text        ${link}
+        Log To Console      ${link_text}
+    END
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/link.robot
+==============================================================================
+Link
+==============================================================================
+Handling Links                                                        .....48
+.Comparison Table.
+here
+Errorcode 400
+Errorcode 401
+Errorcode 402
+Errorcode 403
+Errorcode 404
+Errorcode 405
+Errorcode 406
+Errorcode 407
+Errorcode 408
+Errorcode 409
+Errorcode 410
+Errorcode 411
+Errorcode 412
+Errorcode 413
+Errorcode 414
+Errorcode 415
+Errorcode 416
+Errorcode 417
+Errorcode 420
+Errorcode 422
+Errorcode 423
+Errorcode 424
+Errorcode 429
+Errorcode 431
+Errorcode 450
+Errorcode 500
+Errorcode 501
+Errorcode 502
+Errorcode 503
+Errorcode 504
+Errorcode 505
+Errorcode 506
+Errorcode 507
+Errorcode 509
+Errorcode 510
+Non-existent page link to http://www.deadlinkcity.com/page-not-found.asp
+Non-existent domain link to http://www.domaindoesnot.exist
+301 redirection to a valid link on this site
+302 redirection to a valid link on this site
+301 redirection to an invalid link
+302 redirection to an invalid link
+Double 301 redirection to an invalid link
+Double 302 redirection to an invalid link
+Missing, disallowed by robots.txt
+Missing, allowed by robots.txt
+email us
+Handling Links                                                        | PASS |
+------------------------------------------------------------------------------
+Link                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+-----
+EX 3
+*** Settings ***
+Library         SeleniumLibrary
+
+
+*** Variables ***
+${URL}      https://testautomationpractice.blogspot.com/
+*** Test Cases ***
+Handling Tables
+    Open Browser        ${URL}      chrome      options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    Set Selenium Implicit Wait      10s
+    Table Should Contain        //table[@name="BookTable"]      Mukesh
+    Close Browser
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/table.robot
+==============================================================================
+Table
+==============================================================================
+Handling Tables                                                       | PASS |
+------------------------------------------------------------------------------
+Table                                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+-----
+EX 4
+${rows}     Get Element Count       //table[@name="BookTable"]//tr
+    ${cols}     Get Element Count       //table[@name="BookTable"]//tr[2]/td
+    Log To Console      ${rows}
+    Log To Console      ${cols}
+
+
+    Close Browser
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/table.robot
+==============================================================================
+Table
+==============================================================================
+Handling Tables                                                       ......7
+.4
+Handling Tables                                                       | PASS |
+------------------------------------------------------------------------------
+Table                                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+
+------
+EX 5
+ ${cell_data}        Get Table Cell      //table[@name="BookTable"]      5       1
+    Log To Console      ${cell_data}
+
+     ${cell_data}        Get Table Cell      //table[@name="BookTable"]      3       4
+    Log To Console      ${cell_data}
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/table.robot
+==============================================================================
+Table
+==============================================================================
+Handling Tables                                                       ......7
+.4
+Handling Tables                                                       .Master In Selenium
+..500
+Handling Tables                                                       | PASS |
+------------------------------------------------------------------------------
+Table                                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
