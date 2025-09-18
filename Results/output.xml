@@ -1,89 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-17T21:15:19.357092" rpa="false" schemaversion="5">
-<suite id="s1" name="Table" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_10/table.robot">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-18T22:29:41.217764" rpa="false" schemaversion="5">
+<suite id="s1" name="Alerts" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_10/alerts.robot">
 <test id="s1-t1" name="Handling Tables" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-17T21:15:19.808012" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-09-18T22:29:41.546499" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-17T21:15:19.807409" elapsed="4.429061"/>
+<status status="PASS" start="2025-09-18T22:29:41.546038" elapsed="3.571473"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.238626" elapsed="0.388698"/>
+<status status="PASS" start="2025-09-18T22:29:45.121406" elapsed="0.347345"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.627754" elapsed="0.003801"/>
+<status status="PASS" start="2025-09-18T22:29:45.469616" elapsed="0.003548"/>
 </kw>
-<kw name="Table Should Contain" owner="SeleniumLibrary">
-<arg>//table[@name="BookTable"]</arg>
-<arg>Mukesh</arg>
-<doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.631892" elapsed="0.140573"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-18T22:29:45.477293" level="INFO">Clicking element '//button[@id="promptBtn"]'.</msg>
+<arg>//button[@id="promptBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-18T22:29:45.473495" elapsed="0.164977"/>
 </kw>
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2025-09-17T21:15:24.786669" level="INFO">${rows} = 7</msg>
-<var>${rows}</var>
-<arg>//table[@name="BookTable"]//tr</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.773426" elapsed="0.013315"/>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-09-18T22:29:45.639113" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Please enter your name:</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-09-18T22:29:45.638804" elapsed="0.022370"/>
 </kw>
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2025-09-17T21:15:24.798804" level="INFO">${cols} = 4</msg>
-<var>${cols}</var>
-<arg>//table[@name="BookTable"]//tr[2]/td</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.786976" elapsed="0.011943"/>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<arg>Please Enter Your Name:</arg>
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2025-09-18T22:29:45.661673" elapsed="5.215489"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${rows}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.799303" elapsed="0.000410"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${cols}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.800008" elapsed="0.000303"/>
-</kw>
-<kw name="Get Table Cell" owner="SeleniumLibrary">
-<msg time="2025-09-17T21:15:34.874394" level="INFO">${cell_data} = Master In Selenium</msg>
-<var>${cell_data}</var>
-<arg>//table[@name="BookTable"]</arg>
-<arg>5</arg>
-<arg>1</arg>
-<doc>Returns contents of a table cell.</doc>
-<status status="PASS" start="2025-09-17T21:15:24.800597" elapsed="10.073844"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${cell_data}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-17T21:15:34.874713" elapsed="0.000235"/>
-</kw>
-<kw name="Get Table Cell" owner="SeleniumLibrary">
-<msg time="2025-09-17T21:15:44.917609" level="INFO">${cell_data} = 500</msg>
-<var>${cell_data}</var>
-<arg>//table[@name="BookTable"]</arg>
-<arg>3</arg>
-<arg>4</arg>
-<doc>Returns contents of a table cell.</doc>
-<status status="PASS" start="2025-09-17T21:15:34.875124" elapsed="10.042534"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${cell_data}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-17T21:15:44.917873" elapsed="0.000204"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-17T21:15:44.918258" elapsed="0.232819"/>
-</kw>
-<status status="PASS" start="2025-09-17T21:15:19.805349" elapsed="25.346470"/>
+<status status="PASS" start="2025-09-18T22:29:41.545025" elapsed="9.332780"/>
 </test>
-<status status="PASS" start="2025-09-17T21:15:19.358851" elapsed="25.794766"/>
+<status status="PASS" start="2025-09-18T22:29:41.219050" elapsed="9.660685"/>
 </suite>
 <statistics>
 <total>
@@ -92,7 +47,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Table" id="s1" pass="1" fail="0" skip="0">Table</stat>
+<stat name="Alerts" id="s1" pass="1" fail="0" skip="0">Alerts</stat>
 </suite>
 </statistics>
 <errors>
