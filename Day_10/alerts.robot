@@ -5,7 +5,7 @@ Library         SeleniumLibrary
 ${URL}      https://testautomationpractice.blogspot.com/
 
 *** Test Cases ***
-Handling Tables
+Handling Alerts
     Open Browser        ${URL}      chrome      options=add_experimental_option("detach", True)
     Maximize Browser Window
     Set Selenium Implicit Wait      10s

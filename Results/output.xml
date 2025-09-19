@@ -1,92 +1,824 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-19T23:07:59.444229" rpa="false" schemaversion="5">
-<suite id="s1" name="Mouse Operations" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_10/mouse_operations.robot">
-<test id="s1-t1" name="Handling Mouse Operations" line="8">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-19T23:22:37.708579" rpa="false" schemaversion="5">
+<suite id="s1" name="Link" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_10/link.robot">
+<test id="s1-t1" name="Handling Links" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-19T23:07:59.816535" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-09-19T23:22:38.131829" level="INFO">Opening browser 'chrome' to base url 'http://www.deadlinkcity.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-19T23:07:59.816203" elapsed="4.900058"/>
+<status status="PASS" start="2025-09-19T23:22:38.131210" elapsed="4.077702"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-19T23:08:04.719140" elapsed="0.345170"/>
+<status status="PASS" start="2025-09-19T23:22:42.211459" elapsed="0.371395"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-19T23:08:05.064800" elapsed="0.003677"/>
+<status status="PASS" start="2025-09-19T23:22:42.583221" elapsed="0.002817"/>
 </kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>//*[text()='Copy Text']</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-09-19T23:08:05.068720" elapsed="0.298734"/>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.629891" level="INFO">${all_links} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.26")&gt;, &lt;selenium.webdriv...</msg>
+<var>${all_links}</var>
+<arg>xpath://a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.586360" elapsed="0.043619"/>
 </kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2025-09-19T23:08:05.368121" level="INFO">Simulating Mouse Over on element '//button[text()='Point Me']'.</msg>
-<arg>//button[text()='Point Me']</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2025-09-19T23:08:05.367727" elapsed="2.475570"/>
-</kw>
-<kw name="Double Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-19T23:08:07.843860" level="INFO">Double clicking element '//*[text()='Copy Text']'.</msg>
-<arg>//*[text()='Copy Text']</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-19T23:08:07.843597" elapsed="0.321217"/>
-</kw>
-<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
-<msg time="2025-09-19T23:08:08.212019" level="INFO">Content of text field 'id:field2' is 'Hello World!'.</msg>
-<arg>id:field2</arg>
-<arg>Hello World!</arg>
-<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
-<status status="PASS" start="2025-09-19T23:08:08.165163" elapsed="0.047004"/>
-</kw>
-<kw name="Drag And Drop" owner="SeleniumLibrary">
-<arg>//div[@id='draggable']</arg>
-<arg>//div[@id='droppable']</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2025-09-19T23:08:08.212518" elapsed="0.592471"/>
-</kw>
-<kw name="Get Horizontal Position" owner="SeleniumLibrary">
-<msg time="2025-09-19T23:08:08.827192" level="INFO">${min_location} = 935</msg>
-<var>${min_location}</var>
-<arg>//div[@id='slider-range']/span[1]</arg>
-<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-19T23:08:08.805405" elapsed="0.021839"/>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-09-19T23:22:42.630549" level="INFO">Length is 48.</msg>
+<msg time="2025-09-19T23:22:42.630696" level="INFO">${links_count} = 48</msg>
+<var>${links_count}</var>
+<arg>${all_links}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.630276" elapsed="0.000545"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Before moving Min slider Location: ${min_location}</arg>
+<arg>${links_count}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-19T23:08:08.827614" elapsed="0.000511"/>
+<status status="PASS" start="2025-09-19T23:22:42.631361" elapsed="0.000645"/>
 </kw>
-<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
-<arg>//div[@id='slider-range']/span[1]</arg>
-<arg>-20</arg>
-<arg>0</arg>
-<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
-<status status="PASS" start="2025-09-19T23:08:08.828312" elapsed="0.542328"/>
-</kw>
-<kw name="Get Horizontal Position" owner="SeleniumLibrary">
-<msg time="2025-09-19T23:08:09.386221" level="INFO">${min_location} = 914</msg>
-<var>${min_location}</var>
-<arg>//div[@id='slider-range']/span[1]</arg>
-<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-19T23:08:09.371113" elapsed="0.015163"/>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.650838" level="INFO">${link_text} = Comparison Table.</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.633905" elapsed="0.017002"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>After moving Min slider Location: ${min_location}</arg>
+<arg>${link_text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-19T23:08:09.386490" elapsed="0.000254"/>
+<status status="PASS" start="2025-09-19T23:22:42.651228" elapsed="0.000339"/>
 </kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.26")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.633603" elapsed="0.018050"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.663757" level="INFO">${link_text} = here</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.652032" elapsed="0.011871"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.664128" elapsed="0.000625"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.27")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.651885" elapsed="0.012979"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.673417" level="INFO">${link_text} = Errorcode 400</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.665655" elapsed="0.007818"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.673625" elapsed="0.000374"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.28")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.665437" elapsed="0.008654"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.682883" level="INFO">${link_text} = Errorcode 401</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.674617" elapsed="0.008329"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.683143" elapsed="0.000279"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.29")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.674442" elapsed="0.009065"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.695952" level="INFO">${link_text} = Errorcode 402</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.683924" elapsed="0.012093"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.696225" elapsed="0.000273"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.30")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.683698" elapsed="0.012875"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.705464" level="INFO">${link_text} = Errorcode 403</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.696894" elapsed="0.008618"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.705677" elapsed="0.000207"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.31")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.696757" elapsed="0.009195"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.715007" level="INFO">${link_text} = Errorcode 404</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.706268" elapsed="0.008802"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.715289" elapsed="0.000291"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.32")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.706131" elapsed="0.009531"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.723861" level="INFO">${link_text} = Errorcode 405</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.716151" elapsed="0.007756"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.724098" elapsed="0.000332"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.33")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.716021" elapsed="0.008497"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.733126" level="INFO">${link_text} = Errorcode 406</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.724905" elapsed="0.008267"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.733327" elapsed="0.000215"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.34")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.724755" elapsed="0.008860"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.742873" level="INFO">${link_text} = Errorcode 407</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.733897" elapsed="0.009036"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.743139" elapsed="0.000329"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.35")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.733783" elapsed="0.009833"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.752123" level="INFO">${link_text} = Errorcode 408</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.744081" elapsed="0.008105"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.752346" elapsed="0.000266"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.36")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.743909" elapsed="0.008761"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.761183" level="INFO">${link_text} = Errorcode 409</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.752935" elapsed="0.008318"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.761504" elapsed="0.000287"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.37")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.752805" elapsed="0.009070"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.770663" level="INFO">${link_text} = Errorcode 410</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.762213" elapsed="0.008496"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.770858" elapsed="0.000199"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.38")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.762071" elapsed="0.009039"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.796304" level="INFO">${link_text} = Errorcode 411</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.771427" elapsed="0.024925"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.796563" elapsed="0.000981"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.39")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.771240" elapsed="0.026503"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.806420" level="INFO">${link_text} = Errorcode 412</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.798233" elapsed="0.008231"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.806613" elapsed="0.000223"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.40")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.798066" elapsed="0.008855"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.814076" level="INFO">${link_text} = Errorcode 413</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.807200" elapsed="0.006948"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.814331" elapsed="0.000231"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.41")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.807086" elapsed="0.007550"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.823515" level="INFO">${link_text} = Errorcode 414</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.815054" elapsed="0.008505"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.823709" elapsed="0.000259"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.42")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.814874" elapsed="0.009155"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.831995" level="INFO">${link_text} = Errorcode 415</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.824410" elapsed="0.007635"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.832237" elapsed="0.000285"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.43")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.824300" elapsed="0.008281"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.839196" level="INFO">${link_text} = Errorcode 416</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.832936" elapsed="0.006303"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.839393" elapsed="0.000210"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.44")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.832809" elapsed="0.006848"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.846397" level="INFO">${link_text} = Errorcode 417</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.839988" elapsed="0.006453"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.846599" elapsed="0.000197"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.45")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.839850" elapsed="0.006999"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.853319" level="INFO">${link_text} = Errorcode 420</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.847092" elapsed="0.006271"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.853510" elapsed="0.000196"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.46")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.846981" elapsed="0.006776"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.859803" level="INFO">${link_text} = Errorcode 422</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.854038" elapsed="0.005809"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.860005" elapsed="0.000193"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.47")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.853884" elapsed="0.006366"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.867304" level="INFO">${link_text} = Errorcode 423</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.860482" elapsed="0.006871"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.867512" elapsed="0.000309"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.48")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.860379" elapsed="0.007538"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.874292" level="INFO">${link_text} = Errorcode 424</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.868214" elapsed="0.006123"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.874494" elapsed="0.000196"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.49")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.868092" elapsed="0.006651"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.883119" level="INFO">${link_text} = Errorcode 429</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.875011" elapsed="0.008187"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.883449" elapsed="0.000310"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.50")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.874889" elapsed="0.008942"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.890722" level="INFO">${link_text} = Errorcode 431</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.884182" elapsed="0.006652"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.891018" elapsed="0.000273"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.51")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.884033" elapsed="0.007369"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.897866" level="INFO">${link_text} = Errorcode 450</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.891706" elapsed="0.006211"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.898086" elapsed="0.000308"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.52")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.891589" elapsed="0.007033"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.905139" level="INFO">${link_text} = Errorcode 500</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.899039" elapsed="0.006146"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.905333" elapsed="0.000249"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.53")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.898901" elapsed="0.006755"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.912329" level="INFO">${link_text} = Errorcode 501</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.905979" elapsed="0.006405"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.912547" elapsed="0.000204"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.54")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.905863" elapsed="0.006941"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.919953" level="INFO">${link_text} = Errorcode 502</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.913130" elapsed="0.006869"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.920141" elapsed="0.000194"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.55")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.913000" elapsed="0.007387"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.927263" level="INFO">${link_text} = Errorcode 503</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.920632" elapsed="0.006686"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.927470" elapsed="0.000245"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.56")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.920521" elapsed="0.007287"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.935621" level="INFO">${link_text} = Errorcode 504</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.928367" elapsed="0.007302"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.935817" elapsed="0.000251"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.57")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.928114" elapsed="0.008038"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.943157" level="INFO">${link_text} = Errorcode 505</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.936544" elapsed="0.006657"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.943358" elapsed="0.000201"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.58")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.936393" elapsed="0.007220"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.952232" level="INFO">${link_text} = Errorcode 506</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.943951" elapsed="0.008338"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.952475" elapsed="0.000335"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.59")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.943805" elapsed="0.009110"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.959792" level="INFO">${link_text} = Errorcode 507</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.953294" elapsed="0.006543"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.959984" elapsed="0.000195"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.60")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.953108" elapsed="0.007123"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.967335" level="INFO">${link_text} = Errorcode 509</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.960463" elapsed="0.006917"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.967535" elapsed="0.000199"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.61")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.960366" elapsed="0.007420"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.974020" level="INFO">${link_text} = Errorcode 510</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.968057" elapsed="0.006009"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.974295" elapsed="0.000198"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.62")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.967930" elapsed="0.006616"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.981326" level="INFO">${link_text} = Non-existent page link to http://www.deadlinkcity.com/page-not-found.asp</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.974780" elapsed="0.006619"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.981585" elapsed="0.000286"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.63")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.974672" elapsed="0.007282"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.989316" level="INFO">${link_text} = Non-existent domain link to http://www.domaindoesnot.exist</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.982404" elapsed="0.006971"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.989527" elapsed="0.000216"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.64")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.982216" elapsed="0.007601"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:42.997585" level="INFO">${link_text} = 301 redirection to a valid link on this site</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.990217" elapsed="0.007413"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.997793" elapsed="0.000261"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.65")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.990016" elapsed="0.008122"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.005435" level="INFO">${link_text} = 302 redirection to a valid link on this site</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:42.998519" elapsed="0.006967"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.005643" elapsed="0.000205"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.66")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:42.998323" elapsed="0.007580"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.013326" level="INFO">${link_text} = 301 redirection to an invalid link</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.006215" elapsed="0.007156"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.013515" elapsed="0.000195"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.67")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:43.006058" elapsed="0.007704"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.020824" level="INFO">${link_text} = 302 redirection to an invalid link</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.014057" elapsed="0.006812"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.021016" elapsed="0.000199"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.68")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:43.013922" elapsed="0.007345"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.027962" level="INFO">${link_text} = Double 301 redirection to an invalid link</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.021617" elapsed="0.006395"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.028156" elapsed="0.000202"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.69")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:43.021433" elapsed="0.007059"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.036190" level="INFO">${link_text} = Double 302 redirection to an invalid link</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.029007" elapsed="0.007228"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.036383" elapsed="0.000198"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.70")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:43.028791" elapsed="0.007842"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.043463" level="INFO">${link_text} = Missing, disallowed by robots.txt</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.036879" elapsed="0.006629"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.043709" elapsed="0.000298"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.71")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:43.036774" elapsed="0.007294"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.053804" level="INFO">${link_text} = Missing, allowed by robots.txt</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.044497" elapsed="0.009352"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.053997" elapsed="0.000208"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.72")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:43.044341" elapsed="0.009925"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:22:43.061141" level="INFO">${link_text} = email us</msg>
+<var>${link_text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.054598" elapsed="0.006588"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${link_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:22:43.061330" elapsed="0.000197"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="69582e624573e341f0ed7d36b2685a9c", element="f.17A50A6ABA7729C73F50332E51793062.d.822F20076D81CEB0DE3575E1022E72E4.e.73")&gt;</var>
+<status status="PASS" start="2025-09-19T23:22:43.054456" elapsed="0.007125"/>
+</iter>
+<var>${link}</var>
+<value>@{all_links}</value>
+<status status="PASS" start="2025-09-19T23:22:42.632628" elapsed="0.429012"/>
+</for>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-19T23:08:09.386959" elapsed="0.232794"/>
+<status status="PASS" start="2025-09-19T23:22:43.061863" elapsed="0.107789"/>
 </kw>
-<status status="PASS" start="2025-09-19T23:07:59.815183" elapsed="9.805044"/>
+<status status="PASS" start="2025-09-19T23:22:38.129256" elapsed="5.040760"/>
 </test>
-<status status="PASS" start="2025-09-19T23:07:59.446929" elapsed="10.175137"/>
+<status status="PASS" start="2025-09-19T23:22:37.710332" elapsed="5.460692"/>
 </suite>
 <statistics>
 <total>
@@ -95,7 +827,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Mouse Operations" id="s1" pass="1" fail="0" skip="0">Mouse Operations</stat>
+<stat name="Link" id="s1" pass="1" fail="0" skip="0">Link</stat>
 </suite>
 </statistics>
 <errors>

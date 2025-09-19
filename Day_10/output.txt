@@ -1,3 +1,5 @@
+LINKS
+
 EX 1
 *** Settings ***
 Library     SeleniumLibrary
@@ -30,7 +32,7 @@ Link                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 
------
+--------
 EX 2
 FOR     ${link}     IN      @{all_links}
         ${link_text}        Get Text        ${link}
@@ -97,7 +99,9 @@ Link                                                                  | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 
------
+--------
+TABLES
+
 EX 3
 *** Settings ***
 Library         SeleniumLibrary
@@ -173,6 +177,8 @@ Table                                                                 | PASS |
 ==============================================================================
 
 -------
+ALERTS
+
 EX 6
 *** Settings ***
 Library         SeleniumLibrary
@@ -195,7 +201,7 @@ OUTPUT
 ==============================================================================
 Alerts
 ==============================================================================
-Handling Tables                                                       | PASS |
+Handling Alerts                                                       | PASS |
 ------------------------------------------------------------------------------
 Alerts                                                                | PASS |
 1 test, 1 passed, 0 failed
