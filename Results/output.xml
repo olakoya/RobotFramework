@@ -1,44 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-18T22:29:41.217764" rpa="false" schemaversion="5">
-<suite id="s1" name="Alerts" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_10/alerts.robot">
-<test id="s1-t1" name="Handling Tables" line="8">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-19T23:07:59.444229" rpa="false" schemaversion="5">
+<suite id="s1" name="Mouse Operations" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_10/mouse_operations.robot">
+<test id="s1-t1" name="Handling Mouse Operations" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-18T22:29:41.546499" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-09-19T23:07:59.816535" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-18T22:29:41.546038" elapsed="3.571473"/>
+<status status="PASS" start="2025-09-19T23:07:59.816203" elapsed="4.900058"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-18T22:29:45.121406" elapsed="0.347345"/>
+<status status="PASS" start="2025-09-19T23:08:04.719140" elapsed="0.345170"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-09-18T22:29:45.469616" elapsed="0.003548"/>
+<status status="PASS" start="2025-09-19T23:08:05.064800" elapsed="0.003677"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-18T22:29:45.477293" level="INFO">Clicking element '//button[@id="promptBtn"]'.</msg>
-<arg>//button[@id="promptBtn"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-18T22:29:45.473495" elapsed="0.164977"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[text()='Copy Text']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-09-19T23:08:05.068720" elapsed="0.298734"/>
 </kw>
-<kw name="Alert Should Be Present" owner="SeleniumLibrary">
-<msg time="2025-09-18T22:29:45.639113" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<arg>Please enter your name:</arg>
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<status status="PASS" start="2025-09-18T22:29:45.638804" elapsed="0.022370"/>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:08:05.368121" level="INFO">Simulating Mouse Over on element '//button[text()='Point Me']'.</msg>
+<arg>//button[text()='Point Me']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:08:05.367727" elapsed="2.475570"/>
 </kw>
-<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
-<arg>Please Enter Your Name:</arg>
-<doc>Verifies that no alert is present.</doc>
-<status status="PASS" start="2025-09-18T22:29:45.661673" elapsed="5.215489"/>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:08:07.843860" level="INFO">Double clicking element '//*[text()='Copy Text']'.</msg>
+<arg>//*[text()='Copy Text']</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:08:07.843597" elapsed="0.321217"/>
 </kw>
-<status status="PASS" start="2025-09-18T22:29:41.545025" elapsed="9.332780"/>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:08:08.212019" level="INFO">Content of text field 'id:field2' is 'Hello World!'.</msg>
+<arg>id:field2</arg>
+<arg>Hello World!</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2025-09-19T23:08:08.165163" elapsed="0.047004"/>
+</kw>
+<kw name="Drag And Drop" owner="SeleniumLibrary">
+<arg>//div[@id='draggable']</arg>
+<arg>//div[@id='droppable']</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" start="2025-09-19T23:08:08.212518" elapsed="0.592471"/>
+</kw>
+<kw name="Get Horizontal Position" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:08:08.827192" level="INFO">${min_location} = 935</msg>
+<var>${min_location}</var>
+<arg>//div[@id='slider-range']/span[1]</arg>
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:08:08.805405" elapsed="0.021839"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Before moving Min slider Location: ${min_location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:08:08.827614" elapsed="0.000511"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<arg>//div[@id='slider-range']/span[1]</arg>
+<arg>-20</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" start="2025-09-19T23:08:08.828312" elapsed="0.542328"/>
+</kw>
+<kw name="Get Horizontal Position" owner="SeleniumLibrary">
+<msg time="2025-09-19T23:08:09.386221" level="INFO">${min_location} = 914</msg>
+<var>${min_location}</var>
+<arg>//div[@id='slider-range']/span[1]</arg>
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T23:08:09.371113" elapsed="0.015163"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>After moving Min slider Location: ${min_location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-19T23:08:09.386490" elapsed="0.000254"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T23:08:09.386959" elapsed="0.232794"/>
+</kw>
+<status status="PASS" start="2025-09-19T23:07:59.815183" elapsed="9.805044"/>
 </test>
-<status status="PASS" start="2025-09-18T22:29:41.219050" elapsed="9.660685"/>
+<status status="PASS" start="2025-09-19T23:07:59.446929" elapsed="10.175137"/>
 </suite>
 <statistics>
 <total>
@@ -47,7 +95,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Alerts" id="s1" pass="1" fail="0" skip="0">Alerts</stat>
+<stat name="Mouse Operations" id="s1" pass="1" fail="0" skip="0">Mouse Operations</stat>
 </suite>
 </statistics>
 <errors>

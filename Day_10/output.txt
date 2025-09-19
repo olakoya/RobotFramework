@@ -200,3 +200,84 @@ Handling Tables                                                       | PASS |
 Alerts                                                                | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
+
+---------
+
+EX 7
+Sleep       3s
+    Input Text Into Alert       Python      action=ACCEPT
+    Page Should Contain     Python
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/alerts.robot
+==============================================================================
+Alerts
+==============================================================================
+Handling Tables                                                       | FAIL |
+Alert not found in 5 seconds.
+------------------------------------------------------------------------------
+Alerts                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+
+-----------
+EX 8
+  Click Element       //button[@id="promptBtn"]
+    Alert Should Be Present     Please enter your name:     action=LEAVE
+#    Alert Should Not Be Present     Please Enter Your Name:
+
+    Sleep       3s
+    Input Text Into Alert       Python      action=ACCEPT
+    Page Should Contain     Python
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/alerts.robot
+==============================================================================
+Alerts
+==============================================================================
+Handling Tables                                                       | PASS |
+------------------------------------------------------------------------------
+Alerts                                                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+
+-------
+MOUSE OPERATIONS
+
+EX9
+*** Settings ***
+Library         SeleniumLibrary
+
+*** Variables ***
+${URL}      https://testautomationpractice.blogspot.com/
+
+*** Test Cases ***
+Handling Mouse Operations
+    Open Browser        ${URL}      chrome      options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    Set Selenium Implicit Wait      10s
+
+    Scroll Element Into View        //*[text()='Copy Text']
+    Mouse Over      //button[text()='Point Me']
+    Double Click Element        //*[text()='Copy Text']
+    Textfield Value Should Be       id:field2       Hello World!
+    Drag And Drop       //div[@id='draggable']      //div[@id='droppable']
+    ${min_location}=        Get Horizontal Position     //div[@id='slider-range']/span[1]
+    Log To Console      Before moving Min slider Location: ${min_location}
+    Drag And Drop By Offset     //div[@id='slider-range']/span[1]       -20     0
+    ${min_location}=        Get Horizontal Position     //div[@id='slider-range']/span[1]
+    Log To Console      After moving Min slider Location: ${min_location}
+    Close Browser
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_10/mouse_operations.robot
+==============================================================================
+Mouse Operations
+==============================================================================
+Handling Mouse Operations                                             .Before moving Min slider Location: 935
+...After moving Min slider Location: 914
+Handling Mouse Operations                                             | PASS |
+------------------------------------------------------------------------------
+Mouse Operations                                                      | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================

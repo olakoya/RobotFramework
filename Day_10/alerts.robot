@@ -11,5 +11,9 @@ Handling Tables
     Set Selenium Implicit Wait      10s
 
     Click Element       //button[@id="promptBtn"]
-    Alert Should Be Present     Please enter your name:
-    Alert Should Not Be Present     Please Enter Your Name:
+    Alert Should Be Present     Please enter your name:     action=LEAVE
+#    Alert Should Not Be Present     Please Enter Your Name:
+
+    Sleep       3s
+    Input Text Into Alert       Python      action=ACCEPT
+    Page Should Contain     Python
