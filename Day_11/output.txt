@@ -1,0 +1,49 @@
+ex. 1
+*** Settings ***
+Library     SeleniumLibrary
+
+*** Variables ***
+${URL}      https://testautomationpractice.blogspot.com/
+
+*** Test Cases ***
+Handle Tables
+#    Handling Mouse Operations
+    Open Browser    ${URL}    chrome        options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    Set Selenium Implicit Wait    10s
+
+    # Verify table has expected text
+    Table Should Contain    xpath=//table[@name="BookTable"]    Mukesh
+
+    # Get number of rows and columns
+    ${rows}=    Get Element Count    xpath=//table[@name="BookTable"]//tr
+    ${cols}=    Get Element Count    xpath=//table[@name="BookTable"]//tr[2]/td
+
+    Log To Console    Rows: ${rows}
+    Log To Console    Cols: ${cols}
+
+    # Get specific cell (row 3, column 4)
+    ${cell_data}=    Get Table Cell    xpath=//table[@name="BookTable"]    3    4
+    Log To Console    Cell data (3,4): ${cell_data}
+
+    Close Browser
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_11/headless_testing.robot
+==============================================================================
+Headless Testing
+==============================================================================
+Handle Tables                                                         ......Rows: 7
+.Cols: 4
+Handle Tables                                                         .Cell data (3,4): 500
+Handle Tables                                                         | PASS |
+------------------------------------------------------------------------------
+Headless Testing                                                      | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+-----

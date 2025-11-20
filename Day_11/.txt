@@ -1,0 +1,15 @@
+tests
+	SuiteA.robot
+	SuiteB.robot
+
+
+robot tests
+
+pabot tests
+	SuiteA|SuiteB
+
+
+. ==> current directoty
+.. ==> parent of Current Directory
+
+
