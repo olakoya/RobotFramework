@@ -1,84 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-11-20T22:52:54.409151" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-11-22T23:44:27.617932" rpa="false" schemaversion="5">
 <suite id="s1" name="Headless Testing" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/headless_testing.robot">
 <test id="s1-t1" name="Handle Tables" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-20T22:52:54.781859" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-11-22T23:44:27.903544" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-11-22T23:44:27.904146" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-11-22T23:44:27.904330" level="FAIL">AttributeError: 'Options' object has no attribute 'add_arguement'</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
-<arg>options=add_experimental_option("detach", True)</arg>
+<arg>options=add_experimental_option("detach", True);add_arguement("--headless")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-20T22:52:54.781398" elapsed="5.379704"/>
+<status status="FAIL" start="2025-11-22T23:44:27.903191" elapsed="0.006133">AttributeError: 'Options' object has no attribute 'add_arguement'</status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.163574" elapsed="0.355276"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.909792" elapsed="0.000067"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.519170" elapsed="0.002125"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.910038" elapsed="0.000035"/>
 </kw>
 <kw name="Table Should Contain" owner="SeleniumLibrary">
 <arg>xpath=//table[@name="BookTable"]</arg>
 <arg>Mukesh</arg>
 <doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.521607" elapsed="0.172595"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.910203" elapsed="0.000032"/>
 </kw>
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2025-11-20T22:53:00.708280" level="INFO">${rows} = 7</msg>
 <var>${rows}</var>
 <arg>xpath=//table[@name="BookTable"]//tr</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.694626" elapsed="0.013747"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.910365" elapsed="0.000032"/>
 </kw>
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2025-11-20T22:53:00.718690" level="INFO">${cols} = 4</msg>
 <var>${cols}</var>
 <arg>xpath=//table[@name="BookTable"]//tr[2]/td</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.708618" elapsed="0.010120"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.910534" elapsed="0.000031"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Rows: ${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.719075" elapsed="0.000413"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.910699" elapsed="0.000033"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Cols: ${cols}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.719667" elapsed="0.000191"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.910856" elapsed="0.000030"/>
 </kw>
 <kw name="Get Table Cell" owner="SeleniumLibrary">
-<msg time="2025-11-20T22:53:10.804555" level="INFO">${cell_data} = 500</msg>
 <var>${cell_data}</var>
 <arg>xpath=//table[@name="BookTable"]</arg>
 <arg>3</arg>
 <arg>4</arg>
 <doc>Returns contents of a table cell.</doc>
-<status status="PASS" start="2025-11-20T22:53:00.720034" elapsed="10.084570"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.911010" elapsed="0.000031"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Cell data (3,4): ${cell_data}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-20T22:53:10.804859" elapsed="0.000372"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.911211" elapsed="0.000033"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-20T22:53:10.805401" elapsed="0.369114"/>
+<status status="NOT RUN" start="2025-11-22T23:44:27.911372" elapsed="0.000030"/>
 </kw>
-<status status="PASS" start="2025-11-20T22:52:54.780068" elapsed="16.395806"/>
+<status status="FAIL" start="2025-11-22T23:44:27.902147" elapsed="0.009442">AttributeError: 'Options' object has no attribute 'add_arguement'</status>
 </test>
-<status status="PASS" start="2025-11-20T22:52:54.411611" elapsed="16.770323"/>
+<status status="FAIL" start="2025-11-22T23:44:27.619866" elapsed="0.292150"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Headless Testing" id="s1" pass="1" fail="0" skip="0">Headless Testing</stat>
+<stat name="Headless Testing" id="s1" pass="0" fail="1" skip="0">Headless Testing</stat>
 </suite>
 </statistics>
 <errors>

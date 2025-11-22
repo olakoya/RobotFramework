@@ -7,7 +7,7 @@ ${URL}      https://testautomationpractice.blogspot.com/
 *** Test Cases ***
 Handle Tables
 #    Handling Mouse Operations
-    Open Browser    ${URL}    chrome        options=add_experimental_option("detach", True);add_arguement(*--headless*)
+    Open Browser    ${URL}    chrome        options=add_experimental_option("detach", True);add_arguement(--headless")
     Maximize Browser Window
     Set Selenium Implicit Wait    10s
 
