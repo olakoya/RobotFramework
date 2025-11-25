@@ -306,3 +306,105 @@ Setup Teardown                                                        | PASS |
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
 Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
 Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+--------
+
+TESTS SUITES
+
+SuiteA.robot
+*** Test Cases ***
+
+Test Case 1
+    Log     Test Case 1
+    Sleep       5s
+
+Test Case 2
+    Log     Test Case 2
+    Sleep       5s
+
+Test Case 3
+    Log     Test Case 3
+    Sleep       5s
+
+
+SuiteB.robot
+*** Test Cases ***
+
+Test Case A
+    Log     Test Case A
+    Sleep       5s
+
+Test Case B
+    Log     Test Case B
+    Sleep       5s
+
+Test Case C
+    Log     Test Case C
+    Sleep       5s
+
+OUTPUT
+
+(.venv) olakoya@MacBookPro RobotFramework % robot Day_11/tests
+==============================================================================
+Tests
+==============================================================================
+Tests.SuiteA
+==============================================================================
+Test Case 1                                                           | PASS |
+------------------------------------------------------------------------------
+Test Case 2                                                           | PASS |
+------------------------------------------------------------------------------
+Test Case 3                                                           | PASS |
+------------------------------------------------------------------------------
+Tests.SuiteA                                                          | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Tests.SuiteB
+==============================================================================
+Test Case A                                                           | PASS |
+------------------------------------------------------------------------------
+Test Case B                                                           | PASS |
+------------------------------------------------------------------------------
+Test Case C                                                           | PASS |
+------------------------------------------------------------------------------
+Tests.SuiteB                                                          | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+6 tests, 6 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+
+-------
+2 OUTPUT
+
+Robot Framework remote server at 127.0.0.1:8270 started.
+Storing .pabotsuitenames file
+2025-11-25 23:50:33.786497 [PID:20003] [0] [ID:1] EXECUTING Tests.SuiteB
+2025-11-25 23:50:33.786596 [PID:20004] [1] [ID:0] EXECUTING Tests.SuiteA
+2025-11-25 23:50:49.189118 [PID:20003] [0] [ID:1] still running Tests.SuiteB after 15.0 seconds
+2025-11-25 23:50:49.195018 [PID:20004] [1] [ID:0] still running Tests.SuiteA after 15.0 seconds
+2025-11-25 23:50:49.296288 [PID:20003] [0] [ID:1] PASSED Tests.SuiteB in 15.1 seconds
+2025-11-25 23:50:49.300410 [PID:20004] [1] [ID:0] PASSED Tests.SuiteA in 15.1 seconds
+{'command': ['robot'], 'verbose': False, 'help': False, 'version': False, 'testlevelsplit': False, 'pabotlib': True, 'pabotlibhost': '127.0.0.1', 'pabotlibport': 8270, 'processes': 8, 'processtimeout': None, 'artifacts': ['png'], 'artifactstimestamps': True, 'artifactsinsubfolders': False, 'shardindex': 0, 'shardcount': 1, 'chunk': False, 'no-rebot': False, 'argumentfiles': []}
+6 tests, 6 passed, 0 failed, 0 skipped.
+===================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+Stopping PabotLib process
+Robot Framework remote server at 127.0.0.1:8270 stopped.
+PabotLib process stopped
+Total testing: 30.20 seconds
+Elapsed time:  16.24 seconds
+
+-------
+OUTPUT 3
+
+(.venv) olakoya@MacBookPro RobotFramework % pabot -processes 2 Day_11/tests
+option -p not recognized
+Total testing: 0.0 seconds
+Elapsed time:  0.0 seconds
