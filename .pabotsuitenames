@@ -1,6 +1,10 @@
 datasources:9e7f4340945603e947d479f45c0cd9f2cd48e004
-commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
 suitesfrom:no-suites-from-option
-file:ed62d5f6a62d1d318f58be8c23723bd862e1feaa
---suite Tests.SuiteA
---suite Tests.SuiteB
+file:bf35f90ad54170f373f559c80b6e3fd99d5dceb5
+--test Tests.SuiteA.Test Case 1
+--test Tests.SuiteA.Test Case 2
+--test Tests.SuiteA.Test Case 3
+--test Tests.SuiteB.Test Case A
+--test Tests.SuiteB.Test Case B
+--test Tests.SuiteB.Test Case C

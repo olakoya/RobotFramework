@@ -3,16 +3,12 @@ Tests
 ==============================================================================
 Tests.SuiteB                                                                  
 ==============================================================================
-Test Case A                                                           | PASS |
-------------------------------------------------------------------------------
-Test Case B                                                           | PASS |
-------------------------------------------------------------------------------
 Test Case C                                                           | PASS |
 ------------------------------------------------------------------------------
 Tests.SuiteB                                                          | PASS |
-3 tests, 3 passed, 0 failed
+1 test, 1 passed, 0 failed
 ==============================================================================
 Tests                                                                 | PASS |
-3 tests, 3 passed, 0 failed
+1 test, 1 passed, 0 failed
 ==============================================================================
-Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/pabot_results/1/output.xml
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/pabot_results/5/output.xml

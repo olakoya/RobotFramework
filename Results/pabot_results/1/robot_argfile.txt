@@ -1,16 +1,16 @@
---suite Tests.SuiteB
---variable CALLER_ID:7db96724593e40b5ac672e89f916ddba
+--test Tests.SuiteA.Test Case 2
+--variable CALLER_ID:b898e94b91b84362b555039a3a5ee023
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:0
+--variable PABOTEXECUTIONPOOLID:4
 --variable PABOTISLASTEXECUTIONINPOOL:1
 --variable PABOTNUMBEROFPROCESSES:8
 --variable PABOTQUEUEINDEX:1
---variable PABOTLASTLEVEL:
+--variable PABOTLASTLEVEL:Tests.SuiteA.Test Case 2
+--outputdir Results/pabot_results/1
 --listener RobotStackTracer
 --log NONE
 --report NONE
 --xunit NONE
---outputdir ./pabot_results/1
 --consolecolors off
 --consolemarkers off
 Day_11/tests

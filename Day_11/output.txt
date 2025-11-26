@@ -381,15 +381,22 @@ Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
 -------
 2 OUTPUT
 
+(.venv) olakoya@MacBookPro RobotFramework % pabot --testlevelsplit Day_11/tests
 Robot Framework remote server at 127.0.0.1:8270 started.
 Storing .pabotsuitenames file
-2025-11-25 23:50:33.786497 [PID:20003] [0] [ID:1] EXECUTING Tests.SuiteB
-2025-11-25 23:50:33.786596 [PID:20004] [1] [ID:0] EXECUTING Tests.SuiteA
-2025-11-25 23:50:49.189118 [PID:20003] [0] [ID:1] still running Tests.SuiteB after 15.0 seconds
-2025-11-25 23:50:49.195018 [PID:20004] [1] [ID:0] still running Tests.SuiteA after 15.0 seconds
-2025-11-25 23:50:49.296288 [PID:20003] [0] [ID:1] PASSED Tests.SuiteB in 15.1 seconds
-2025-11-25 23:50:49.300410 [PID:20004] [1] [ID:0] PASSED Tests.SuiteA in 15.1 seconds
-{'command': ['robot'], 'verbose': False, 'help': False, 'version': False, 'testlevelsplit': False, 'pabotlib': True, 'pabotlibhost': '127.0.0.1', 'pabotlibport': 8270, 'processes': 8, 'processtimeout': None, 'artifacts': ['png'], 'artifactstimestamps': True, 'artifactsinsubfolders': False, 'shardindex': 0, 'shardcount': 1, 'chunk': False, 'no-rebot': False, 'argumentfiles': []}
+2025-11-26 00:10:23.436203 [PID:35414] [2] [ID:2] EXECUTING Tests.SuiteA.Test Case 3
+2025-11-26 00:10:23.436356 [PID:35415] [5] [ID:0] EXECUTING Tests.SuiteA.Test Case 1
+2025-11-26 00:10:23.436271 [PID:35416] [1] [ID:3] EXECUTING Tests.SuiteB.Test Case A
+2025-11-26 00:10:23.436639 [PID:35417] [3] [ID:1] EXECUTING Tests.SuiteA.Test Case 2
+2025-11-26 00:10:23.436722 [PID:35418] [0] [ID:4] EXECUTING Tests.SuiteB.Test Case B
+2025-11-26 00:10:23.436436 [PID:35419] [4] [ID:5] EXECUTING Tests.SuiteB.Test Case C
+2025-11-26 00:10:29.067719 [PID:35418] [0] [ID:4] PASSED Tests.SuiteB.Test Case B in 5.5 seconds
+2025-11-26 00:10:29.070502 [PID:35416] [1] [ID:3] PASSED Tests.SuiteB.Test Case A in 5.5 seconds
+2025-11-26 00:10:29.071632 [PID:35417] [3] [ID:1] PASSED Tests.SuiteA.Test Case 2 in 5.5 seconds
+2025-11-26 00:10:29.073172 [PID:35415] [5] [ID:0] PASSED Tests.SuiteA.Test Case 1 in 5.5 seconds
+2025-11-26 00:10:29.075632 [PID:35414] [2] [ID:2] PASSED Tests.SuiteA.Test Case 3 in 5.5 seconds
+2025-11-26 00:10:29.084792 [PID:35419] [4] [ID:5] PASSED Tests.SuiteB.Test Case C in 5.5 seconds
+{'command': ['robot'], 'verbose': False, 'help': False, 'version': False, 'testlevelsplit': True, 'pabotlib': True, 'pabotlibhost': '127.0.0.1', 'pabotlibport': 8270, 'processes': 8, 'processtimeout': None, 'artifacts': ['png'], 'artifactstimestamps': True, 'artifactsinsubfolders': False, 'shardindex': 0, 'shardcount': 1, 'chunk': False, 'no-rebot': False, 'argumentfiles': []}
 6 tests, 6 passed, 0 failed, 0 skipped.
 ===================================================
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/output.xml
@@ -398,8 +405,9 @@ Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
 Stopping PabotLib process
 Robot Framework remote server at 127.0.0.1:8270 stopped.
 PabotLib process stopped
-Total testing: 30.20 seconds
-Elapsed time:  16.24 seconds
+Total testing: 33.0 seconds
+Elapsed time:  6.22 seconds
+
 
 -------
 OUTPUT 3
@@ -408,3 +416,135 @@ OUTPUT 3
 option -p not recognized
 Total testing: 0.0 seconds
 Elapsed time:  0.0 seconds
+
+
+---------
+OUTPUT 4
+
+(.venv) olakoya@MacBookPro RobotFramework % pabot Day_11/tests/SuiteA
+Robot Framework remote server at 127.0.0.1:8270 started.
+Parsing '/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/tests/SuiteA' failed: File or directory to execute does not exist.
+Stopping PabotLib process
+Robot Framework remote server at 127.0.0.1:8270 stopped.
+PabotLib process stopped
+Total testing: 0.0 seconds
+Elapsed time:  0.44 seconds
+(.venv) olakoya@MacBookPro RobotFramework %
+
+---------
+OUTPUT 5
+
+(.venv) olakoya@MacBookPro RobotFramework % pabot --testlevelsplit Day_11/tests/SuiteA
+Warning: specified pabotlibport 8270 is already in use. A free port will be assigned automatically.
+Robot Framework remote server at 127.0.0.1:52671 started.
+Parsing '/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/tests/SuiteA' failed: File or directory to execute does not exist.
+Stopping PabotLib process
+Robot Framework remote server at 127.0.0.1:52671 stopped.
+PabotLib process stopped
+Total testing: 0.0 seconds
+Elapsed time:  0.43 seconds
+
+-------
+OUTPUT 6
+
+(.venv) olakoya@MacBookPro RobotFramework % pabot -d Results Day_11/tests/SuiteA.robot
+Robot Framework remote server at 127.0.0.1:8270 started.
+Storing .pabotsuitenames file
+2025-11-26 00:23:05.407143 [PID:45208] [0] [ID:0] EXECUTING SuiteA
+2025-11-26 00:23:20.704508 [PID:45208] [0] [ID:0] still running SuiteA after 15.0 seconds
+2025-11-26 00:23:20.911927 [PID:45208] [0] [ID:0] PASSED SuiteA in 15.2 seconds
+{'command': ['robot'], 'verbose': False, 'help': False, 'version': False, 'testlevelsplit': False, 'pabotlib': True, 'pabotlibhost': '127.0.0.1', 'pabotlibport': 8270, 'processes': 8, 'processtimeout': None, 'artifacts': ['png'], 'artifactstimestamps': True, 'artifactsinsubfolders': False, 'shardindex': 0, 'shardcount': 1, 'chunk': False, 'no-rebot': False, 'argumentfiles': []}
+3 tests, 3 passed, 0 failed, 0 skipped.
+===================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+Stopping PabotLib process
+Robot Framework remote server at 127.0.0.1:8270 stopped.
+PabotLib process stopped
+Total testing: 15.20 seconds
+Elapsed time:  16.14 seconds
+
+---------
+OUTPUT 7
+
+(.venv) olakoya@MacBookPro RobotFramework % pabot -d Results Day_11/tests
+Robot Framework remote server at 127.0.0.1:8270 started.
+Storing .pabotsuitenames file
+2025-11-26 00:31:11.184060 [PID:51386] [0] [ID:0] EXECUTING Tests.SuiteA
+2025-11-26 00:31:11.184114 [PID:51387] [1] [ID:1] EXECUTING Tests.SuiteB
+2025-11-26 00:31:26.519989 [PID:51387] [1] [ID:1] still running Tests.SuiteB after 15.0 seconds
+2025-11-26 00:31:26.520867 [PID:51386] [0] [ID:0] still running Tests.SuiteA after 15.0 seconds
+2025-11-26 00:31:26.725399 [PID:51386] [0] [ID:0] PASSED Tests.SuiteA in 15.2 seconds
+2025-11-26 00:31:26.725762 [PID:51387] [1] [ID:1] PASSED Tests.SuiteB in 15.2 seconds
+{'command': ['robot'], 'verbose': False, 'help': False, 'version': False, 'testlevelsplit': False, 'pabotlib': True, 'pabotlibhost': '127.0.0.1', 'pabotlibport': 8270, 'processes': 8, 'processtimeout': None, 'artifacts': ['png'], 'artifactstimestamps': True, 'artifactsinsubfolders': False, 'shardindex': 0, 'shardcount': 1, 'chunk': False, 'no-rebot': False, 'argumentfiles': []}
+6 tests, 6 passed, 0 failed, 0 skipped.
+===================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+Stopping PabotLib process
+Robot Framework remote server at 127.0.0.1:8270 stopped.
+PabotLib process stopped
+Total testing: 30.40 seconds
+Elapsed time:  16.13 seconds
+
+-------
+OUTPUT 8
+
+(.venv) olakoya@MacBookPro RobotFramework % pabot --testlevelsplit -d Results Day_11/tests
+Robot Framework remote server at 127.0.0.1:8270 started.
+Storing .pabotsuitenames file
+2025-11-26 00:44:41.629776 [PID:61869] [1] [ID:5] EXECUTING Tests.SuiteB.Test Case C
+2025-11-26 00:44:41.629838 [PID:61870] [0] [ID:3] EXECUTING Tests.SuiteB.Test Case A
+2025-11-26 00:44:41.630876 [PID:61871] [5] [ID:4] EXECUTING Tests.SuiteB.Test Case B
+2025-11-26 00:44:41.629947 [PID:61874] [4] [ID:1] EXECUTING Tests.SuiteA.Test Case 2
+2025-11-26 00:44:41.631280 [PID:61875] [2] [ID:0] EXECUTING Tests.SuiteA.Test Case 1
+2025-11-26 00:44:41.633345 [PID:61876] [3] [ID:2] EXECUTING Tests.SuiteA.Test Case 3
+2025-11-26 00:44:47.231022 [PID:61870] [0] [ID:3] PASSED Tests.SuiteB.Test Case A in 5.5 seconds
+2025-11-26 00:44:47.249014 [PID:61874] [4] [ID:1] PASSED Tests.SuiteA.Test Case 2 in 5.5 seconds
+2025-11-26 00:44:47.250671 [PID:61875] [2] [ID:0] PASSED Tests.SuiteA.Test Case 1 in 5.5 seconds
+2025-11-26 00:44:47.251200 [PID:61869] [1] [ID:5] PASSED Tests.SuiteB.Test Case C in 5.5 seconds
+2025-11-26 00:44:47.252960 [PID:61871] [5] [ID:4] PASSED Tests.SuiteB.Test Case B in 5.5 seconds
+2025-11-26 00:44:47.264794 [PID:61876] [3] [ID:2] PASSED Tests.SuiteA.Test Case 3 in 5.5 seconds
+{'command': ['robot'], 'verbose': False, 'help': False, 'version': False, 'testlevelsplit': True, 'pabotlib': True, 'pabotlibhost': '127.0.0.1', 'pabotlibport': 8270, 'processes': 8, 'processtimeout': None, 'artifacts': ['png'], 'artifactstimestamps': True, 'artifactsinsubfolders': False, 'shardindex': 0, 'shardcount': 1, 'chunk': False, 'no-rebot': False, 'argumentfiles': []}
+6 tests, 6 passed, 0 failed, 0 skipped.
+===================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+Stopping PabotLib process
+Robot Framework remote server at 127.0.0.1:8270 stopped.
+PabotLib process stopped
+Total testing: 33.0 seconds
+Elapsed time:  6.19 seconds
+
+--------
+OUTPUT 9
+
+(.venv) olakoya@MacBookPro RobotFramework % pabot --testlevelsplit -d Results Day_11/tests
+Robot Framework remote server at 127.0.0.1:8270 started.
+Storing .pabotsuitenames file
+2025-11-26 00:44:41.629776 [PID:61869] [1] [ID:5] EXECUTING Tests.SuiteB.Test Case C
+2025-11-26 00:44:41.629838 [PID:61870] [0] [ID:3] EXECUTING Tests.SuiteB.Test Case A
+2025-11-26 00:44:41.630876 [PID:61871] [5] [ID:4] EXECUTING Tests.SuiteB.Test Case B
+2025-11-26 00:44:41.629947 [PID:61874] [4] [ID:1] EXECUTING Tests.SuiteA.Test Case 2
+2025-11-26 00:44:41.631280 [PID:61875] [2] [ID:0] EXECUTING Tests.SuiteA.Test Case 1
+2025-11-26 00:44:41.633345 [PID:61876] [3] [ID:2] EXECUTING Tests.SuiteA.Test Case 3
+2025-11-26 00:44:47.231022 [PID:61870] [0] [ID:3] PASSED Tests.SuiteB.Test Case A in 5.5 seconds
+2025-11-26 00:44:47.249014 [PID:61874] [4] [ID:1] PASSED Tests.SuiteA.Test Case 2 in 5.5 seconds
+2025-11-26 00:44:47.250671 [PID:61875] [2] [ID:0] PASSED Tests.SuiteA.Test Case 1 in 5.5 seconds
+2025-11-26 00:44:47.251200 [PID:61869] [1] [ID:5] PASSED Tests.SuiteB.Test Case C in 5.5 seconds
+2025-11-26 00:44:47.252960 [PID:61871] [5] [ID:4] PASSED Tests.SuiteB.Test Case B in 5.5 seconds
+2025-11-26 00:44:47.264794 [PID:61876] [3] [ID:2] PASSED Tests.SuiteA.Test Case 3 in 5.5 seconds
+{'command': ['robot'], 'verbose': False, 'help': False, 'version': False, 'testlevelsplit': True, 'pabotlib': True, 'pabotlibhost': '127.0.0.1', 'pabotlibport': 8270, 'processes': 8, 'processtimeout': None, 'artifacts': ['png'], 'artifactstimestamps': True, 'artifactsinsubfolders': False, 'shardindex': 0, 'shardcount': 1, 'chunk': False, 'no-rebot': False, 'argumentfiles': []}
+6 tests, 6 passed, 0 failed, 0 skipped.
+===================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+Stopping PabotLib process
+Robot Framework remote server at 127.0.0.1:8270 stopped.
+PabotLib process stopped
+Total testing: 33.0 seconds
+Elapsed time:  6.19 seconds

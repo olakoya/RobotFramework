@@ -1,104 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-11-25T23:50:49.318394" rpa="false" schemaversion="5">
+<robot generator="Rebot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-11-26T00:12:14.751941" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/tests">
 <suite id="s1-s1" name="SuiteA" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/tests/SuiteA.robot">
 <test id="s1-s1-t1" name="Test Case 1" line="3">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-25T23:50:34.090550" level="INFO">Test Case 1</msg>
+<msg time="2025-11-26T00:12:08.680468" level="INFO">Test Case 1</msg>
 <arg>Test Case 1</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-25T23:50:34.090327" elapsed="0.000300"/>
+<status status="PASS" start="2025-11-26T00:12:08.680147" elapsed="0.000449"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-25T23:50:39.092282" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-26T00:12:13.684436" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-25T23:50:34.090884" elapsed="5.001634"/>
+<status status="PASS" start="2025-11-26T00:12:08.680925" elapsed="5.003881"/>
 </kw>
-<status status="PASS" start="2025-11-25T23:50:34.089502" elapsed="5.003494"/>
+<status status="PASS" start="2025-11-26T00:12:08.679112" elapsed="5.006423"/>
 </test>
 <test id="s1-s1-t2" name="Test Case 2" line="7">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-25T23:50:39.094796" level="INFO">Test Case 2</msg>
+<msg time="2025-11-26T00:12:08.688187" level="INFO">Test Case 2</msg>
 <arg>Test Case 2</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-25T23:50:39.094435" elapsed="0.000482"/>
+<status status="PASS" start="2025-11-26T00:12:08.687729" elapsed="0.000592"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-25T23:50:44.096229" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-26T00:12:13.694397" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-25T23:50:39.095147" elapsed="5.001191"/>
+<status status="PASS" start="2025-11-26T00:12:08.689112" elapsed="5.007354"/>
 </kw>
-<status status="PASS" start="2025-11-25T23:50:39.093766" elapsed="5.002734"/>
+<status status="PASS" start="2025-11-26T00:12:08.685771" elapsed="5.011223"/>
 </test>
 <test id="s1-s1-t3" name="Test Case 3" line="11">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-25T23:50:44.097238" level="INFO">Test Case 3</msg>
+<msg time="2025-11-26T00:12:08.699542" level="INFO">Test Case 3</msg>
 <arg>Test Case 3</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-25T23:50:44.097070" elapsed="0.000229"/>
+<status status="PASS" start="2025-11-26T00:12:08.699211" elapsed="0.000452"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-25T23:50:49.099053" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-26T00:12:13.706006" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-25T23:50:44.097408" elapsed="5.001856"/>
+<status status="PASS" start="2025-11-26T00:12:08.699926" elapsed="5.006305"/>
 </kw>
-<status status="PASS" start="2025-11-25T23:50:44.096755" elapsed="5.002864"/>
+<status status="PASS" start="2025-11-26T00:12:08.698034" elapsed="5.008513"/>
 </test>
-<status status="PASS" start="2025-11-25T23:50:34.088000" elapsed="15.009000"/>
+<status status="PASS" start="2025-11-26T00:12:08.677000" elapsed="5.030000"/>
 </suite>
 <suite id="s1-s2" name="SuiteB" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/tests/SuiteB.robot">
 <test id="s1-s2-t1" name="Test Case A" line="3">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-25T23:50:34.091360" level="INFO">Test Case A</msg>
+<msg time="2025-11-26T00:12:08.684010" level="INFO">Test Case A</msg>
 <arg>Test Case A</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-25T23:50:34.091152" elapsed="0.000282"/>
+<status status="PASS" start="2025-11-26T00:12:08.683667" elapsed="0.000463"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-25T23:50:39.092759" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-26T00:12:13.686256" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-25T23:50:34.091598" elapsed="5.001396"/>
+<status status="PASS" start="2025-11-26T00:12:08.684394" elapsed="5.002089"/>
 </kw>
-<status status="PASS" start="2025-11-25T23:50:34.090463" elapsed="5.002875"/>
+<status status="PASS" start="2025-11-26T00:12:08.682181" elapsed="5.004741"/>
 </test>
 <test id="s1-s2-t2" name="Test Case B" line="7">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-25T23:50:39.095031" level="INFO">Test Case B</msg>
+<msg time="2025-11-26T00:12:08.705557" level="INFO">Test Case B</msg>
 <arg>Test Case B</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-25T23:50:39.094688" elapsed="0.000474"/>
+<status status="PASS" start="2025-11-26T00:12:08.705077" elapsed="0.000604"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-25T23:50:44.096031" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-26T00:12:13.714917" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-25T23:50:39.095391" elapsed="5.000782"/>
+<status status="PASS" start="2025-11-26T00:12:08.705952" elapsed="5.009536"/>
 </kw>
-<status status="PASS" start="2025-11-25T23:50:39.094035" elapsed="5.002310"/>
+<status status="PASS" start="2025-11-26T00:12:08.703521" elapsed="5.012423"/>
 </test>
 <test id="s1-s2-t3" name="Test Case C" line="11">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-25T23:50:44.097146" level="INFO">Test Case C</msg>
+<msg time="2025-11-26T00:12:08.691303" level="INFO">Test Case C</msg>
 <arg>Test Case C</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-25T23:50:44.096954" elapsed="0.000252"/>
+<status status="PASS" start="2025-11-26T00:12:08.689617" elapsed="0.002245"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-25T23:50:49.097729" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-26T00:12:13.697603" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-25T23:50:44.097315" elapsed="5.000597"/>
+<status status="PASS" start="2025-11-26T00:12:08.692727" elapsed="5.005105"/>
 </kw>
-<status status="PASS" start="2025-11-25T23:50:44.096631" elapsed="5.001540"/>
+<status status="PASS" start="2025-11-26T00:12:08.685032" elapsed="5.013100"/>
 </test>
-<status status="PASS" start="2025-11-25T23:50:34.089259" elapsed="15.009961"/>
+<status status="PASS" start="2025-11-26T00:12:08.680000" elapsed="10.017000"/>
 </suite>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
-<status status="PASS" start="2025-11-25T23:50:34.072000" elapsed="15.028000"/>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 6 executions.</doc>
+<status status="PASS" start="2025-11-26T00:12:08.646000" elapsed="5.072000"/>
 </suite>
 <statistics>
 <total>
