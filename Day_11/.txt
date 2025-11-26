@@ -9,7 +9,7 @@ pabot tests
 	SuiteA|SuiteB
 
 
-. ==> current directoty
+. ==> current directory
 .. ==> parent of Current Directory
 
 
