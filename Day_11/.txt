@@ -8,8 +8,10 @@ robot tests
 pabot tests
 	SuiteA|SuiteB
 
-
+Resource is also page object file
 . ==> current directory
 .. ==> parent of Current Directory
+
+${ERROR_MSG} ==> Scalar variable
 
 

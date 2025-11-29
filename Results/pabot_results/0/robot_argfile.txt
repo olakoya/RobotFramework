@@ -1,11 +1,11 @@
---test Tests.SuiteA.Test Case 1
---variable CALLER_ID:f3f89041b0024cdcb071179eeed32d06
+--test Login DDT Excel.Data Driven Testing using Test Data in Excel File
+--variable CALLER_ID:d56c9c84ff5742bc90c9c4ff12ddf936
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:2
---variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTEXECUTIONPOOLID:0
+--variable PABOTISLASTEXECUTIONINPOOL:1
 --variable PABOTNUMBEROFPROCESSES:8
 --variable PABOTQUEUEINDEX:0
---variable PABOTLASTLEVEL:Tests.SuiteA.Test Case 1
+--variable PABOTLASTLEVEL:
 --outputdir Results/pabot_results/0
 --listener RobotStackTracer
 --log NONE
@@ -13,4 +13,4 @@
 --xunit NONE
 --consolecolors off
 --consolemarkers off
-Day_11/tests
+Day_11/DDT/Login_DDT_Excel.robot

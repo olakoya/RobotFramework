@@ -1,10 +1,5 @@
-datasources:9e7f4340945603e947d479f45c0cd9f2cd48e004
+datasources:3181642921a3fe06d9dc8cf29fcac2ace5378ed0
 commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
 suitesfrom:no-suites-from-option
-file:bf35f90ad54170f373f559c80b6e3fd99d5dceb5
---test Tests.SuiteA.Test Case 1
---test Tests.SuiteA.Test Case 2
---test Tests.SuiteA.Test Case 3
---test Tests.SuiteB.Test Case A
---test Tests.SuiteB.Test Case B
---test Tests.SuiteB.Test Case C
+file:881c836a3a171828fe325a725147d78500462e4b
+--test Login DDT Excel.Data Driven Testing using Test Data in Excel File

@@ -1,14 +1,10 @@
 ==============================================================================
-Tests                                                                         
+Login DDT Excel                                                               
 ==============================================================================
-Tests.SuiteA                                                                  
-==============================================================================
-Test Case 1                                                           | PASS |
+Data Driven Testing using Test Data in Excel File                     | FAIL |
+Test cannot be empty.
 ------------------------------------------------------------------------------
-Tests.SuiteA                                                          | PASS |
-1 test, 1 passed, 0 failed
-==============================================================================
-Tests                                                                 | PASS |
-1 test, 1 passed, 0 failed
+Login DDT Excel                                                       | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
 Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/pabot_results/0/output.xml
