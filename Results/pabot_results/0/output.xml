@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-11-29T21:06:55.859080" rpa="false" schemaversion="5">
-<suite id="s1" name="Login DDT Excel" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/Login_DDT_Excel.robot">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-11-30T18:59:42.136761" rpa="false" schemaversion="5">
+<suite id="s1" name="Login DDT Csv" source="/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/Login_DDT_Csv.robot">
 <kw name="Open My Browser" owner="login_page_resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-29T21:06:57.373325" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2025-11-30T18:59:42.637526" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-29T21:06:57.372804" elapsed="2.368020"/>
+<status status="PASS" start="2025-11-30T18:59:42.637116" elapsed="5.290399"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-29T21:06:59.743564" elapsed="0.332926"/>
+<status status="PASS" start="2025-11-30T18:59:47.930392" elapsed="0.334139"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>3s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-11-29T21:07:00.076963" elapsed="0.002886"/>
+<status status="PASS" start="2025-11-30T18:59:48.265095" elapsed="0.004146"/>
 </kw>
-<status status="PASS" start="2025-11-29T21:06:57.371863" elapsed="2.708499"/>
+<status status="PASS" start="2025-11-30T18:59:42.636341" elapsed="5.633737"/>
 </kw>
 <test id="s1-t1" name="Data Driven Testing using Test Data in Excel File" line="14">
-<status status="FAIL" start="2025-11-29T21:07:00.080756" elapsed="0.003104">Test cannot be empty.</status>
+<status status="FAIL" start="2025-11-30T18:59:48.270730" elapsed="0.008332">Test cannot be empty.</status>
 </test>
 <kw name="Close Browsers" owner="login_page_resource" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-29T21:07:00.085655" elapsed="0.152503"/>
+<status status="PASS" start="2025-11-30T18:59:48.286446" elapsed="0.244656"/>
 </kw>
-<status status="PASS" start="2025-11-29T21:07:00.085026" elapsed="0.153390"/>
+<status status="PASS" start="2025-11-30T18:59:48.285378" elapsed="0.245958"/>
 </kw>
-<status status="FAIL" start="2025-11-29T21:06:55.877968" elapsed="4.360555"/>
+<status status="FAIL" start="2025-11-30T18:59:42.152891" elapsed="6.378556"/>
 </suite>
 <statistics>
 <total>
@@ -40,14 +40,14 @@
 <tag>
 </tag>
 <suite>
-<stat name="Login DDT Excel" id="s1" pass="0" fail="1" skip="0">Login DDT Excel</stat>
+<stat name="Login DDT Csv" id="s1" pass="0" fail="1" skip="0">Login DDT Csv</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-11-29T21:06:57.368599" level="ERROR">[ DataDriver ] Error in robot file:
-  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/Login_DDT_Excel.robot", line 0</msg>
-<msg time="2025-11-29T21:06:57.368799" level="ERROR">In source file:
-  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/../Login_Data.xlsx", line 0</msg>
-<msg time="2025-11-29T21:06:57.371207" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: AttributeError: No "Test Template" keyword found for first test case.</msg>
+<msg time="2025-11-30T18:59:42.632389" level="ERROR">[ DataDriver ] Error in robot file:
+  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/Login_DDT_Csv.robot", line 0</msg>
+<msg time="2025-11-30T18:59:42.632586" level="ERROR">In source file:
+  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/../Login_Data.csv", line 0</msg>
+<msg time="2025-11-30T18:59:42.635620" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: AttributeError: No "Test Template" keyword found for first test case.</msg>
 </errors>
 </robot>

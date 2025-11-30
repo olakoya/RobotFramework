@@ -1,5 +1,5 @@
---test Login DDT Excel.Data Driven Testing using Test Data in Excel File
---variable CALLER_ID:d56c9c84ff5742bc90c9c4ff12ddf936
+--test Login DDT Csv.Data Driven Testing using Test Data in Excel File
+--variable CALLER_ID:ede7dcff0e1f4b1fbc440a5622e4c2b2
 --variable PABOTLIBURI:127.0.0.1:8270
 --variable PABOTEXECUTIONPOOLID:0
 --variable PABOTISLASTEXECUTIONINPOOL:1
@@ -13,4 +13,4 @@
 --xunit NONE
 --consolecolors off
 --consolemarkers off
-Day_11/DDT/Login_DDT_Excel.robot
+Day_11/DDT/Login_DDT_Csv.robot

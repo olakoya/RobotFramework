@@ -1,5 +1,5 @@
 [ ERROR ] [ DataDriver ] Error in robot file:
-  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/Login_DDT_Excel.robot", line 0
+  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/Login_DDT_Csv.robot", line 0
 [ ERROR ] In source file:
-  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/../Login_Data.xlsx", line 0
+  File "/Users/olakoya/Desktop/PythonProjects/RobotFramework/Day_11/DDT/../Login_Data.csv", line 0
 [ ERROR ] Calling method '_start_suite' of listener 'DataDriver' failed: AttributeError: No "Test Template" keyword found for first test case.
