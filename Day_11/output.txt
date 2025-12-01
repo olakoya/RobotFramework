@@ -1,4 +1,6 @@
-ex. 1
+Session Notes on YouTube: https://www.youtube.com/watch?v=gLH7fEwq_tw&list=PLpVPFODLvNXNvNv5MxvbfGnh5424TVp0p&index=99
+
+Ex. 1
 *** Settings ***
 Library     SeleniumLibrary
 
@@ -548,3 +550,84 @@ Robot Framework remote server at 127.0.0.1:8270 stopped.
 PabotLib process stopped
 Total testing: 33.0 seconds
 Elapsed time:  6.19 seconds
+
+--------
+Ex
+*** Test Cases ***
+Compare Equal Values
+    [Documentation]    Test to Compare Equal Values.
+    ${value1}    Set Variable    10
+    ${value2}    Set Variable    10
+    Should Be Equal    ${value1}    ${value2}    Values are not equal!
+
+Compare Unequal Values
+    [Documentation]    Test to Compare Unequal Values.
+    ${value1}    Set Variable    10
+    ${value2}    Set Variable    20
+    Should Not Be Equal    ${value1}    ${value2}    Values should not be equal!
+
+Compare Greater Value
+    [Documentation]    Test to verify value1 is greater than value2.
+    ${value1}    Set Variable    20
+    ${value2}    Set Variable    10
+    Should Be True    ${value1} > ${value2}    ${value1} is not greater than ${value2}!
+
+
+OUTPUT
+(.venv) olakoya@MacBookPro RobotFramework % robot -d Results Day_11/rerun_failed_test.robot
+==============================================================================
+Rerun Failed Test
+==============================================================================
+Compare Equal Values :: Test to Compare Equal Values.                 | PASS |
+------------------------------------------------------------------------------
+Compare Unequal Values :: Test to Compare Unequal Values.             | PASS |
+------------------------------------------------------------------------------
+Compare Greater Value :: Test to verify value1 is greater than val... | PASS |
+------------------------------------------------------------------------------
+Rerun Failed Test                                                     | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+(.venv) olakoya@MacBookPro RobotFramework % rebot --merge Results/output.xml rerun.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+
+
+(.venv) olakoya@MacBookPro RobotFramework % robot --listener RetryFailed -d Results Day_11/rerun_failed_test.robot
+==============================================================================
+Rerun Failed Test
+==============================================================================
+Compare Equal Values :: Test to Compare Equal Values.                 | PASS |
+------------------------------------------------------------------------------
+Compare Unequal Values :: Test to Compare Unequal Values.             | PASS |
+------------------------------------------------------------------------------
+Compare Greater Value :: Test to verify value1 is greater than val... | PASS |
+------------------------------------------------------------------------------
+Rerun Failed Test                                                     | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/output.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/Results/report.html
+
+
+
+
+(.venv) olakoya@MacBookPro RobotFramework % robot --rerunfailed Results/output.xml --output rerun.xml Day_11/rerun_failed_test.robot
+==============================================================================
+Rerun Failed Test
+==============================================================================
+Compare Unequal Values :: Test to Compare Unequal Values.             | PASS |
+------------------------------------------------------------------------------
+Rerun Failed Test                                                     | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/rerun.xml
+Log:     /Users/olakoya/Desktop/PythonProjects/RobotFramework/log.html
+Report:  /Users/olakoya/Desktop/PythonProjects/RobotFramework/report.html
+(.venv) olakoya@MacBookPro RobotFramework %
+
