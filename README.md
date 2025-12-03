@@ -1,4 +1,4 @@
-# Hybrid Web Automation Framework
+# Hybrid Web Automation Framework - Robot Framework
 
 ## 📌 Overview
 This project is a **Hybrid Test Automation Framework** built using **Robot Framework**, **Selenium**, and **Python** for automated web application testing.
